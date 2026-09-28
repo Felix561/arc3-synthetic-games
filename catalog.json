@@ -1,0 +1,693 @@
+{
+  "schema_version": 1,
+  "name": "ARC3 Synthetic Games",
+  "version": "1.0.0",
+  "license": "MIT",
+  "native_runtime": {
+    "python": "3.12",
+    "arcengine": "0.9.3",
+    "arc-agi": "0.9.8",
+    "numpy": "2.5.3"
+  },
+  "games": [
+    {
+      "id": "sg01",
+      "game_id": "sg01-4ac0337b8857411e",
+      "version": "4ac0337b8857411e",
+      "title": "Keys and Currents",
+      "teaser": "Explore a route where collected keys open gates and currents carry you beyond a single step.",
+      "mechanics": "Move along the paths, collect keys by contact, and use Space beside a matching gate. Currents continue movement until stopped; visit the outlined destinations.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg01/4ac0337b8857411e",
+      "preview": "media/previews/sg01.png",
+      "files_sha256": {
+        "metadata.json": "5bdd1958fc4a0c4d7dbf371990fcd170c8c68d650be41580ec323ae478b84709",
+        "sg01.py": "ab8dcf75ad997f78630ec66de05bb5fb48fff65c3e58eb250a8a03a86cc67a29"
+      },
+      "demo": "media/demos/sg01.gif"
+    },
+    {
+      "id": "sg02",
+      "game_id": "sg02-a882427e821f494d",
+      "version": "a882427e821f494d",
+      "title": "Color Conduits",
+      "teaser": "Carry color through an unfinished network and discover how neighboring channels bring its receivers to life.",
+      "mechanics": "Move the cursor to a color source and use Space, or click the source under the cursor, to load it. Click an adjacent channel to paint it with the held color; an empty hand erases it. Mixers change the held color.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg02/a882427e821f494d",
+      "preview": "media/previews/sg02.png",
+      "files_sha256": {
+        "metadata.json": "aad17c4adf3ba7941a58041362a7b38dde1dd312c25d739f8fa8cd27b5687a40",
+        "sg02.py": "46a58d7b3a325bd312509a3fabba6eba2d8eead167eb0bf13e3e7036f8776682"
+      }
+    },
+    {
+      "id": "sg03",
+      "game_id": "sg03-94fea60caf164173",
+      "version": "94fea60caf164173",
+      "title": "Contact Chain",
+      "teaser": "A single impact follows the facing edges of connected tiles; change the chain before setting it in motion.",
+      "mechanics": "Click an upright tile to rotate its contact direction. Space, or a click on the starting tile, launches the chain; press it again after an unsuccessful run to restore the upright tiles.",
+      "controls": [
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg03/94fea60caf164173",
+      "preview": "media/previews/sg03.png",
+      "files_sha256": {
+        "metadata.json": "1b927c7b2007fb4b290292526af9c5c0ac73660b41a8d51f4314272b5658e9e4",
+        "sg03.py": "2cac54cc87c60ff842e2929df6ce1f54b8bd68006bd8677a424d248b3a8148dc"
+      }
+    },
+    {
+      "id": "sg04",
+      "game_id": "sg04-e137c80d4e4d4034",
+      "version": "e137c80d4e4d4034",
+      "title": "Light Relay",
+      "teaser": "Redirect colored beams through mirrors, splitters and relays toward their matching receivers.",
+      "mechanics": "Click an optical component to select it. Right rotates a mirror or relay clockwise. Space rotates a mirror counterclockwise, changes a splitter phase, or changes a relay mode. Observe how the connected light paths respond.",
+      "controls": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg04/e137c80d4e4d4034",
+      "preview": "media/previews/sg04.png",
+      "files_sha256": {
+        "metadata.json": "1fc2b5d73216d4f06c2f8fe0bcb1e862630cf71a7d6fa42dd6a0b0b2536ebeb5",
+        "sg04.py": "db797e69706b9bddadf2ddf9882a1bec47c0b7714d214e992a00eaf75d50d998"
+      }
+    },
+    {
+      "id": "sg05",
+      "game_id": "sg05-60ba78a9efe1498a",
+      "version": "60ba78a9efe1498a",
+      "title": "Coupled Garden",
+      "teaser": "A pool can feed several neighboring sprouts, so one watering may change more than one plant.",
+      "mechanics": "Click a pool to grow every linked neighboring sprout by one stage. The flower outline shows the desired stage; additional watering can take a plant beyond it.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg05/60ba78a9efe1498a",
+      "preview": "media/previews/sg05.png",
+      "files_sha256": {
+        "metadata.json": "59b906dab2f46f8d9c7c63a9fef9086021d9167f597a1a3abc284de192b60950",
+        "sg05.py": "35917d57afb39d20bfa8d918d712351147cba493b03f913363fe190e1488f9c8"
+      }
+    },
+    {
+      "id": "sg06",
+      "game_id": "sg06-28c20e5036544f64",
+      "version": "28c20e5036544f64",
+      "title": "Suspended Weights",
+      "teaser": "Move shared weights between connected supports to release the routes held by their balance beams.",
+      "mechanics": "Click a weight to select it, then an empty connected node to transfer it. Countable units determine each beam balance; satisfied beams release their linked routes. Some levels include a clickable direction lever.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg06/28c20e5036544f64",
+      "preview": "media/previews/sg06.png",
+      "files_sha256": {
+        "metadata.json": "0eb9c25470f8691204f3f087faaf7daff6ab6ae0ddad16544d0461620e845ea7",
+        "sg06.py": "739ce27b4ee118222d1b13c7f1ddbf0a7da264b33c7ff2652b843dd5721b3606"
+      },
+      "demo": "media/demos/sg06.gif"
+    },
+    {
+      "id": "sg07",
+      "game_id": "sg07-2ddb082daf9c4b50",
+      "version": "2ddb082daf9c4b50",
+      "title": "Layer Press",
+      "teaser": "Build a picture through shaped impressions, hidden ink layers and a stencil that controls where marks can land.",
+      "mechanics": "Click an ink or peel tool, then a position on the work surface. Up and Down rotate the tool; Right rotates a movable stencil. Space or the press control applies the selected shape; peeling reveals earlier layers.",
+      "controls": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg07/2ddb082daf9c4b50",
+      "preview": "media/previews/sg07.png",
+      "files_sha256": {
+        "metadata.json": "0e4ace7bb9e5a17b71400fb07c74c6f5bf50c0d46fc62849e5d201755d2261b1",
+        "sg07.py": "1fa81f344810d037dbed07c2bf5f7ee36be91707d6f9d3291e22431986ce9cb9"
+      }
+    },
+    {
+      "id": "sg08",
+      "game_id": "sg08-4a1496ac8a7c47e3",
+      "version": "4a1496ac8a7c47e3",
+      "title": "Toll Vaults",
+      "teaser": "Every doorway exchanges part of your purse, making the route and the resources inseparable.",
+      "mechanics": "Use arrows or click a connected room to cross its doorway. The doorway cartridge shows the coins given and received; crossings fail when the purse cannot pay. Reach the marked room with its pictured purse contents.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg08/4a1496ac8a7c47e3",
+      "preview": "media/previews/sg08.png",
+      "files_sha256": {
+        "metadata.json": "70909463b6ae430303ad71e4c08727e747f20a6bdadc64cd8b51b22c2013710c",
+        "sg08.py": "b05060bde43be10f70e923ba74b2c0ec80a1ca0ea96569b4e92865b8412c555d"
+      },
+      "demo": "media/demos/sg08.gif"
+    },
+    {
+      "id": "sg09",
+      "game_id": "sg09-bf0d447a5c554cdc",
+      "version": "bf0d447a5c554cdc",
+      "title": "Spectral Causeway",
+      "teaser": "Steer a two-part hull over changing causeways while distant crystals respond only along a clear sightline.",
+      "mechanics": "Arrows translate the whole hull and Space turns it around its anchor. Click a visible crystal to change the shared phase; the full hull must remain supported. Collect the marked badges and fit the docking outline.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg09/bf0d447a5c554cdc",
+      "preview": "media/previews/sg09.png",
+      "files_sha256": {
+        "metadata.json": "6a249256257861e5609eb79418fa682611e5dc075d697b901a10b22222a0bf63",
+        "sg09.py": "ec953b497bb3d405fd926c47e1478de0e51ad99fde3a95dc4f3496d421cbd188"
+      }
+    },
+    {
+      "id": "sg10",
+      "game_id": "sg10-7b32ef91e45147d7",
+      "version": "7b32ef91e45147d7",
+      "title": "Charge Rail",
+      "teaser": "A locomotive shares its route with an electrical network whose switches and stored charge outlast a pulse.",
+      "mechanics": "Move along continuous rails using arrows or destination clicks. Click the occupied junction to change its routing; Space or the battery control sends a pulse. Dotted jumpers carry electricity rather than the locomotive.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg10/7b32ef91e45147d7",
+      "preview": "media/previews/sg10.png",
+      "files_sha256": {
+        "metadata.json": "222edace34833bd6228e7958c896800a68f2674f3e9f279e25391172b47d94c7",
+        "sg10.py": "fd3b24d64ffdcc646ab22caf4bfb57c6c8f6a445c5f6cd74575e064a7bd95625"
+      }
+    },
+    {
+      "id": "sg11",
+      "game_id": "sg11-106d370a94b94f84",
+      "version": "106d370a94b94f84",
+      "title": "Shared Loom",
+      "teaser": "Weave several rows against a single over-and-under rhythm, with limited knots that alter what follows.",
+      "mechanics": "Click a row shuttle to weave its next crossing. All rows share the alternating rhythm. Space or a click on the latest crossing adds an available knot, changing that crossing and the next phase.",
+      "controls": [
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg11/106d370a94b94f84",
+      "preview": "media/previews/sg11.png",
+      "files_sha256": {
+        "metadata.json": "956f5b6c9fc0ff4ae23e7429839cb651d752e60ce2248b1884a55a94370caa36",
+        "sg11.py": "824e1f63150ecb1c5bb2436fd982a20ae7a614da4a2e36dda946da05070d5c01"
+      }
+    },
+    {
+      "id": "sg12",
+      "game_id": "sg12-d5101b0e3113467e",
+      "version": "d5101b0e3113467e",
+      "title": "Thermal Passage",
+      "teaser": "Push temperature-bearing blocks through a room where heat and cold reshape the ground beneath them.",
+      "mechanics": "Arrows move the traveler and push contacted blocks. Use Space beside a thermal device, or click that device, to change blocks along its channel. Heating, freezing and brittle-floor reactions change which positions remain supported.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg12/d5101b0e3113467e",
+      "preview": "media/previews/sg12.png",
+      "files_sha256": {
+        "metadata.json": "56dd6592dbc5a5d56c009a567ecc06cca9427a5ec413ae4960295e6a2f183a83",
+        "sg12.py": "4488e1480c00e3f498e192ddd6c03997351cb3533d4c464b97d88324b0111d96"
+      }
+    },
+    {
+      "id": "sg13",
+      "game_id": "sg13-3c8c8fdc6c6649c2",
+      "version": "3c8c8fdc6c6649c2",
+      "title": "Turnover Trays",
+      "teaser": "Transfer two-sided packets between shallow trays, watching both face and order reverse together.",
+      "mechanics": "Click a tray to select its top packet, then a different tray to transfer it. Reclick the selected tray, or use Space, to overturn the whole tray. Matching faces join into larger packets and tray walls limit capacity.",
+      "controls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg13/3c8c8fdc6c6649c2",
+      "preview": "media/previews/sg13.png",
+      "files_sha256": {
+        "metadata.json": "088b592839585437a49f5662ae5fd81c2d44e70d874318bb3172ac9749ff9493",
+        "sg13.py": "541c9ce80e9a5fa02588b7298ced32b84368aca578299909f009d87af0fda001"
+      }
+    },
+    {
+      "id": "sg14",
+      "game_id": "sg14-c58da490e7e443bd",
+      "version": "c58da490e7e443bd",
+      "title": "Carrying Window",
+      "teaser": "A moving window carries what it encloses and leaves behind what its surroundings will not let through.",
+      "mechanics": "Move the window with the arrows. Enclosed pieces move with it unless a wall or stationary piece blocks them; pieces left outside stay put. Bring the colored objects to their matching outlines.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg14/c58da490e7e443bd",
+      "preview": "media/previews/sg14.png",
+      "files_sha256": {
+        "metadata.json": "f5718295121ce3fc6a1fbd88ce453615dc95351f78336b78acaa81ee5f3dcca4",
+        "sg14.py": "df7ca4a13e779cfeb193882315a1ea71eaaa6454f9b2174b673bf32c8fbfcf4d"
+      }
+    },
+    {
+      "id": "sg15",
+      "game_id": "sg15-b1f511b9708042eb",
+      "version": "b1f511b9708042eb",
+      "title": "Ribbon Fusion",
+      "teaser": "Merge neighboring ribbons while their widths persist and their colors advance through a cycle.",
+      "mechanics": "Choose a join with Left or Right, then use Space; clicking a visible join also works. Only adjacent ribbons of the same color fuse. Their combined width is conserved and the new color advances in the cycle.",
+      "controls": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg15/b1f511b9708042eb",
+      "preview": "media/previews/sg15.png",
+      "files_sha256": {
+        "metadata.json": "61986aa82dd1f2ba50b7fdc21eb99b953c7f006e0b36c4fd90e80c0e39723c62",
+        "sg15.py": "b0cb3de526ee5424f7d09c3f5613812d2dd09e49615013096d0db9b139ad4c80"
+      }
+    },
+    {
+      "id": "sg16",
+      "game_id": "sg16-a9e5cdf05c8e4859",
+      "version": "a9e5cdf05c8e4859",
+      "title": "Cut and Fall",
+      "teaser": "Cut a connected shape at its cracks and let the freed fragments settle onto the supports below.",
+      "mechanics": "Click a marked crack to remove its indicated cut through the shape. Remaining connected fragments fall rigidly until supported. The order of cuts changes the final arrangement.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg16/a9e5cdf05c8e4859",
+      "preview": "media/previews/sg16.png",
+      "files_sha256": {
+        "metadata.json": "84bd4e5bf411761e4880c859ebcb9887d08322ec27d883439561eec67c0046ec",
+        "sg16.py": "04430b31504d2b36d6beacebfb929e68c6f709638dcf896ca452f5507bc9252c"
+      }
+    },
+    {
+      "id": "sg17",
+      "game_id": "sg17-fb94f8992a9540b1",
+      "version": "fb94f8992a9540b1",
+      "title": "Direction Stations",
+      "teaser": "Set directions at programming pads, then advance all pieces together through a shared space.",
+      "mechanics": "Arrow inputs program the headings of pieces currently on station pads. Space advances every piece one step in its stored direction; walls, contested destinations and head-on collisions can stop movement.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg17/fb94f8992a9540b1",
+      "preview": "media/previews/sg17.png",
+      "files_sha256": {
+        "metadata.json": "dab3c111383ee7f049bb48e41aab6a53a8afb19f0d79f12e30f7c973a9d31dce",
+        "sg17.py": "4de9fba51261ddc8292b5225da2686e56f17104b9326690d3be4422029187f34"
+      }
+    },
+    {
+      "id": "sg18",
+      "game_id": "sg18-af8d11e58ac94cd7",
+      "version": "af8d11e58ac94cd7",
+      "title": "Pivot Reflections",
+      "teaser": "Use one piece as a center of reflection while occupied destinations and walls selectively hold the others in place.",
+      "mechanics": "Click a piece to leave it fixed and reflect the other pieces through its center. A destination outside the field, in a wall, or occupied before the move blocks that individual reflection.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg18/af8d11e58ac94cd7",
+      "preview": "media/previews/sg18.png",
+      "files_sha256": {
+        "metadata.json": "6efe8be554a99cedf29e90895b7eb9c7dd946bc893c82396e13e021c6bd4e8e0",
+        "sg18.py": "dc44b30824497f2b19b521c421ab92a3b8bf80e503bdb5129215f1d849b69327"
+      }
+    },
+    {
+      "id": "sg19",
+      "game_id": "sg19-25a14e907e1c463d",
+      "version": "25a14e907e1c463d",
+      "title": "Capacity Ring",
+      "teaser": "Redistribute countable contents around a ring whose full bowls divert the flow.",
+      "mechanics": "Click a bowl to sow its contents around the ring in the shown direction. Full bowls are skipped during distribution; the slot outlines show each target amount.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg19/25a14e907e1c463d",
+      "preview": "media/previews/sg19.png",
+      "files_sha256": {
+        "metadata.json": "4067555dfcd2b9bc06d4b422a7e2cf7c7b6cac4888045baa250051e01529ca7b",
+        "sg19.py": "766fa80528b63570be810f5a4d142a5ab983952fbbe34f57beb093ff0ad8f777"
+      }
+    },
+    {
+      "id": "sg20",
+      "game_id": "sg20-a3b73a0fda9e4006",
+      "version": "a3b73a0fda9e4006",
+      "title": "Borrowed Hue",
+      "teaser": "Change one tile and watch every tile already wearing its next color borrow the color it leaves behind.",
+      "mechanics": "Click a tile to advance its color through the three-color cycle. Other tiles holding the new color switch to the clicked tile's old color. Compare the resulting colors with the target frames.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg20/a3b73a0fda9e4006",
+      "preview": "media/previews/sg20.png",
+      "files_sha256": {
+        "metadata.json": "26899f8f8da3c04e9e2399dd38da7c93c021203883db1cf0f6247d148f1863d3",
+        "sg20.py": "e51e6350813a2de1b5801081ce55da733b2bd976e62ccae8cc46c6cbe5fc3fd1"
+      }
+    },
+    {
+      "id": "sg21",
+      "game_id": "sg21-809cfa39d3fa4757",
+      "version": "809cfa39d3fa4757",
+      "title": "Hidden Cups",
+      "teaser": "Rearrange neighboring cups while keeping track of the colors carried beneath their covers.",
+      "mechanics": "Click a middle cup or its lower control to cycle that cup and its two neighbors. Some positions conceal their contents after a rearrangement. Space or a click on a cover reveals the current colors without rearranging them.",
+      "controls": [
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg21/809cfa39d3fa4757",
+      "preview": "media/previews/sg21.png",
+      "files_sha256": {
+        "metadata.json": "d9cc71cef883daa706bbfe4df5f8ed6de705bfc3a8151ec697f1bda117dc39b5",
+        "sg21.py": "f93a09e7105a7ec032f90c891cb6c55d2496c740069be1b59a29fcbdf8a73c8c"
+      }
+    },
+    {
+      "id": "sg22",
+      "game_id": "sg22-a911173626904645",
+      "version": "a911173626904645",
+      "title": "Slack Tether",
+      "teaser": "Move either end of a tether that allows independent travel until its slack runs out.",
+      "mechanics": "Click a bead to select it and move it with the arrows. Beyond the tether's allowed length, the other bead is pulled in the same direction; obstacles can prevent the coupled move.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg22/a911173626904645",
+      "preview": "media/previews/sg22.png",
+      "files_sha256": {
+        "metadata.json": "20276bc50efb08be32530844ac6c4b9a893a669e04f656bd309c6b35f2688c58",
+        "sg22.py": "79ef1cab3b7ba0e6ba04e2be7ff756b427e6e9bc1d9ebcac20e6e6ae9f8b9cb2"
+      }
+    },
+    {
+      "id": "sg23",
+      "game_id": "sg23-bb0b94dd75ad4169",
+      "version": "bb0b94dd75ad4169",
+      "title": "Clutch Gears",
+      "teaser": "Turn a gear train whose contacts reverse motion and whose clutches can separate the chain.",
+      "mechanics": "Click a gear to turn it one step; contacting gears turn in alternating directions. The clicked gear becomes selected. Space raises or lowers a selected clutch gear to change which contacts transmit rotation.",
+      "controls": [
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg23/bb0b94dd75ad4169",
+      "preview": "media/previews/sg23.png",
+      "files_sha256": {
+        "metadata.json": "e75e2919a40413881dc65e464b7e06627528342bf8e018516bc7993c92f880ec",
+        "sg23.py": "f88cf614aa289cefc2a4e3c421c529f9cd54ffc956531252d84a21c58f9fbca1"
+      }
+    },
+    {
+      "id": "sg24",
+      "game_id": "sg24-c5553d90bc44437d",
+      "version": "c5553d90bc44437d",
+      "title": "Portable Bridge",
+      "teaser": "Carry a single rigid bridge across a canyon and turn it into the support needed for the next crossing.",
+      "mechanics": "Arrows move the walker, climb ladders and step over low edges. Space at a bridge end picks it up; Space while carrying sets it down only when both ends are supported. A carried bridge does not support the walker.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg24/c5553d90bc44437d",
+      "preview": "media/previews/sg24.png",
+      "files_sha256": {
+        "metadata.json": "b138b26f1cfaf8fcd55b0690b157ecf896f79858f2d0248fdfad04056aea44d6",
+        "sg24.py": "c97be0de216baf714e36548e2205f95ab570d6ccf62ccbbe84dab5f4c844d49b"
+      },
+      "demo": "media/demos/sg24.gif"
+    },
+    {
+      "id": "sg25",
+      "game_id": "sg25-1ec41211c870430e",
+      "version": "1ec41211c870430e",
+      "title": "Gravity Vessel",
+      "teaser": "Change the direction of gravity inside a vessel, using one gate to route rigid grains into its wells.",
+      "mechanics": "Arrows choose the gravity direction and the grains settle until blocked. Space opens or closes the vessel's gate. The grains keep their shapes while sliding; containment and gate timing determine where they settle.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg25/1ec41211c870430e",
+      "preview": "media/previews/sg25.png",
+      "files_sha256": {
+        "metadata.json": "e347d00fc489fa0643b9c6ec90dd95312e1b3768bf601523056a31b0ce741b3d",
+        "sg25.py": "5603b3f31196a0318e50df87c5f56e13a260ff4d4029624fd468b61e5379db1d"
+      }
+    },
+    {
+      "id": "sg26",
+      "game_id": "sg26-552d5d2ce2b44fe2",
+      "version": "552d5d2ce2b44fe2",
+      "title": "Equalizing Basins",
+      "teaser": "Open local connections between water basins and arrange their levels without changing the total volume.",
+      "mechanics": "Click a valve between neighboring basins to equalize their water levels. Only that pair exchanges water, with odd quantities leaving one extra unit on the previously higher side. Target marks show the desired surfaces.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg26/552d5d2ce2b44fe2",
+      "preview": "media/previews/sg26.png",
+      "files_sha256": {
+        "metadata.json": "a69c31b55e2b406b6d215de5bfa5ce46ced369746c415e55f2a871944633a059",
+        "sg26.py": "daf596bd4dbf7d4ce82da19cd03bf3c4d319efa1e78894a00eab07d54f41ddb5"
+      },
+      "demo": "media/demos/sg26.gif"
+    },
+    {
+      "id": "sg27",
+      "game_id": "sg27-1b5a0ff3fa874c96",
+      "version": "1b5a0ff3fa874c96",
+      "title": "Opposed Press",
+      "teaser": "Position a two-sided press so one expansion pushes contacted cargo in opposite directions.",
+      "mechanics": "Arrows move the press. While folded, an arrow also sets its horizontal or vertical axis. Space expands both jaws together, pushing cargo directly in their way; Space again folds them. Ordinary movement does not push cargo.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg27/1b5a0ff3fa874c96",
+      "preview": "media/previews/sg27.png",
+      "files_sha256": {
+        "metadata.json": "ee2bc0d6fb742f5dd00edbfa4092c9031501ffa88a1244db1e465c960264a445",
+        "sg27.py": "a36837ec304b2d97d0a3dd3c6de199e85f3353b84b84275bba08615754d0e8c2"
+      }
+    },
+    {
+      "id": "sg28",
+      "game_id": "sg28-c27ff0a54fbd4413",
+      "version": "c27ff0a54fbd4413",
+      "title": "Collision Lane",
+      "teaser": "Time a pair of runners and spring bumpers along a lane where impacts exchange their motion.",
+      "mechanics": "Space, or the pulse control, advances both runners one step. They exchange directions on collision. Click a spring bumper to enable or disable its reflection; the outlined bays show required positions and headings.",
+      "controls": [
+        5,
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg28/c27ff0a54fbd4413",
+      "preview": "media/previews/sg28.png",
+      "files_sha256": {
+        "metadata.json": "97d9d97438a29fc6594c8b60e7b4a8a8326a32205ce1a87903b5125913cb75f5",
+        "sg28.py": "bd44e3e66ef1391934e2f07c4bb39ff38a4912c4f2ab726764108425aabac9d5"
+      },
+      "demo": "media/demos/sg28.gif"
+    },
+    {
+      "id": "sg29",
+      "game_id": "sg29-2ece60f659c04e37",
+      "version": "2ece60f659c04e37",
+      "title": "Two-Ended Convoy",
+      "teaser": "Guide an ordered chain through branching roads by handing leadership from one end to the other.",
+      "mechanics": "Arrows advance the active endpoint while every following segment takes its predecessor's previous position. Space switches the leading end. Road boundaries and the convoy's own occupied segments constrain each move.",
+      "controls": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg29/2ece60f659c04e37",
+      "preview": "media/previews/sg29.png",
+      "files_sha256": {
+        "metadata.json": "aaf388adf4948869b5f36333dd857dbc28c59f594756bc5610c7e65901f3d4bf",
+        "sg29.py": "5126ff18b2f27f89464155b130b5adbe62afebd534d3ed09017bdd8b44cfc216"
+      }
+    },
+    {
+      "id": "sg30",
+      "game_id": "sg30-8570298dc9744ad3",
+      "version": "8570298dc9744ad3",
+      "title": "Torque Mobile",
+      "teaser": "Move hanging weights along suspended beams and balance the effects of mass and distance from each pivot.",
+      "mechanics": "Click a weight to select it, then an empty hook on its beam to relocate it. Moving farther from the pivot increases its turning effect. In later mobiles, the lower assembly also loads the upper beam.",
+      "controls": [
+        6,
+        7
+      ],
+      "levels": 7,
+      "default_fps": 8,
+      "environment_path": "environment_files/sg30/8570298dc9744ad3",
+      "preview": "media/previews/sg30.png",
+      "files_sha256": {
+        "metadata.json": "ee4676c15280dac166ebc72fffc7ada7e3391f4aef051fe21e75146777a1ccf6",
+        "sg30.py": "fb746cce3ae367ab6989fb834ec0ee53e5db0cb498b8108d3230f253f243e093"
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARC3 Synthetic Games</title>
+    <link rel="icon" href="/static/icon.svg" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="/"
+        ><span class="mark" aria-hidden="true"
+          ><i></i><i></i><i></i><i></i></span
+        >ARC3 Synthetic Games</a
+      ><span class="edition">Independent collection · v1.0</span>
+    </header>
+    <main>
+      <p id="notice" role="status" hidden></p>
+      <section id="library">
+        <div class="intro">
+          <p class="eyebrow">EXPLORE · EXPERIMENT · DISCOVER</p>
+          <h1>Small worlds.<br />New rules to discover.</h1>
+          <p class="lede">
+            Thirty abstract games for curious people and reasoning agents.
+            Choose a world, try an action, and see what changes.
+          </p>
+          <div class="facts">
+            <span><strong>30</strong> games</span
+            ><span><strong>210</strong> levels</span
+            ><span><strong>64 × 64</strong> native pixels</span>
+          </div>
+        </div>
+        <div class="library-tools">
+          <h2>The collection</h2>
+          <label class="search-label"
+            >Find a game<input
+              id="search"
+              type="search"
+              placeholder="Search by title or SG number"
+              autocomplete="off"
+          /></label>
+        </div>
+        <div id="gallery" class="gallery" aria-live="polite"></div>
+        <p id="no-results" hidden>No games match that search.</p>
+      </section>
+      <section id="player" hidden>
+        <button id="back" class="text-button" type="button">← All games</button>
+        <div class="player-heading">
+          <div>
+            <p id="game-id" class="eyebrow"></p>
+            <h1 id="game-title"></h1>
+            <p id="game-teaser" class="lede"></p>
+          </div>
+          <label class="level-label"
+            >Level<select id="level" aria-label="Choose a level"></select
+          ></label>
+        </div>
+        <div class="play-layout">
+          <div class="board-wrap">
+            <canvas
+              id="board"
+              width="64"
+              height="64"
+              tabindex="0"
+              aria-label="Game board: use supported keyboard controls or click"
+            ></canvas>
+            <p id="game-state" class="state-line" aria-live="polite"></p>
+          </div>
+          <aside class="play-panel">
+            <h2>Try an action</h2>
+            <p class="muted">
+              Controls vary by game. Click the board when clicking is available.
+            </p>
+            <div id="actions" class="actions"></div>
+            <div class="reset-controls">
+              <button id="reset" type="button">Reset level</button
+              ><button id="restart" type="button" class="secondary">
+                Restart game
+              </button>
+            </div>
+            <p class="muted small">
+              Choose any level above. Progression also advances naturally when
+              you solve a level. Nothing you play is recorded.
+            </p>
+            <details id="mechanics">
+              <summary>
+                Explain the basic mechanics <span>optional</span>
+              </summary>
+              <p id="mechanics-text"></p>
+            </details>
+            <details id="demo" hidden>
+              <summary>
+                Watch a human-played excerpt <span>spoilers</span>
+              </summary>
+              <img
+                id="demo-image"
+                width="256"
+                height="256"
+                alt="Anonymous human gameplay excerpt"
+              />
+              <p class="muted small">
+                Real game pixels. Pauses shortened for demonstration.
+              </p>
+            </details>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span
+        >Independent synthetic environments compatible with the ARC3
+        engine.</span
+      ><span>Local play · No accounts · No telemetry</span>
+    </footer>
+  </body>
+</html>

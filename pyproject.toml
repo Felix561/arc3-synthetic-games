@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arc3-synthetic-games"
+version = "1.0.0"
+description = "Thirty independent native ARC3-style games and a local browser player"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = ["arcengine==0.9.3", "arc-agi==0.9.8", "numpy==2.5.3", "fastapi==0.141.1", "uvicorn==0.53.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.11,<1"]
+
+[project.scripts]
+arc3-synthetic-games = "arc3_synthetic_games.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/arc3_synthetic_games"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"environment_files" = "arc3_synthetic_games/data/environment_files"
+"catalog.json" = "arc3_synthetic_games/data/catalog.json"
+"media" = "arc3_synthetic_games/data/media"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+extend-exclude = ["environment_files"]

@@ -1,0 +1,2 @@
+# Native checksums refer to exact bytes. Preserve them on every platform.
+* -text
