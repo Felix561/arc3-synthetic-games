@@ -65,3 +65,9 @@ python -m pytest -q
 
 The second command executes native Python; use an isolated development/CI
 environment.
+
+The [2026-09-30 publication audit](PUBLICATION_AUDIT.md) repeated the source and
+installed-wheel checks, inspected release packages and media for private data,
+validated citation metadata, scanned dependency advisories and updated the
+AI disclosure and third-party notices. It records the remaining release and
+research limitations.

@@ -116,3 +116,12 @@ Original games, player, documentation and demonstration assets are available
 under the [MIT license](LICENSE). The [official ARC-AGI toolkit](https://github.com/arcprize/ARC-AGI)
 and ARC engine are separate dependencies; see [third-party acknowledgments](THIRD_PARTY_NOTICES.md).
 Citation metadata is in [CITATION.cff](CITATION.cff).
+
+## AI disclosure
+
+This repository was created with substantial assistance from AI coding agents,
+including game design, implementation, the local player and documentation.
+Human feedback, gameplay and iterative review informed the collection. The GIF
+demonstrations show actual human gameplay; they are not AI-generated playthroughs.
+AI assistance and technical validation do not establish that every level has
+been independently human-reviewed or that the collection is free of errors.

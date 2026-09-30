@@ -24,6 +24,7 @@ packages = ["src/arc3_synthetic_games"]
 "environment_files" = "arc3_synthetic_games/data/environment_files"
 "catalog.json" = "arc3_synthetic_games/data/catalog.json"
 "media" = "arc3_synthetic_games/data/media"
+"THIRD_PARTY_NOTICES.md" = "arc3_synthetic_games/data/THIRD_PARTY_NOTICES.md"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
