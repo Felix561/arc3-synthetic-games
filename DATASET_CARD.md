@@ -2,7 +2,7 @@
 
 ## Contents
 
-ARC3 Synthetic Games 1.0.2 contains one current version of each SG01–SG30 game:
+ARC3 Synthetic Games 1.0.3 contains one current version of each SG01–SG30 game:
 30 native Python environments with seven fixed levels each, 210 levels in total.
 Observations use the native 64×64 grid and 16-color ARC3 palette. Depending on
 the environment, actions use arrows, Space, clicks and Undo. Exact action masks
@@ -43,7 +43,7 @@ SDK release. Custom environments are used in offline mode without an API key.
 The optional browser preview uses Pyodide 314.0.7 (Python 3.14), arcengine 0.9.3
 and Pyodide's NumPy 2.4.6/Pydantic 2.12.5 builds. It is a convenience demo, with
 native-frame parity checks documented in VALIDATION.md. Use the pinned Python
-3.12 runtime above for reproducible SDK experiments. Release 1.0.2 changes no
+3.12 runtime above for reproducible SDK experiments. Release 1.0.3 changes no
 native game versions or file hashes from 1.0.0.
 
 Use exact native IDs and release hashes when reporting results. Changes to

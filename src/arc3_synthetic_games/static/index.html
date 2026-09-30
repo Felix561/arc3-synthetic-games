@@ -9,19 +9,20 @@
     <script src="static/app.js" defer></script>
   </head>
   <body>
+    <div class="application-window">
     <header class="masthead">
       <a class="brand" href="./"
         ><span class="mark" aria-hidden="true"
           ><i></i><i></i><i></i><i></i></span
         >ARC3 Synthetic Games</a
-      ><span class="edition">Independent collection · v1.0.2</span>
+      ><span class="edition">Independent collection · v1.0.3</span>
     </header>
     <main>
       <p id="notice" role="status" hidden></p>
       <section id="library">
         <div class="intro">
           <p class="eyebrow">EXPLORE · EXPERIMENT · DISCOVER</p>
-          <h1>Small worlds.<br />New rules to discover.</h1>
+          <h1>Game Explorer</h1>
           <p class="lede">
             Thirty abstract games for curious people and reasoning agents.
             Choose a world, try an action, and see what changes.
@@ -33,7 +34,7 @@
           </div>
         </div>
         <div class="library-tools">
-          <h2>The collection</h2>
+          <h2>Game library</h2>
           <label class="search-label"
             >Find a game<input
               id="search"
@@ -59,6 +60,7 @@
         </div>
         <div class="play-layout">
           <div class="board-wrap">
+            <h2 class="display-caption">Game display</h2>
             <canvas
               id="board"
               width="64"
@@ -69,7 +71,7 @@
             <p id="game-state" class="state-line" aria-live="polite"></p>
           </div>
           <aside class="play-panel">
-            <h2>Try an action</h2>
+            <h2>Controls</h2>
             <p class="muted">
               Controls vary by game. Click the board when clicking is available.
             </p>
@@ -114,5 +116,6 @@
         engine.</span
       ><span>Local play · No accounts · No telemetry</span>
     </footer>
+    </div>
   </body>
 </html>

@@ -2,12 +2,12 @@
 
 The collection contains 30 games, 210 levels and 60 native source/metadata files.
 Catalog IDs and SHA-256 hashes bind each game to its exact native version.
-Release 1.0.2 preserves all native game files from 1.0.0.
+Release 1.0.3 preserves all native game files from 1.0.0.
 
 ## Native runtime and player
 
 The validated runtime is Python 3.12, arcengine 0.9.3, arc-agi 0.9.8 and
-NumPy 2.5.3. Source and installed-wheel suites passed 71 tests for release 1.0.1;
+NumPy 2.5.3. Source and installed-wheel suites passed 73 tests for release 1.0.2;
 the current suite is rerun in CI. Checks cover offline SDK discovery, reset and
 representative actions for all 30 games, initialization of all 210 levels,
 action validation, independent player sessions, level selection and packaging.

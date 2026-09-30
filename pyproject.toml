@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "arc3-synthetic-games"
-version = "1.0.2"
+version = "1.0.3"
 description = "Thirty independent native ARC3-style games and a local browser player"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"

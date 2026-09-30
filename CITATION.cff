@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite this collection when using its environments in research."
 type: dataset
 title: "ARC3 Synthetic Games"
-version: 1.0.2
+version: 1.0.3
 date-released: 2026-09-30
 license: MIT
 authors:

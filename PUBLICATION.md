@@ -39,6 +39,6 @@ and may retain request information under their own policies.
 - **.whl / .tar.gz:** Installable Python package and source distribution.
 - **SHA256SUMS.txt:** Checksums for the five artifacts above.
 
-Release 1.0.2 keeps every native game ID, version and source/metadata hash from
+Release 1.0.3 keeps every native game ID, version and source/metadata hash from
 1.0.0. Only packaging, player transport, browser hosting and documentation change.
 Previous release tags and assets remain available unchanged.

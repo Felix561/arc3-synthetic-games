@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 — 2026-09-30
+
+- Classic desktop styling with gray window frames, blue title bars and beveled controls.
+- Responsive gallery and player layouts with clear keyboard focus and touch controls.
+- Unchanged native games, runtime dependencies and player actions.
+
 ## 1.0.2 — 2026-09-30
 
 - Streamlined public documentation and release contents.
