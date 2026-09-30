@@ -62,6 +62,7 @@ def check(url, golden, screenshot_dir=None, executable=None):
         # Lazy-loaded gallery images need to enter the viewport.
         for image in page.locator(".preview img").all():
             image.scroll_into_view_if_needed()
+            page.wait_for_function("img => img.complete && img.naturalWidth > 0", arg=image.element_handle())
             image.evaluate("img => img.decode()")
         assert not any(".gif" in address for address, _ in requests)
         assert not any("pyodide" in address for address, _ in requests)
