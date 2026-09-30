@@ -89,6 +89,7 @@ def check(url, golden, screenshot_dir=None, executable=None):
         page.locator("#mechanics summary").click()
         page.wait_for_function("document.querySelector('#mechanics-text').textContent.length > 0")
         page.locator("#demo summary").click()
+        page.wait_for_function("document.querySelector('#demo-image').getAttribute('src')")
         page.locator("#demo-image").evaluate("img => img.decode()")
         if screenshot_dir:
             screenshot_dir.mkdir(parents=True, exist_ok=True)
@@ -117,8 +118,20 @@ def check(url, golden, screenshot_dir=None, executable=None):
         page.locator("#search").fill("sg18")
         page.locator(".game-card button").click()
         page.locator("#player").wait_for(state="visible")
+        page.wait_for_function("!document.querySelector('#reset').disabled")
+        page.evaluate("""() => {
+          const original = window.arc3Transport.request;
+          window.arc3Transport.request = (...args) => {
+            if (args[0].endsWith('/action')) window.lastCheckedAction = args[2];
+            return original(...args);
+          };
+        }""")
+        width = page.locator("#board").bounding_box()["width"]
         page.locator("#board").click(position={"x": 180, "y": 180})
         page.wait_for_function("!document.querySelector('#reset').disabled")
+        assert page.evaluate("window.lastCheckedAction") == {
+            "action_id": 6, "data": {"x": int(180 / width * 64), "y": int(180 / width * 64)}
+        }
         page.set_viewport_size({"width": 390, "height": 844})
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
         if screenshot_dir:
