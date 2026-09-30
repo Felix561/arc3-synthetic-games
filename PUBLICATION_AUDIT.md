@@ -1,5 +1,15 @@
 # Publication audit — 2026-09-30
 
+## Release follow-up
+
+Release 1.0.1 incorporates the documentation and license corrections recorded
+below, plus a static browser demo and automated browser/native parity checks.
+The release keeps every original native game version and hash. The 1.0.0 assets
+remain immutable. See [VALIDATION.md](VALIDATION.md) for the updated checks and
+[PUBLICATION.md](PUBLICATION.md) for package contents and GitHub Pages setup.
+The assessment below records the earlier audit baseline; its release-package
+and optional UI-test recommendations are addressed by 1.0.1.
+
 ## Assessment
 
 The current source tree is suitable for an initial public release as an

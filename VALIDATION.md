@@ -1,5 +1,38 @@
 # Release validation
 
+## Release 1.0.1 — 2026-09-30
+
+All 30 native IDs, versions and 60 source/metadata hashes remain identical to
+1.0.0. The source and installed-wheel suites each passed **71 tests** in the
+network-isolated, read-only, unprivileged Docker environment described below.
+The two added checks cover static-preview contents, reproducible game archives,
+asset inventory and rejection of corrupt dependencies or reused output folders.
+
+The static demo was exercised in a fresh headless Microsoft Edge browser at
+a project subpath matching GitHub Pages. It matched **1,381 native observations**
+exactly against Python 3.12: every pixel, state, selected level, available action
+and reset flag, across all 30 games and all 210 level initializations, with
+representative actions, Undo, reset and restart. UI checks covered lazy previews,
+opt-in explanations/GIFs, keyboard and scaled click input, level selection and
+a 390-pixel mobile layout. Gallery browsing does not load the Python runtime;
+the first Play does. A deliberately corrupted engine download was rejected,
+and a subsequent retry succeeded. No gameplay HTTP requests, browser storage,
+cookies or JavaScript errors were observed.
+
+The browser uses Pyodide 314.0.7, Python 3.14, NumPy 2.4.6 and Pydantic 2.12.5.
+These parity checks cover representative transitions, not every possible action
+sequence. The pinned Python 3.12 SDK runtime remains the research reference.
+Automated Chromium/native parity checks are now included in GitHub CI.
+
+Updated packages preserve the original MIT license, both ARC dependency notices,
+AI disclosure and checksum catalog. Browser packages also acknowledge Pyodide's
+MPL-2.0 license and link its corresponding source. Release archives and reachable
+Git history are checked for credentials and private data before uploading.
+
+These checks do not prove complete solvability of every level.
+
+## Original release 1.0.0
+
 Version 1.0.0 was checked on 2026-09-28 with Python 3.12, arcengine 0.9.3,
 arc-agi 0.9.8 and NumPy 2.5.3.
 

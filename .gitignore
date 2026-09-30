@@ -14,3 +14,5 @@ recordings/
 scorecards/
 test-results/
 playwright-report/
+_site/
+_preview/

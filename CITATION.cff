@@ -2,12 +2,13 @@ cff-version: 1.2.0
 message: "Please cite this collection when using its environments in research."
 type: dataset
 title: "ARC3 Synthetic Games"
-version: 1.0.0
-date-released: 2026-09-28
+version: 1.0.1
+date-released: 2026-09-30
 license: MIT
 authors:
   - name: "ARC3 Synthetic Games contributors"
-abstract: "Thirty independent synthetic ARC3-compatible native games, with 210 fixed levels and a local browser player."
+abstract: "Thirty independent synthetic ARC3-compatible native games, with 210 fixed levels and local and in-browser players."
+repository-code: "https://github.com/Felix561/arc3-synthetic-games"
 keywords:
   - interactive reasoning
   - synthetic environments

@@ -55,6 +55,8 @@ function notice(text = "") {
   $("notice").hidden = !text;
 }
 async function api(path, method = "GET", body) {
+  if (window.arc3Transport)
+    return window.arc3Transport.request(path, method, body);
   const options = {
     method,
     credentials: "same-origin",
@@ -105,7 +107,7 @@ function renderGallery() {
     const card = node("article", undefined, "game-card");
     const imageBox = node("div", undefined, "preview");
     const image = node("img");
-    image.src = "/" + game.preview;
+    image.src = new URL(game.preview, document.baseURI).href;
     image.alt = `${game.title}, first level`;
     image.width = 256;
     image.height = 256;
@@ -295,7 +297,7 @@ $("mechanics").addEventListener("toggle", async () => {
 });
 $("demo").addEventListener("toggle", () => {
   if ($("demo").open && state.game?.demo)
-    $("demo-image").src = "/" + state.game.demo;
+    $("demo-image").src = new URL(state.game.demo, document.baseURI).href;
   else $("demo-image").removeAttribute("src");
 });
 $("board").addEventListener("click", (e) => {
@@ -326,6 +328,10 @@ document.addEventListener("keydown", (e) => {
   if (!e.repeat) perform("action", { action_id: action, data: {} });
 });
 window.addEventListener("pagehide", () => {
+  if (window.arc3Transport) {
+    window.arc3Transport.close();
+    return;
+  }
   if (state.session)
     fetch(`/api/sessions/${state.session}`, {
       method: "DELETE",

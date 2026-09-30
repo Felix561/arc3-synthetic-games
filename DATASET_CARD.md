@@ -2,13 +2,13 @@
 
 ## Contents
 
-ARC3 Synthetic Games 1.0.0 contains one current version of each SG01–SG30 game:
+ARC3 Synthetic Games 1.0.1 contains one current version of each SG01–SG30 game:
 30 native Python environments with seven fixed levels each, 210 levels in total.
 Observations use the native 64×64 grid and 16-color ARC3 palette. Depending on
 the environment, actions use arrows, Space, clicks and Undo. Exact action masks
 are provided by the native engine.
 
-The release contains native source/metadata, a checksum catalog, a local player,
+The release contains native source/metadata, a checksum catalog, local and browser players,
 30 initial-board previews and six anonymous human-played GIF excerpts. It contains
 no raw human trajectories, historical replacements, generation pipeline,
 learning scripts, private solution witnesses or official ARC3 game sources.
@@ -39,6 +39,12 @@ were replaced with neutral comments, without changing executable mechanics.
 The validated runtime is Python 3.12, arcengine 0.9.3, arc-agi 0.9.8 and
 NumPy 2.5.3. This is a compatibility pin, not a claim of support for every future
 SDK release. Custom environments are used in offline mode without an API key.
+
+The optional browser preview uses Pyodide 314.0.7 (Python 3.14), arcengine 0.9.3
+and Pyodide's NumPy 2.4.6/Pydantic 2.12.5 builds. It is a convenience demo, with
+native-frame parity checks documented in VALIDATION.md. Use the pinned Python
+3.12 runtime above for reproducible SDK experiments. Release 1.0.1 changes no
+native game versions or file hashes from 1.0.0.
 
 Use exact native IDs and release hashes when reporting results. Changes to
 mechanics require a new game version and release inventory; this release remains

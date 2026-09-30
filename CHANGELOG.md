@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-09-30
+
+- Static browser demo for all 30 games, using the original native Python sources.
+- GitHub Pages workflow and one-time hosting instructions.
+- Refreshed README, AI disclosure, third-party notices and release packages.
+- Unchanged native game IDs, versions, source hashes and mechanics.
+
 ## 1.0.0 — 2026-09-28
 
 - Thirty native environments, each with seven fixed levels.

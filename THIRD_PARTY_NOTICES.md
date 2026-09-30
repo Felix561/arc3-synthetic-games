@@ -3,7 +3,9 @@
 This independent collection uses the ARC Prize Foundation's ARC engine and
 [ARC-AGI toolkit](https://github.com/arcprize/ARC-AGI), pinned as `arcengine==0.9.3`
 and `arc-agi==0.9.8`. Both installed distributions identify their license as MIT.
-They are installed dependencies, not vendored source or official game packages.
+The local player installs them as dependencies. The built browser demo bundles
+the unmodified arcengine 0.9.3 wheel, preserving its package metadata and the
+full MIT notice below. No official game packages are distributed.
 Their license declarations are present in package metadata. The tested wheels
 do not include standalone license files, so the upstream MIT notices are
 reproduced below. These notices also acknowledge the engine's palette convention.
@@ -20,6 +22,17 @@ and satisfying those licenses.
 Original native games, player code, catalog prose, previews and anonymous
 gameplay GIF assets in this repository are covered by the project's MIT license.
 The 16-color palette and native game interface follow the ARC3 engine convention.
+
+## Browser runtime
+
+The browser demo loads unmodified [Pyodide 314.0.7](https://github.com/pyodide/pyodide)
+and its NumPy/Pydantic packages from jsDelivr. Pyodide's own code is under
+[MPL-2.0](https://github.com/pyodide/pyodide/blob/314.0.7/LICENSE); its source and
+license remain available at that versioned repository. CPython, NumPy, Pydantic
+and their bundled components retain their upstream licenses. These runtime
+files are served by the CDN, not included in the source repository or Python
+wheel. This project's browser adapter is separate MIT-licensed code; it does
+not modify or relicense Pyodide or its dependencies.
 
 ## ARC engine
 
