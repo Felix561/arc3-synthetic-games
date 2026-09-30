@@ -67,7 +67,7 @@ def build(output, engine_wheel=None):
     html = html.replace(
         '<script src="static/app.js" defer></script>',
         '<script src="browser/client.js" defer></script>\n    <script src="static/app.js" defer></script>',
-    ).replace("Independent collection · v1.0.1", f"Browser demo · v{data['version']}")
+    ).replace("Independent collection · v1.0.2", f"Browser demo · v{data['version']}")
     html = html.replace("Choose a world, try an action, and see what changes.",
                         "Choose a world and play without installing anything. "
                         "The first game downloads a browser runtime; an internet connection is needed.")

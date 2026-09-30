@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 — 2026-09-30
+
+- Streamlined public documentation and release contents.
+- Unchanged native games, runtime dependencies and player behavior.
+
 ## 1.0.1 — 2026-09-30
 
 - Static browser demo for all 30 games, using the original native Python sources.

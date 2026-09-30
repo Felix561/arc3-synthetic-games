@@ -14,9 +14,20 @@ def git(*args):
     return subprocess.check_output(["git", "-C", str(ROOT), *args])
 
 
+PUBLIC_DOCS = {"README.md", "DATASET_CARD.md", "GAMES.md", "VALIDATION.md", "PUBLICATION.md",
+               "THIRD_PARTY_NOTICES.md", "CHANGELOG.md"}
+
+
+def check_public_docs(paths):
+    unexpected = [name for name in paths if name.lower().endswith(".md") and name not in PUBLIC_DOCS]
+    if unexpected:
+        raise ValueError(f"Unexpected Markdown in publication source: {unexpected}")
+
+
 def build(output, preview, packages):
     if git("status", "--porcelain").strip():
         raise ValueError("Commit the reviewed source before creating release packages")
+    check_public_docs(git("ls-files", "-z").decode().split("\0")[:-1])
     output = output.resolve()
     output.mkdir(parents=True, exist_ok=True)
     if any(output.iterdir()):
@@ -44,8 +55,6 @@ def build(output, preview, packages):
     readme = readme[:readme.index("## Play locally")] + readme[readme.index("## Use the native environments"):]
     readme = readme[:readme.index("## Development and hosting")] + readme[readme.index("## License and citation"):]
     files["README.md"] = readme.encode("utf-8")
-    # Validation links to the historical audit, so retain that public document too.
-    files["PUBLICATION_AUDIT.md"] = (ROOT / "PUBLICATION_AUDIT.md").read_bytes()
     write_zip(output / f"{stem}-environments.zip", files)
     manifest = json.loads((preview / "browser/runtime.json").read_text())
     if manifest["version"] != version:

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "arc3-synthetic-games"
-version = "1.0.1"
+version = "1.0.2"
 description = "Thirty independent native ARC3-style games and a local browser player"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
@@ -19,6 +19,9 @@ arc3-synthetic-games = "arc3_synthetic_games.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/arc3_synthetic_games"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["AGENTS.md", "PUBLICATION_AUDIT.md", "**/AGENTS.md", "**/TODO*.md", "**/*feedback*.md"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "environment_files" = "arc3_synthetic_games/data/environment_files"
