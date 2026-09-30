@@ -72,6 +72,8 @@ def build(output, engine_wheel=None):
                         "Choose a world and play without installing anything. "
                         "The first game downloads a browser runtime; an internet connection is needed.")
     html = html.replace("Local play · No accounts · No telemetry", "In-browser play · No accounts · No telemetry")
+    html = html.replace("In-browser play · No accounts · No telemetry",
+                        'In-browser play · No accounts · No telemetry · <a href="THIRD_PARTY_NOTICES.md">Licenses</a>')
     (output / "index.html").write_text(html, encoding="utf-8")
     (output / ".nojekyll").write_bytes(b"")
     (output / "browser").mkdir()

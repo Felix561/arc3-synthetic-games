@@ -28,7 +28,7 @@ def build(output, preview, packages):
     subprocess.run(["git", "-C", str(ROOT), "archive", "--format=zip", "--output",
                     str(output / f"{stem}-source.zip"), "HEAD"], check=True)
     names = {"catalog.json", "LICENSE", "THIRD_PARTY_NOTICES.md", "DATASET_CARD.md", "GAMES.md",
-             "VALIDATION.md", "CITATION.cff", "CHANGELOG.md", "media/overview.png"}
+             "VALIDATION.md", "CITATION.cff", "CHANGELOG.md", "PUBLICATION.md", "media/overview.png"}
     for entry in data["games"]:
         names.add(entry["preview"])
         if entry.get("demo"):
