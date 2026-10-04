@@ -1,0 +1,19 @@
+{
+  "game_id": "fl5273-6a25a72a",
+  "title": "FL5273",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    9,
+    20,
+    20,
+    17,
+    28,
+    17,
+    21,
+    24
+  ],
+  "class_name": "Fl5273"
+}

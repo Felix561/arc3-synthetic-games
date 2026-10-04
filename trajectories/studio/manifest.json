@@ -1,0 +1,1028 @@
+{
+  "actor_type": "online_agent",
+  "agent": {
+    "effective_model_metadata": "inherited_session_not_independently_measured",
+    "requested_effort": "ultra",
+    "requested_model": "gpt-6.1-sol"
+  },
+  "assistance_and_context_notes": [
+    {
+      "assistance_verification_scope": "Actor reports; replay does not independently measure reasoning strategy.",
+      "bundled_solver_or_solution_path_use_reported": false,
+      "game": "sg24",
+      "planning_helpers_visible": [
+        "search"
+      ],
+      "source_collection": "studio"
+    },
+    {
+      "assistance_verification_scope": "Actor reports; replay does not independently measure reasoning strategy.",
+      "bundled_solver_or_solution_path_use_reported": false,
+      "game": "sg27",
+      "planning_helpers_visible": [
+        "explore",
+        "path_to"
+      ],
+      "source_collection": "studio"
+    },
+    {
+      "assistance_verification_scope": "Actor reports; replay does not independently measure reasoning strategy.",
+      "bundled_solver_or_solution_path_use_reported": false,
+      "game": "sg29",
+      "planning_helpers_visible": [
+        "explore",
+        "path_to",
+        "min_switches"
+      ],
+      "source_collection": "studio"
+    },
+    {
+      "additional_assistance": "Normal rules clarified by a separate read-only reviewer: reflection, occupancy, parity, click coordinates, and undo. No solution path or reviewer gameplay.",
+      "assistance_verification_scope": "Actor reports; replay does not independently measure reasoning strategy.",
+      "bundled_solver_or_solution_path_use_reported": false,
+      "game": "sg18",
+      "source_collection": "studio"
+    }
+  ],
+  "canonical_path": "trajectories/studio/trajectories.jsonl.gz",
+  "canonical_sha256": "17de119f3ad45a496e063e4bd57f998a32108cb5ba3e011ccc497de71f8823c6",
+  "dataset_version": "arc3-source-informed-agent-20261002-v1",
+  "games": [
+    {
+      "environment_content_sha256": "66c5084f6df17b8ea9446c116528d5525bb48861c4fe50c2f07c8304ef667864",
+      "environment_files_sha256": {
+        "metadata.json": "5bdd1958fc4a0c4d7dbf371990fcd170c8c68d650be41580ec323ae478b84709",
+        "sg01.py": "ab8dcf75ad997f78630ec66de05bb5fb48fff65c3e58eb250a8a03a86cc67a29"
+      },
+      "environment_path": "environment_files/sg01/4ac0337b8857411e",
+      "game": "sg01",
+      "levels": 7,
+      "native_game_id": "sg01-4ac0337b8857411e",
+      "native_recording_game_id": "sg01-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 362,
+        "native_policy_actions": 355,
+        "native_responses": 356,
+        "unknown_native_timestamps": 356
+      },
+      "recording_path": "trajectories/studio/recordings/sg01.recording.jsonl.gz",
+      "recording_sha256": "7bdd9e6c688e9cc31235ad1ef39c3f239d015526630cb132194e83ce3d05e7d3",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "4ac0337b8857411e"
+    },
+    {
+      "environment_content_sha256": "381d58cbba5b49728c54446151d49dc53dba6c67b3359536fea7fb7a8b19a3f4",
+      "environment_files_sha256": {
+        "metadata.json": "aad17c4adf3ba7941a58041362a7b38dde1dd312c25d739f8fa8cd27b5687a40",
+        "sg02.py": "46a58d7b3a325bd312509a3fabba6eba2d8eead167eb0bf13e3e7036f8776682"
+      },
+      "environment_path": "environment_files/sg02/a882427e821f494d",
+      "game": "sg02",
+      "levels": 7,
+      "native_game_id": "sg02-a882427e821f494d",
+      "native_recording_game_id": "sg02-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 90,
+        "native_policy_actions": 83,
+        "native_responses": 84,
+        "unknown_native_timestamps": 84
+      },
+      "recording_path": "trajectories/studio/recordings/sg02.recording.jsonl.gz",
+      "recording_sha256": "3af56ae3f1a9c783d3dd9f15e0497cbfbab4f85fcd6f0c16cd47e582b58043c0",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "a882427e821f494d"
+    },
+    {
+      "environment_content_sha256": "5df14581912fa95ca7e79f4fe2e40d6e56edaa6b474104069f11e1382a7cffed",
+      "environment_files_sha256": {
+        "metadata.json": "1b927c7b2007fb4b290292526af9c5c0ac73660b41a8d51f4314272b5658e9e4",
+        "sg03.py": "2cac54cc87c60ff842e2929df6ce1f54b8bd68006bd8677a424d248b3a8148dc"
+      },
+      "environment_path": "environment_files/sg03/94fea60caf164173",
+      "game": "sg03",
+      "levels": 7,
+      "native_game_id": "sg03-94fea60caf164173",
+      "native_recording_game_id": "sg03-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 67,
+        "native_policy_actions": 19,
+        "native_responses": 20,
+        "unknown_native_timestamps": 20
+      },
+      "recording_path": "trajectories/studio/recordings/sg03.recording.jsonl.gz",
+      "recording_sha256": "b92719abb9150a37104f58e585ec07e9e81a9a23f5070bbd2f5e44bdc49c8d5b",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "94fea60caf164173"
+    },
+    {
+      "environment_content_sha256": "1a42f745925b521a7c894c715e4552b2b5190d54de832f62ed8feb89b68f773b",
+      "environment_files_sha256": {
+        "metadata.json": "1fc2b5d73216d4f06c2f8fe0bcb1e862630cf71a7d6fa42dd6a0b0b2536ebeb5",
+        "sg04.py": "db797e69706b9bddadf2ddf9882a1bec47c0b7714d214e992a00eaf75d50d998"
+      },
+      "environment_path": "environment_files/sg04/e137c80d4e4d4034",
+      "game": "sg04",
+      "levels": 7,
+      "native_game_id": "sg04-e137c80d4e4d4034",
+      "native_recording_game_id": "sg04-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 47,
+        "native_policy_actions": 40,
+        "native_responses": 41,
+        "unknown_native_timestamps": 41
+      },
+      "recording_path": "trajectories/studio/recordings/sg04.recording.jsonl.gz",
+      "recording_sha256": "a85dc27505cb4cb8f6e90054e347d5c8212bcfc3e8c5ae25ae4fe687e5b3f078",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "e137c80d4e4d4034"
+    },
+    {
+      "environment_content_sha256": "d601051cb31e5846a707000599275065bea8e5453e482d35bbece596c44de420",
+      "environment_files_sha256": {
+        "metadata.json": "59b906dab2f46f8d9c7c63a9fef9086021d9167f597a1a3abc284de192b60950",
+        "sg05.py": "35917d57afb39d20bfa8d918d712351147cba493b03f913363fe190e1488f9c8"
+      },
+      "environment_path": "environment_files/sg05/60ba78a9efe1498a",
+      "game": "sg05",
+      "levels": 7,
+      "native_game_id": "sg05-60ba78a9efe1498a",
+      "native_recording_game_id": "sg05-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 53,
+        "native_policy_actions": 23,
+        "native_responses": 24,
+        "unknown_native_timestamps": 24
+      },
+      "recording_path": "trajectories/studio/recordings/sg05.recording.jsonl.gz",
+      "recording_sha256": "25d84dc3ac87ffe72d0172700ebec5e59dc09fc8487cf7c53361c3564ee902fb",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "60ba78a9efe1498a"
+    },
+    {
+      "environment_content_sha256": "d56023c5dc39aa79a6e3f769a08f66f8231364734b2f9b2a7626de6bbfb271a5",
+      "environment_files_sha256": {
+        "metadata.json": "0eb9c25470f8691204f3f087faaf7daff6ab6ae0ddad16544d0461620e845ea7",
+        "sg06.py": "739ce27b4ee118222d1b13c7f1ddbf0a7da264b33c7ff2652b843dd5721b3606"
+      },
+      "environment_path": "environment_files/sg06/28c20e5036544f64",
+      "game": "sg06",
+      "levels": 7,
+      "native_game_id": "sg06-28c20e5036544f64",
+      "native_recording_game_id": "sg06-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 46,
+        "native_policy_actions": 39,
+        "native_responses": 40,
+        "unknown_native_timestamps": 40
+      },
+      "recording_path": "trajectories/studio/recordings/sg06.recording.jsonl.gz",
+      "recording_sha256": "83bc932cf4e22574774eb1d3a1d37b20205d649711d0248ff20dc3c882a8df8b",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "28c20e5036544f64"
+    },
+    {
+      "environment_content_sha256": "974467fb4df6e0cc080c9a676a8b95d4208875b0c79fab02ef344ab2dc0714ab",
+      "environment_files_sha256": {
+        "metadata.json": "0e4ace7bb9e5a17b71400fb07c74c6f5bf50c0d46fc62849e5d201755d2261b1",
+        "sg07.py": "1fa81f344810d037dbed07c2bf5f7ee36be91707d6f9d3291e22431986ce9cb9"
+      },
+      "environment_path": "environment_files/sg07/2ddb082daf9c4b50",
+      "game": "sg07",
+      "levels": 7,
+      "native_game_id": "sg07-2ddb082daf9c4b50",
+      "native_recording_game_id": "sg07-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 75,
+        "native_policy_actions": 68,
+        "native_responses": 69,
+        "unknown_native_timestamps": 69
+      },
+      "recording_path": "trajectories/studio/recordings/sg07.recording.jsonl.gz",
+      "recording_sha256": "1bf45e3ea55f82ef3d8aafa892227af96e8b28ecc89e06ec25fe12f56e494102",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "2ddb082daf9c4b50"
+    },
+    {
+      "environment_content_sha256": "342427ebc033d7dce358073563ff9bdf25532cadd5dbb109269ea0e7ffd14041",
+      "environment_files_sha256": {
+        "metadata.json": "70909463b6ae430303ad71e4c08727e747f20a6bdadc64cd8b51b22c2013710c",
+        "sg08.py": "b05060bde43be10f70e923ba74b2c0ec80a1ca0ea96569b4e92865b8412c555d"
+      },
+      "environment_path": "environment_files/sg08/4a1496ac8a7c47e3",
+      "game": "sg08",
+      "levels": 7,
+      "native_game_id": "sg08-4a1496ac8a7c47e3",
+      "native_recording_game_id": "sg08-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 70,
+        "native_policy_actions": 63,
+        "native_responses": 64,
+        "unknown_native_timestamps": 64
+      },
+      "recording_path": "trajectories/studio/recordings/sg08.recording.jsonl.gz",
+      "recording_sha256": "e4b4533ed50269bc12fced85996db2fdb277d5066462a4b6c5ea2409a8708a8d",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "4a1496ac8a7c47e3"
+    },
+    {
+      "environment_content_sha256": "6d0ad626ae02cef9c74debe8bb12c13ae238ce34140df271e69b6a88e6ba1969",
+      "environment_files_sha256": {
+        "metadata.json": "6a249256257861e5609eb79418fa682611e5dc075d697b901a10b22222a0bf63",
+        "sg09.py": "ec953b497bb3d405fd926c47e1478de0e51ad99fde3a95dc4f3496d421cbd188"
+      },
+      "environment_path": "environment_files/sg09/bf0d447a5c554cdc",
+      "game": "sg09",
+      "levels": 7,
+      "native_game_id": "sg09-bf0d447a5c554cdc",
+      "native_recording_game_id": "sg09-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 196,
+        "native_policy_actions": 189,
+        "native_responses": 190,
+        "unknown_native_timestamps": 190
+      },
+      "recording_path": "trajectories/studio/recordings/sg09.recording.jsonl.gz",
+      "recording_sha256": "a1b708e337dfe36fa03177d8245b8cd4fa4901cc00943b0dfe2bdadcdd795504",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "bf0d447a5c554cdc"
+    },
+    {
+      "environment_content_sha256": "002b629efe19842eef5af02aca4da5a31fa5da2e2dff6edd76436c83996bed60",
+      "environment_files_sha256": {
+        "metadata.json": "222edace34833bd6228e7958c896800a68f2674f3e9f279e25391172b47d94c7",
+        "sg10.py": "fd3b24d64ffdcc646ab22caf4bfb57c6c8f6a445c5f6cd74575e064a7bd95625"
+      },
+      "environment_path": "environment_files/sg10/7b32ef91e45147d7",
+      "game": "sg10",
+      "levels": 7,
+      "native_game_id": "sg10-7b32ef91e45147d7",
+      "native_recording_game_id": "sg10-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 67,
+        "native_policy_actions": 60,
+        "native_responses": 61,
+        "unknown_native_timestamps": 61
+      },
+      "recording_path": "trajectories/studio/recordings/sg10.recording.jsonl.gz",
+      "recording_sha256": "d8393b848641dea6e8e2b296807e36063de5126a0b706828730da8299d684733",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "7b32ef91e45147d7"
+    },
+    {
+      "environment_content_sha256": "21b7400cf62b67b3123c0dfc862de35feece47015478a111895d294e1e38ec93",
+      "environment_files_sha256": {
+        "metadata.json": "956f5b6c9fc0ff4ae23e7429839cb651d752e60ce2248b1884a55a94370caa36",
+        "sg11.py": "824e1f63150ecb1c5bb2436fd982a20ae7a614da4a2e36dda946da05070d5c01"
+      },
+      "environment_path": "environment_files/sg11/106d370a94b94f84",
+      "game": "sg11",
+      "levels": 7,
+      "native_game_id": "sg11-106d370a94b94f84",
+      "native_recording_game_id": "sg11-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 74,
+        "native_policy_actions": 67,
+        "native_responses": 68,
+        "unknown_native_timestamps": 68
+      },
+      "recording_path": "trajectories/studio/recordings/sg11.recording.jsonl.gz",
+      "recording_sha256": "039d4387e48625d5e8e71d62a2b38dd4d346535ce63548a002b283967617882c",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "106d370a94b94f84"
+    },
+    {
+      "environment_content_sha256": "8d45dc10f40729a8210c53f53d0ebb080c942084583741774932b0746e810741",
+      "environment_files_sha256": {
+        "metadata.json": "56dd6592dbc5a5d56c009a567ecc06cca9427a5ec413ae4960295e6a2f183a83",
+        "sg12.py": "4488e1480c00e3f498e192ddd6c03997351cb3533d4c464b97d88324b0111d96"
+      },
+      "environment_path": "environment_files/sg12/d5101b0e3113467e",
+      "game": "sg12",
+      "levels": 7,
+      "native_game_id": "sg12-d5101b0e3113467e",
+      "native_recording_game_id": "sg12-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 88,
+        "native_policy_actions": 81,
+        "native_responses": 82,
+        "unknown_native_timestamps": 82
+      },
+      "recording_path": "trajectories/studio/recordings/sg12.recording.jsonl.gz",
+      "recording_sha256": "3ffd54a8d98f59e47df4cbaf73197e0e2d0535fb96e2cf665e338926c836d836",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "d5101b0e3113467e"
+    },
+    {
+      "environment_content_sha256": "487efe5fd3b10474c2fdaafbe278381b3e86cccd1d0274be3667c67d45be1260",
+      "environment_files_sha256": {
+        "metadata.json": "088b592839585437a49f5662ae5fd81c2d44e70d874318bb3172ac9749ff9493",
+        "sg13.py": "541c9ce80e9a5fa02588b7298ced32b84368aca578299909f009d87af0fda001"
+      },
+      "environment_path": "environment_files/sg13/3c8c8fdc6c6649c2",
+      "game": "sg13",
+      "levels": 7,
+      "native_game_id": "sg13-3c8c8fdc6c6649c2",
+      "native_recording_game_id": "sg13-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 187,
+        "native_policy_actions": 120,
+        "native_responses": 121,
+        "unknown_native_timestamps": 121
+      },
+      "recording_path": "trajectories/studio/recordings/sg13.recording.jsonl.gz",
+      "recording_sha256": "ed09675cfb2ba858ffbc2e6eaf78fb80df1e28bc528bc9f7ec66bb6ccbeedf36",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "3c8c8fdc6c6649c2"
+    },
+    {
+      "environment_content_sha256": "0a7d81db2845074a8a7873249c05b065aee8e16852fdf86dac6e248f8c5b51a5",
+      "environment_files_sha256": {
+        "metadata.json": "f5718295121ce3fc6a1fbd88ce453615dc95351f78336b78acaa81ee5f3dcca4",
+        "sg14.py": "df7ca4a13e779cfeb193882315a1ea71eaaa6454f9b2174b673bf32c8fbfcf4d"
+      },
+      "environment_path": "environment_files/sg14/c58da490e7e443bd",
+      "game": "sg14",
+      "levels": 7,
+      "native_game_id": "sg14-c58da490e7e443bd",
+      "native_recording_game_id": "sg14-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 161,
+        "native_policy_actions": 154,
+        "native_responses": 155,
+        "unknown_native_timestamps": 155
+      },
+      "recording_path": "trajectories/studio/recordings/sg14.recording.jsonl.gz",
+      "recording_sha256": "39bb81515f8eae9e00c7af999b2767b6a97f2c9505c1e440ec36a650a9babdf7",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "c58da490e7e443bd"
+    },
+    {
+      "environment_content_sha256": "3c8c241b4555c2a0665cbfbd585f7d7003aaf2615f3e31ac5a72317ac44f54f8",
+      "environment_files_sha256": {
+        "metadata.json": "61986aa82dd1f2ba50b7fdc21eb99b953c7f006e0b36c4fd90e80c0e39723c62",
+        "sg15.py": "b0cb3de526ee5424f7d09c3f5613812d2dd09e49615013096d0db9b139ad4c80"
+      },
+      "environment_path": "environment_files/sg15/b1f511b9708042eb",
+      "game": "sg15",
+      "levels": 7,
+      "native_game_id": "sg15-b1f511b9708042eb",
+      "native_recording_game_id": "sg15-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 36,
+        "native_policy_actions": 29,
+        "native_responses": 30,
+        "unknown_native_timestamps": 30
+      },
+      "recording_path": "trajectories/studio/recordings/sg15.recording.jsonl.gz",
+      "recording_sha256": "a1e58eb03804bc3e60ebbab26054603d3b987cea28feba60ad38467adf69ee9a",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "b1f511b9708042eb"
+    },
+    {
+      "environment_content_sha256": "62701eb694597bf15c104f1e690a7e5628b2982ff44089711d1ce5c24741a629",
+      "environment_files_sha256": {
+        "metadata.json": "84bd4e5bf411761e4880c859ebcb9887d08322ec27d883439561eec67c0046ec",
+        "sg16.py": "04430b31504d2b36d6beacebfb929e68c6f709638dcf896ca452f5507bc9252c"
+      },
+      "environment_path": "environment_files/sg16/a9e5cdf05c8e4859",
+      "game": "sg16",
+      "levels": 7,
+      "native_game_id": "sg16-a9e5cdf05c8e4859",
+      "native_recording_game_id": "sg16-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 53,
+        "native_policy_actions": 23,
+        "native_responses": 24,
+        "unknown_native_timestamps": 24
+      },
+      "recording_path": "trajectories/studio/recordings/sg16.recording.jsonl.gz",
+      "recording_sha256": "935495032a77af7fe2dd48ab25030f4255a7400182b429b705ef00f35a31ae13",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "a9e5cdf05c8e4859"
+    },
+    {
+      "environment_content_sha256": "d5ceb5260c30024fb04ab848a2564023bfaeb789ff8b5c3b8af2c2b240da53ce",
+      "environment_files_sha256": {
+        "metadata.json": "dab3c111383ee7f049bb48e41aab6a53a8afb19f0d79f12e30f7c973a9d31dce",
+        "sg17.py": "4de9fba51261ddc8292b5225da2686e56f17104b9326690d3be4422029187f34"
+      },
+      "environment_path": "environment_files/sg17/fb94f8992a9540b1",
+      "game": "sg17",
+      "levels": 7,
+      "native_game_id": "sg17-fb94f8992a9540b1",
+      "native_recording_game_id": "sg17-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 107,
+        "native_policy_actions": 100,
+        "native_responses": 101,
+        "unknown_native_timestamps": 101
+      },
+      "recording_path": "trajectories/studio/recordings/sg17.recording.jsonl.gz",
+      "recording_sha256": "63d7330ba3f4be3ced526fc180ec4110faf440e46d1ea0ff9dbd3d102da732bf",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "fb94f8992a9540b1"
+    },
+    {
+      "environment_content_sha256": "fcf1980a7e2e8e6c0df90eeaf8186875f30ffe95c2060ae2c0c6a174a8518e04",
+      "environment_files_sha256": {
+        "metadata.json": "6efe8be554a99cedf29e90895b7eb9c7dd946bc893c82396e13e021c6bd4e8e0",
+        "sg18.py": "dc44b30824497f2b19b521c421ab92a3b8bf80e503bdb5129215f1d849b69327"
+      },
+      "environment_path": "environment_files/sg18/af8d11e58ac94cd7",
+      "game": "sg18",
+      "levels": 7,
+      "native_game_id": "sg18-af8d11e58ac94cd7",
+      "native_recording_game_id": "sg18-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 113,
+        "native_policy_actions": 106,
+        "native_responses": 107,
+        "unknown_native_timestamps": 107
+      },
+      "recording_path": "trajectories/studio/recordings/sg18.recording.jsonl.gz",
+      "recording_sha256": "e29d214518f69f816a76f26a364c3639955612838c3461aeb79590a7fa7fd2f9",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "af8d11e58ac94cd7"
+    },
+    {
+      "environment_content_sha256": "1130c221ae2fd9f2b164b1c03fb5e7858e9c08dd6a704b13947a4799a9bc7ba0",
+      "environment_files_sha256": {
+        "metadata.json": "4067555dfcd2b9bc06d4b422a7e2cf7c7b6cac4888045baa250051e01529ca7b",
+        "sg19.py": "766fa80528b63570be810f5a4d142a5ab983952fbbe34f57beb093ff0ad8f777"
+      },
+      "environment_path": "environment_files/sg19/25a14e907e1c463d",
+      "game": "sg19",
+      "levels": 7,
+      "native_game_id": "sg19-25a14e907e1c463d",
+      "native_recording_game_id": "sg19-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 51,
+        "native_policy_actions": 44,
+        "native_responses": 45,
+        "unknown_native_timestamps": 45
+      },
+      "recording_path": "trajectories/studio/recordings/sg19.recording.jsonl.gz",
+      "recording_sha256": "7ec45bcd5946104f1b9ec71a32f157d1539724ae5096f458e136c790849e6cc5",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "25a14e907e1c463d"
+    },
+    {
+      "environment_content_sha256": "db8885a124d7de92ede2d0974b6b55044c00758488601e602e9c27d7fe87b0cd",
+      "environment_files_sha256": {
+        "metadata.json": "26899f8f8da3c04e9e2399dd38da7c93c021203883db1cf0f6247d148f1863d3",
+        "sg20.py": "e51e6350813a2de1b5801081ce55da733b2bd976e62ccae8cc46c6cbe5fc3fd1"
+      },
+      "environment_path": "environment_files/sg20/a3b73a0fda9e4006",
+      "game": "sg20",
+      "levels": 7,
+      "native_game_id": "sg20-a3b73a0fda9e4006",
+      "native_recording_game_id": "sg20-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 59,
+        "native_policy_actions": 52,
+        "native_responses": 53,
+        "unknown_native_timestamps": 53
+      },
+      "recording_path": "trajectories/studio/recordings/sg20.recording.jsonl.gz",
+      "recording_sha256": "765c4b586e9ee4c639aecb2ef266f377736dc7b3a6ef4d22a1be287743daf7c5",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "a3b73a0fda9e4006"
+    },
+    {
+      "environment_content_sha256": "5e1321e82e2beef7c836f34b200932e76728c06ede59bf0a2c1fa4fc7ef56d17",
+      "environment_files_sha256": {
+        "metadata.json": "d9cc71cef883daa706bbfe4df5f8ed6de705bfc3a8151ec697f1bda117dc39b5",
+        "sg21.py": "f93a09e7105a7ec032f90c891cb6c55d2496c740069be1b59a29fcbdf8a73c8c"
+      },
+      "environment_path": "environment_files/sg21/809cfa39d3fa4757",
+      "game": "sg21",
+      "levels": 7,
+      "native_game_id": "sg21-809cfa39d3fa4757",
+      "native_recording_game_id": "sg21-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 42,
+        "native_policy_actions": 35,
+        "native_responses": 36,
+        "unknown_native_timestamps": 36
+      },
+      "recording_path": "trajectories/studio/recordings/sg21.recording.jsonl.gz",
+      "recording_sha256": "2c5bada253293ed65ad16f899a65c823470c8f3a0ad464ef73cdd98a84e9b61e",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "809cfa39d3fa4757"
+    },
+    {
+      "environment_content_sha256": "6c9df5e69413422a362f439308f4fc722f055fa0e708227ceb25a2cb2f135c52",
+      "environment_files_sha256": {
+        "metadata.json": "20276bc50efb08be32530844ac6c4b9a893a669e04f656bd309c6b35f2688c58",
+        "sg22.py": "79ef1cab3b7ba0e6ba04e2be7ff756b427e6e9bc1d9ebcac20e6e6ae9f8b9cb2"
+      },
+      "environment_path": "environment_files/sg22/a911173626904645",
+      "game": "sg22",
+      "levels": 7,
+      "native_game_id": "sg22-a911173626904645",
+      "native_recording_game_id": "sg22-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 60,
+        "native_policy_actions": 53,
+        "native_responses": 54,
+        "unknown_native_timestamps": 54
+      },
+      "recording_path": "trajectories/studio/recordings/sg22.recording.jsonl.gz",
+      "recording_sha256": "b40d66fdde2af1890ef840100e15ce46eab25f2e6e42ee38518acaf888b2c7b1",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "a911173626904645"
+    },
+    {
+      "environment_content_sha256": "0c969c8ef2ffe510801b0f2d059961c5dca175bb9c4578881e050d7d8c2df8b2",
+      "environment_files_sha256": {
+        "metadata.json": "e75e2919a40413881dc65e464b7e06627528342bf8e018516bc7993c92f880ec",
+        "sg23.py": "f88cf614aa289cefc2a4e3c421c529f9cd54ffc956531252d84a21c58f9fbca1"
+      },
+      "environment_path": "environment_files/sg23/bb0b94dd75ad4169",
+      "game": "sg23",
+      "levels": 7,
+      "native_game_id": "sg23-bb0b94dd75ad4169",
+      "native_recording_game_id": "sg23-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 38,
+        "native_policy_actions": 31,
+        "native_responses": 32,
+        "unknown_native_timestamps": 32
+      },
+      "recording_path": "trajectories/studio/recordings/sg23.recording.jsonl.gz",
+      "recording_sha256": "c599e283243a01d019a18acf97f6d2c04cbf72e3b96282536eeae732489bc9f7",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "bb0b94dd75ad4169"
+    },
+    {
+      "environment_content_sha256": "0c03da9d85580767f3becfedc58842488ff3c75c2a459239004493b5497f0a39",
+      "environment_files_sha256": {
+        "metadata.json": "b138b26f1cfaf8fcd55b0690b157ecf896f79858f2d0248fdfad04056aea44d6",
+        "sg24.py": "c97be0de216baf714e36548e2205f95ab570d6ccf62ccbbe84dab5f4c844d49b"
+      },
+      "environment_path": "environment_files/sg24/c5553d90bc44437d",
+      "game": "sg24",
+      "levels": 7,
+      "native_game_id": "sg24-c5553d90bc44437d",
+      "native_recording_game_id": "sg24-borrowed-span",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 206,
+        "native_policy_actions": 199,
+        "native_responses": 200,
+        "unknown_native_timestamps": 200
+      },
+      "recording_path": "trajectories/studio/recordings/sg24.recording.jsonl.gz",
+      "recording_sha256": "f499e89344fb8b4f1bc3cf432a35d450a9bd5adf247a4d8fc3ce491325869ae6",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "c5553d90bc44437d"
+    },
+    {
+      "environment_content_sha256": "775cefab8752c671a6070f2e287b40ad5c8c84a2d991578acf6d65215637f3ce",
+      "environment_files_sha256": {
+        "metadata.json": "e347d00fc489fa0643b9c6ec90dd95312e1b3768bf601523056a31b0ce741b3d",
+        "sg25.py": "5603b3f31196a0318e50df87c5f56e13a260ff4d4029624fd468b61e5379db1d"
+      },
+      "environment_path": "environment_files/sg25/1ec41211c870430e",
+      "game": "sg25",
+      "levels": 7,
+      "native_game_id": "sg25-1ec41211c870430e",
+      "native_recording_game_id": "sg25-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 167,
+        "native_policy_actions": 53,
+        "native_responses": 54,
+        "unknown_native_timestamps": 54
+      },
+      "recording_path": "trajectories/studio/recordings/sg25.recording.jsonl.gz",
+      "recording_sha256": "f7cb5963dea8981751fc8708c5ba931de73297e7d0cea8cf5cc34b61d7c3dc67",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "1ec41211c870430e"
+    },
+    {
+      "environment_content_sha256": "4bcc0854a4cf1f7dd7443c9df72ccebfcb1e455f4c46f6bc54587039a4971184",
+      "environment_files_sha256": {
+        "metadata.json": "a69c31b55e2b406b6d215de5bfa5ce46ced369746c415e55f2a871944633a059",
+        "sg26.py": "daf596bd4dbf7d4ce82da19cd03bf3c4d319efa1e78894a00eab07d54f41ddb5"
+      },
+      "environment_path": "environment_files/sg26/552d5d2ce2b44fe2",
+      "game": "sg26",
+      "levels": 7,
+      "native_game_id": "sg26-552d5d2ce2b44fe2",
+      "native_recording_game_id": "sg26-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 65,
+        "native_policy_actions": 29,
+        "native_responses": 30,
+        "unknown_native_timestamps": 30
+      },
+      "recording_path": "trajectories/studio/recordings/sg26.recording.jsonl.gz",
+      "recording_sha256": "298625c207c66fb196ab84e318f39377b647c84a8bc37120df90eeb3252e7473",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "552d5d2ce2b44fe2"
+    },
+    {
+      "environment_content_sha256": "17274f62462d3cfd2bd697400f8aa4bd6a5761140200e0e2a5604c9829dde693",
+      "environment_files_sha256": {
+        "metadata.json": "ee2bc0d6fb742f5dd00edbfa4092c9031501ffa88a1244db1e465c960264a445",
+        "sg27.py": "a36837ec304b2d97d0a3dd3c6de199e85f3353b84b84275bba08615754d0e8c2"
+      },
+      "environment_path": "environment_files/sg27/1b5a0ff3fa874c96",
+      "game": "sg27",
+      "levels": 7,
+      "native_game_id": "sg27-1b5a0ff3fa874c96",
+      "native_recording_game_id": "sg27-v2",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 108,
+        "native_policy_actions": 84,
+        "native_responses": 85,
+        "unknown_native_timestamps": 85
+      },
+      "recording_path": "trajectories/studio/recordings/sg27.recording.jsonl.gz",
+      "recording_sha256": "3aaaf07c813eb2aa0412cf83b4b6d8149ac3a38ac889d6e88b576f19e11451d0",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "1b5a0ff3fa874c96"
+    },
+    {
+      "environment_content_sha256": "dd269841eec8f1fc608a0131ba78c9d95e3b2d80402d9729c555aeed9e7a7ef8",
+      "environment_files_sha256": {
+        "metadata.json": "97d9d97438a29fc6594c8b60e7b4a8a8326a32205ce1a87903b5125913cb75f5",
+        "sg28.py": "bd44e3e66ef1391934e2f07c4bb39ff38a4912c4f2ab726764108425aabac9d5"
+      },
+      "environment_path": "environment_files/sg28/c27ff0a54fbd4413",
+      "game": "sg28",
+      "levels": 7,
+      "native_game_id": "sg28-c27ff0a54fbd4413",
+      "native_recording_game_id": "sg28-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 62,
+        "native_policy_actions": 55,
+        "native_responses": 56,
+        "unknown_native_timestamps": 56
+      },
+      "recording_path": "trajectories/studio/recordings/sg28.recording.jsonl.gz",
+      "recording_sha256": "07cd24af76d8a59dbb0e73e349ed5e76ff78450dd15f8bed35fe07d8685ed6e0",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "c27ff0a54fbd4413"
+    },
+    {
+      "environment_content_sha256": "3b37a91a48098075fee6450656c3f65accd85d2665007299f3a703043e8d140e",
+      "environment_files_sha256": {
+        "metadata.json": "aaf388adf4948869b5f36333dd857dbc28c59f594756bc5610c7e65901f3d4bf",
+        "sg29.py": "5126ff18b2f27f89464155b130b5adbe62afebd534d3ed09017bdd8b44cfc216"
+      },
+      "environment_path": "environment_files/sg29/2ece60f659c04e37",
+      "game": "sg29",
+      "levels": 7,
+      "native_game_id": "sg29-2ece60f659c04e37",
+      "native_recording_game_id": "sg29-v2",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 131,
+        "native_policy_actions": 66,
+        "native_responses": 67,
+        "unknown_native_timestamps": 67
+      },
+      "recording_path": "trajectories/studio/recordings/sg29.recording.jsonl.gz",
+      "recording_sha256": "c8b4813a3f5bdc6ae9b083925ecf3f4fb6330dc59aea9543387fea7e7864ac06",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "2ece60f659c04e37"
+    },
+    {
+      "environment_content_sha256": "3a58ec148344ef8532e31384b0d57426014b85553e7696bdf269484c903a6f86",
+      "environment_files_sha256": {
+        "metadata.json": "ee4676c15280dac166ebc72fffc7ada7e3391f4aef051fe21e75146777a1ccf6",
+        "sg30.py": "fb746cce3ae367ab6989fb834ec0ee53e5db0cb498b8108d3230f253f243e093"
+      },
+      "environment_path": "environment_files/sg30/8570298dc9744ad3",
+      "game": "sg30",
+      "levels": 7,
+      "native_game_id": "sg30-8570298dc9744ad3",
+      "native_recording_game_id": "sg30-v1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 31,
+        "native_policy_actions": 24,
+        "native_responses": 25,
+        "unknown_native_timestamps": 25
+      },
+      "recording_path": "trajectories/studio/recordings/sg30.recording.jsonl.gz",
+      "recording_sha256": "0be4e894e8b07840df06653d2acb0bb95f73fa3f8fcae5c35b496938df835881",
+      "seed": 0,
+      "source_collection": "studio",
+      "source_provenance": {
+        "license": "MIT",
+        "repository": "https://github.com/Felix561/arc3-synthetic-games"
+      },
+      "version": "8570298dc9744ad3"
+    }
+  ],
+  "human_trajectories_included": false,
+  "input_identity": {
+    "checksums_sha256": "edc18c0a0258ef27c3fe37f4c054abd97a0e5e61d15ddaecd428a9f99ed866ed",
+    "dataset_version": "arc3-meta-informed-agent-20261002-v1",
+    "manifest_sha256": "357b70b9a4c2320eb1649f2e6370b36b75a40677c24f338ffd7d879fb74cdeac",
+    "projection": "Immutable verified input; no native environment modifications or new gameplay."
+  },
+  "interpretation": "Privileged source-informed direct-agent gameplay. Actors reported no bundled solver/search/solution-path use; replay proves recorded execution, not their mental process.",
+  "license": "MIT",
+  "license_path": "LICENSE",
+  "schema_version": "arc3-public-agent-trajectories/1",
+  "source_collection": "studio",
+  "source_informed": true,
+  "statistics": {
+    "actions_per_segment": {
+      "max": 86,
+      "mean": 11.161905,
+      "median": 6.0,
+      "min": 1
+    },
+    "attempts": 210,
+    "clicks": 736,
+    "current_level_resets": 0,
+    "first_attempt_solved_levels": 210,
+    "game_wins": 30,
+    "games": 30,
+    "initialisation_resets": 30,
+    "levels": 210,
+    "native_game_over_responses": 0,
+    "native_palette_frames": 2912,
+    "native_responses": 2374,
+    "policy_actions": 2344,
+    "segments": 210,
+    "short_segments": 95,
+    "solved_segments": 210,
+    "success_rate": 1.0,
+    "terminal_reasons": {
+      "level_solved": 180,
+      "win": 30
+    },
+    "terminal_segments": 210,
+    "truncated_segments": 0,
+    "undo_actions": 7,
+    "unknown_native_timestamps": 2374,
+    "unsolved_segments": 0
+  }
+}

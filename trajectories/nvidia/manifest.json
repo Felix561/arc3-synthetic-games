@@ -1,0 +1,908 @@
+{
+  "actor_type": "online_agent",
+  "agent": {
+    "effective_model_metadata": "inherited_session_not_independently_measured",
+    "requested_effort": "ultra",
+    "requested_model": "gpt-6.1-sol"
+  },
+  "assistance_and_context_notes": [
+    {
+      "assistance_verification_scope": "Actor reports; replay does not independently measure reasoning strategy.",
+      "bundled_solver_or_solution_path_use_reported": false,
+      "game": "ll4821",
+      "planning_helpers_visible": [
+        "_bfs_first_action",
+        "_distance_to_goals",
+        "_candidate_fire_cells",
+        "_best_safe_move"
+      ],
+      "source_collection": "nvidia"
+    },
+    {
+      "assistance_verification_scope": "Actor reports; replay does not independently measure reasoning strategy.",
+      "bundled_solver_or_solution_path_use_reported": false,
+      "design_guidance_visible": "Design metadata included switch-count guidance.",
+      "game": "ps1842",
+      "source_collection": "nvidia"
+    }
+  ],
+  "canonical_path": "trajectories/nvidia/trajectories.jsonl.gz",
+  "canonical_sha256": "72d0bc2eed666ec5b092ff7d1faa264022301eca42e2da751b2097066358a3ca",
+  "dataset_version": "arc3-source-informed-agent-20261002-v1",
+  "games": [
+    {
+      "environment_content_sha256": "050d0961aa1e439f6d67074e443bcdff5b4f44b99757d2f287c2e5ff788396de",
+      "environment_files_sha256": {
+        "al7306.py": "e0b92dac792f34b0ccb645cd76ef317f971c089caead3149c7e900faac8daad0",
+        "metadata.json": "79874254e068b463aa88a78ed7f9834d705411fca6d9e5ca5daae46982857d18"
+      },
+      "environment_path": "third_party/nvidia/environment_files/al7306/000afcc7",
+      "game": "al7306",
+      "levels": 8,
+      "native_game_id": "al7306-000afcc7",
+      "native_recording_game_id": "al7306-000afcc7",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 182,
+        "native_policy_actions": 174,
+        "native_responses": 175,
+        "unknown_native_timestamps": 175
+      },
+      "recording_path": "trajectories/nvidia/recordings/al7306.recording.jsonl.gz",
+      "recording_sha256": "3308178c2221ac74bf164685b28c62e5148f52ee66babcfc3b44aa8516f70f5e",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "000afcc7"
+    },
+    {
+      "environment_content_sha256": "800f2d0238e0cdbc5072f53d92aa118ed5591d901dafec4814b0f084c3e102c8",
+      "environment_files_sha256": {
+        "cc2048.py": "811915f8a3faf016cef26a2d9770cdfa3fe506070dbc56625b46016bb470c918",
+        "metadata.json": "9e38c5186608ed7b4787a0cfd579cbea6145e7e83fff904dbcf8be7b974eb8f8"
+      },
+      "environment_path": "third_party/nvidia/environment_files/cc2048/f080c4af",
+      "game": "cc2048",
+      "levels": 8,
+      "native_game_id": "cc2048-f080c4af",
+      "native_recording_game_id": "cc2048-f080c4af",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 166,
+        "native_policy_actions": 158,
+        "native_responses": 159,
+        "unknown_native_timestamps": 159
+      },
+      "recording_path": "trajectories/nvidia/recordings/cc2048.recording.jsonl.gz",
+      "recording_sha256": "a9f6a826079b6ad34423cb7c8011ad4ce17c5ad38ccd40c1ec8d98b5ffba06f8",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "f080c4af"
+    },
+    {
+      "environment_content_sha256": "243233b51a719afa1d185f6ebebfe69234f61cf16ca8148c521963328788b361",
+      "environment_files_sha256": {
+        "cg1842.py": "6c7e8b5ceda9ff8ea86c9302b2e110cdf35c47aadcb58f07cb515e1768cf7b7d",
+        "metadata.json": "82cef2df89baa560b90dee5404dda0337008853bfc67274f47bd54c9c1fcb9bf"
+      },
+      "environment_path": "third_party/nvidia/environment_files/cg1842/e7600c9f",
+      "game": "cg1842",
+      "levels": 8,
+      "native_game_id": "cg1842-e7600c9f",
+      "native_recording_game_id": "cg1842-e7600c9f",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 185,
+        "native_policy_actions": 177,
+        "native_responses": 178,
+        "unknown_native_timestamps": 178
+      },
+      "recording_path": "trajectories/nvidia/recordings/cg1842.recording.jsonl.gz",
+      "recording_sha256": "681b43c6a4e25b201f50190e876e779563de664d952c07f2acf5d6ffc378e10d",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "e7600c9f"
+    },
+    {
+      "environment_content_sha256": "801df78ba3073d12999e9e89d3fd3ac81275a9ac7fee701fd0d741bc9e3a54a2",
+      "environment_files_sha256": {
+        "cl0426.py": "dfea05d94590e23992e443ea52b153dbcac391d410ee77297ed0c7b039fa6d39",
+        "metadata.json": "31495c0c945348da060ec4ca6e35948787a4a588d0b51649ce100f80944d8812"
+      },
+      "environment_path": "third_party/nvidia/environment_files/cl0426/c5dfa3ac",
+      "game": "cl0426",
+      "levels": 8,
+      "native_game_id": "cl0426-c5dfa3ac",
+      "native_recording_game_id": "cl0426-c5dfa3ac",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 82,
+        "native_policy_actions": 74,
+        "native_responses": 75,
+        "unknown_native_timestamps": 75
+      },
+      "recording_path": "trajectories/nvidia/recordings/cl0426.recording.jsonl.gz",
+      "recording_sha256": "8c1001db39def7cdbc1976271b6d03ab67aa0fa0beaf95611b01a4b99c003bbd",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "c5dfa3ac"
+    },
+    {
+      "environment_content_sha256": "b333c19173d10e2e17901e137b492959c4307b61b222ba36d8bf17a1d4858dfb",
+      "environment_files_sha256": {
+        "df4821.py": "bae9b0b416ec33672c516363ac26e36da01f2969c34f5c5489736473fd17d457",
+        "metadata.json": "35ada9b8d448b39a54f283164a72c42504f28d720256e6717b6b0810494e54f7"
+      },
+      "environment_path": "third_party/nvidia/environment_files/df4821/818c2c5e",
+      "game": "df4821",
+      "levels": 8,
+      "native_game_id": "df4821-818c2c5e",
+      "native_recording_game_id": "df4821-818c2c5e",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 190,
+        "native_policy_actions": 182,
+        "native_responses": 183,
+        "unknown_native_timestamps": 183
+      },
+      "recording_path": "trajectories/nvidia/recordings/df4821.recording.jsonl.gz",
+      "recording_sha256": "cab02d7b455f91acbb997953b168422491f9d96bf3ddf8ab8689dc28e37943ae",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "818c2c5e"
+    },
+    {
+      "environment_content_sha256": "71733b4f95afe62df111759ba8cb382f4409d52767b108570452256f348829c3",
+      "environment_files_sha256": {
+        "dl4827.py": "1dca1c8f640b990a1c0a932a165cecb0bbdf8c4ec1a5b4b28a214603b2ed841f",
+        "metadata.json": "7288bb026a15013dd18d457333da756c7ecc9cf15b59570239bd08b2e7086573"
+      },
+      "environment_path": "third_party/nvidia/environment_files/dl4827/b8768101",
+      "game": "dl4827",
+      "levels": 8,
+      "native_game_id": "dl4827-b8768101",
+      "native_recording_game_id": "dl4827-b8768101",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 234,
+        "native_policy_actions": 226,
+        "native_responses": 227,
+        "unknown_native_timestamps": 227
+      },
+      "recording_path": "trajectories/nvidia/recordings/dl4827.recording.jsonl.gz",
+      "recording_sha256": "34eccb1f884fb1ec75941a38f3ae40c157b7d34dc68ac45fcb45f1a685812dbc",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "b8768101"
+    },
+    {
+      "environment_content_sha256": "5f841bc31fcfcf482377be414350d898325370c85bb0f1b759e3234b672bf087",
+      "environment_files_sha256": {
+        "fl5273.py": "d895aec731d606ba04bf8c0e2298d8c755245e90cc22139bb4b4dfd9cb3ba504",
+        "metadata.json": "09b0e050cf089a56d778252a8338ac19fe4f40d104466a2f24542a91c5d743f8"
+      },
+      "environment_path": "third_party/nvidia/environment_files/fl5273/6a25a72a",
+      "game": "fl5273",
+      "levels": 8,
+      "native_game_id": "fl5273-6a25a72a",
+      "native_recording_game_id": "fl5273-6a25a72a",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 208,
+        "native_policy_actions": 200,
+        "native_responses": 201,
+        "unknown_native_timestamps": 201
+      },
+      "recording_path": "trajectories/nvidia/recordings/fl5273.recording.jsonl.gz",
+      "recording_sha256": "8af9c2482369b47b45c5ed9ec92e948cf3922757600692abad75b666bebb35a6",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "6a25a72a"
+    },
+    {
+      "environment_content_sha256": "221aef8d153596ee1bf539155615754197d3d42333af192d20e6741b9d58d6e7",
+      "environment_files_sha256": {
+        "fw4821.py": "a3bb35dd45ed1e714a2ac07296d5db7511eeeb069ddf42bb6603031bfffe4e50",
+        "metadata.json": "3eafc882d6560c58c5bb999efc8383caff21658023031eac416e08003f7d801f"
+      },
+      "environment_path": "third_party/nvidia/environment_files/fw4821/98cb6b43",
+      "game": "fw4821",
+      "levels": 8,
+      "native_game_id": "fw4821-98cb6b43",
+      "native_recording_game_id": "fw4821-98cb6b43",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 87,
+        "native_policy_actions": 79,
+        "native_responses": 80,
+        "unknown_native_timestamps": 80
+      },
+      "recording_path": "trajectories/nvidia/recordings/fw4821.recording.jsonl.gz",
+      "recording_sha256": "26028132cc6be1a33394a18a79ede622c4cec35f35315ae1a57e4c54bad9c044",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "98cb6b43"
+    },
+    {
+      "environment_content_sha256": "71b3e6208c01e63f252b0cd073c15787e2783036971952f8ec3f0f60ab14383a",
+      "environment_files_sha256": {
+        "gc4721.py": "42dfa30544c4ba9f44b71330194aac1530ac0def4ffe0f04350f358dc4e91b3c",
+        "metadata.json": "704ffa5be1b7a7cc9e0ba4066891faef71bc432a99b434fa083972128a2652f2"
+      },
+      "environment_path": "third_party/nvidia/environment_files/gc4721/78997285",
+      "game": "gc4721",
+      "levels": 8,
+      "native_game_id": "gc4721-78997285",
+      "native_recording_game_id": "gc4721-78997285",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 127,
+        "native_policy_actions": 119,
+        "native_responses": 120,
+        "unknown_native_timestamps": 120
+      },
+      "recording_path": "trajectories/nvidia/recordings/gc4721.recording.jsonl.gz",
+      "recording_sha256": "6cc5e2fe029bbb7ba87ac4f9964d4d618d46fc2fc965651ad61c9c1305d9aaab",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "78997285"
+    },
+    {
+      "environment_content_sha256": "ebeae20cb1080e32823ca3cdd434e58ab95e5d6b4443cc468d339c6327414c00",
+      "environment_files_sha256": {
+        "hr2048.py": "6001d8d3a5ec6791aca7919ad6d5ce13094b0a56521a3a2504485fde7bb73d9d",
+        "metadata.json": "5faf9d3b8ceaf387ca6e25842aae955648d7418fd45fed68f8c9b9ca1a208796"
+      },
+      "environment_path": "third_party/nvidia/environment_files/hr2048/b96419ed",
+      "game": "hr2048",
+      "levels": 8,
+      "native_game_id": "hr2048-b96419ed",
+      "native_recording_game_id": "hr2048-b96419ed",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 132,
+        "native_policy_actions": 124,
+        "native_responses": 125,
+        "unknown_native_timestamps": 125
+      },
+      "recording_path": "trajectories/nvidia/recordings/hr2048.recording.jsonl.gz",
+      "recording_sha256": "4f6fa638c9737b796f866d9da5d6c18f5991660f1f97dfce3b3a9d2d22d31f5e",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "b96419ed"
+    },
+    {
+      "environment_content_sha256": "e58c5149274b6ca8354e4f7b39fc46e6b31d364f27011094c02912838096e180",
+      "environment_files_sha256": {
+        "ll4821.py": "3ab10e6ee0c057337b7f4564d50048e10372fdfddee2991d48841d74f67fa94a",
+        "metadata.json": "7d189ca4476ecded619fe2a5d991a24032f4b949a7e740b19995afd089603e36"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ll4821/9da7c9ef",
+      "game": "ll4821",
+      "levels": 8,
+      "native_game_id": "ll4821-9da7c9ef",
+      "native_recording_game_id": "ll4821-9da7c9ef",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 126,
+        "native_policy_actions": 118,
+        "native_responses": 119,
+        "unknown_native_timestamps": 119
+      },
+      "recording_path": "trajectories/nvidia/recordings/ll4821.recording.jsonl.gz",
+      "recording_sha256": "67ef6fb04704ac80f6998b7222d8d6dd4d2cfcd38d603c922588395f34d3fc7a",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "9da7c9ef"
+    },
+    {
+      "environment_content_sha256": "22d870178ee8ea35e42c95ff8fe8f659caab391e2e53d9f0296afee6e0c3a317",
+      "environment_files_sha256": {
+        "ma4173.py": "3e58f6857750a423466935e6db6e2e62359b006fc6466db46e2482e8cffab681",
+        "metadata.json": "e959dd66923d369795f3d17ae2afa9893a39f9535d0fbf2ca8db61fb9a980a0c"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ma4173/177dbde4",
+      "game": "ma4173",
+      "levels": 8,
+      "native_game_id": "ma4173-177dbde4",
+      "native_recording_game_id": "ma4173-177dbde4",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 119,
+        "native_policy_actions": 111,
+        "native_responses": 112,
+        "unknown_native_timestamps": 112
+      },
+      "recording_path": "trajectories/nvidia/recordings/ma4173.recording.jsonl.gz",
+      "recording_sha256": "10775d01603a00245ddbb03269969f15bbcc5f1afe8879c9287b9b38edfe3c21",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "177dbde4"
+    },
+    {
+      "environment_content_sha256": "6ad03036f151426ef0a80f4ebbb7feb620936e6045e50f94b1a087934c4ec195",
+      "environment_files_sha256": {
+        "mb2741.py": "4945ce7a556fc4e2c70c2cdc68c9cbf8cccde46e209df45015720c66949efe46",
+        "metadata.json": "119d6d847c77c744b193754dd4cab3fd351c3a859d7a47fca740fb664a46dbc3"
+      },
+      "environment_path": "third_party/nvidia/environment_files/mb2741/094cefb3",
+      "game": "mb2741",
+      "levels": 8,
+      "native_game_id": "mb2741-094cefb3",
+      "native_recording_game_id": "mb2741-094cefb3",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 120,
+        "native_policy_actions": 112,
+        "native_responses": 113,
+        "unknown_native_timestamps": 113
+      },
+      "recording_path": "trajectories/nvidia/recordings/mb2741.recording.jsonl.gz",
+      "recording_sha256": "084694400e5ec83b505c879f1990b81d56b608ed401794d0bac84a175cd936d7",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "094cefb3"
+    },
+    {
+      "environment_content_sha256": "579be5cc0ee3a8585ff4c9cc21f7d1d1a79332f4f9948f1e253fdec5d5bff1f8",
+      "environment_files_sha256": {
+        "metadata.json": "d470fb78d3adecfdc3f0510c4af4671fc9e8ca85c34a85e9e64a619791ea34b8",
+        "ml2048.py": "1657caf5c4caa721675425e7b0ea181af174bfff387d99f07466ac5d33ac1e64"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ml2048/a6677a07",
+      "game": "ml2048",
+      "levels": 8,
+      "native_game_id": "ml2048-a6677a07",
+      "native_recording_game_id": "ml2048-a6677a07",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 136,
+        "native_policy_actions": 128,
+        "native_responses": 129,
+        "unknown_native_timestamps": 129
+      },
+      "recording_path": "trajectories/nvidia/recordings/ml2048.recording.jsonl.gz",
+      "recording_sha256": "e3eeb4e08e2c28891cc670ea7007d5c1fab8fcc7f10520294f919a3581112799",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "a6677a07"
+    },
+    {
+      "environment_content_sha256": "64028ff9791f989b8bf9612ef361a7c8669be8fc3dc9d1fc0103f2fec05f20f9",
+      "environment_files_sha256": {
+        "metadata.json": "4b18060cd531262b36a047917f70107ff5499105ae518d99f6d244be620a37e9",
+        "mt4926.py": "746f8ec4b754f63c57e2d3cc7f1d0dc5183e8db10827fa5f2bcdd3050f2389d9"
+      },
+      "environment_path": "third_party/nvidia/environment_files/mt4926/66d0222a",
+      "game": "mt4926",
+      "levels": 8,
+      "native_game_id": "mt4926-66d0222a",
+      "native_recording_game_id": "mt4926-66d0222a",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 101,
+        "native_policy_actions": 93,
+        "native_responses": 94,
+        "unknown_native_timestamps": 94
+      },
+      "recording_path": "trajectories/nvidia/recordings/mt4926.recording.jsonl.gz",
+      "recording_sha256": "461d36a95d78dec1e8f52375581e27ae6ee734943505c2fad011ce735a96d696",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "66d0222a"
+    },
+    {
+      "environment_content_sha256": "bcbd7cf80655909833506d771563eb1f378f527c197c4861a1b708cd246bf207",
+      "environment_files_sha256": {
+        "metadata.json": "de94efa50afa32458900e2bfc235faa10391b57597f16ccb6cf82be1e194741c",
+        "ne4172.py": "dd473929b8ce20186d699fcf53590d4fef1480c2c972743f1dbeafadda5267cf"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ne4172/fe2b50a3",
+      "game": "ne4172",
+      "levels": 8,
+      "native_game_id": "ne4172-fe2b50a3",
+      "native_recording_game_id": "ne4172-fe2b50a3",
+      "native_statistics": {
+        "current_level_resets": 1,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 382,
+        "native_policy_actions": 373,
+        "native_responses": 375,
+        "unknown_native_timestamps": 375
+      },
+      "recording_path": "trajectories/nvidia/recordings/ne4172.recording.jsonl.gz",
+      "recording_sha256": "b70184c10b0d39a48686d6ecebd66f79ea80fe391ee3af972d71aea0f77f9b75",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "fe2b50a3"
+    },
+    {
+      "environment_content_sha256": "fa897a57a9c9aab68aad29589bf6b3caae328cf87a22d27839892d1ab9121d8c",
+      "environment_files_sha256": {
+        "metadata.json": "d25256262be4d4fed2db674923670cf9d3aa5289a3e47eaff0e503d24ba8a70b",
+        "os1842.py": "39faca9a755bb9d23fbc323846ebc3582527fe69e2d954a9dd378c5eaa63f6e5"
+      },
+      "environment_path": "third_party/nvidia/environment_files/os1842/ca39ae90",
+      "game": "os1842",
+      "levels": 8,
+      "native_game_id": "os1842-ca39ae90",
+      "native_recording_game_id": "os1842-ca39ae90",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 69,
+        "native_policy_actions": 61,
+        "native_responses": 62,
+        "unknown_native_timestamps": 62
+      },
+      "recording_path": "trajectories/nvidia/recordings/os1842.recording.jsonl.gz",
+      "recording_sha256": "dc9e84453f71e79343aebf16195c287d12af16a0c33420fc1255d0e6a24639c5",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "ca39ae90"
+    },
+    {
+      "environment_content_sha256": "f20021de6ee1c2acfaddb877be7dff08d7bc0d68cfa04e90873f81726643772d",
+      "environment_files_sha256": {
+        "metadata.json": "5531f16871dd75fa522cf9bbeb462e2e15167817c32778898ff5efae41d077ab",
+        "ps1842.py": "96b09066249ee5933600cff3de9dd05fec0832045a8250ab26459ea43b6b8451"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ps1842/539e99d4",
+      "game": "ps1842",
+      "levels": 8,
+      "native_game_id": "ps1842-539e99d4",
+      "native_recording_game_id": "ps1842-539e99d4",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 71,
+        "native_policy_actions": 63,
+        "native_responses": 64,
+        "unknown_native_timestamps": 64
+      },
+      "recording_path": "trajectories/nvidia/recordings/ps1842.recording.jsonl.gz",
+      "recording_sha256": "96704cdb873fc3b21c811aae8a36a87920e3bb990cab0b6886003aede53e8d96",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "539e99d4"
+    },
+    {
+      "environment_content_sha256": "cc816321ad5381a7e6116d61744c313c353141b46847d1a2ab9d5bdb7c09fad5",
+      "environment_files_sha256": {
+        "metadata.json": "e3190ebcab832957857c1575b29744c9c7c94fd3edcf25084e9df54c45a5c4ff",
+        "ps7413.py": "cdeaf9a0bb03d82330ff94453e9e6b83d3d0117ae8e26d2c122f0fc37fd44e3c"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ps7413/3a14ed61",
+      "game": "ps7413",
+      "levels": 8,
+      "native_game_id": "ps7413-3a14ed61",
+      "native_recording_game_id": "ps7413-3a14ed61",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 353,
+        "native_policy_actions": 345,
+        "native_responses": 346,
+        "unknown_native_timestamps": 346
+      },
+      "recording_path": "trajectories/nvidia/recordings/ps7413.recording.jsonl.gz",
+      "recording_sha256": "e912db1cba56b369482136fa14d81fade401cef8615a79d12a36a581d0764fc4",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "3a14ed61"
+    },
+    {
+      "environment_content_sha256": "1580e67d1803c18aedc8a08ef9c1bb4e4a95d430657c3dfa6581379d0b7ec97f",
+      "environment_files_sha256": {
+        "metadata.json": "8fe5ff4792005d3711a28a19a3393d469034b741af4ead939da9cc4e6c6197a2",
+        "rl2048.py": "02ac1d8dc99d4018246626d710ba6a2ba14340a33fd28f6f9a4904c725b8e492"
+      },
+      "environment_path": "third_party/nvidia/environment_files/rl2048/8deeab8c",
+      "game": "rl2048",
+      "levels": 8,
+      "native_game_id": "rl2048-8deeab8c",
+      "native_recording_game_id": "rl2048-8deeab8c",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 138,
+        "native_policy_actions": 130,
+        "native_responses": 131,
+        "unknown_native_timestamps": 131
+      },
+      "recording_path": "trajectories/nvidia/recordings/rl2048.recording.jsonl.gz",
+      "recording_sha256": "2fb9164f4d29ba4defec40a1b43287c3fdc9bb5960b7df1ddb56e41b3cae5fee",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "8deeab8c"
+    },
+    {
+      "environment_content_sha256": "30728e141f89b6bec0f62b2df02ceea4f067a41511ab865b7342982c9931a6f4",
+      "environment_files_sha256": {
+        "metadata.json": "20a1a68fa2f5c508e1c8f0234f942ae4ac8898a841e078a7c047fd31ae89be48",
+        "rs0427.py": "c4854a2079b92e10cc84b23905513fbaeaa73506e53752a2fdf97295b451bcbc"
+      },
+      "environment_path": "third_party/nvidia/environment_files/rs0427/2c8b97d9",
+      "game": "rs0427",
+      "levels": 8,
+      "native_game_id": "rs0427-2c8b97d9",
+      "native_recording_game_id": "rs0427-2c8b97d9",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 141,
+        "native_policy_actions": 133,
+        "native_responses": 134,
+        "unknown_native_timestamps": 134
+      },
+      "recording_path": "trajectories/nvidia/recordings/rs0427.recording.jsonl.gz",
+      "recording_sha256": "f4cc081fc27295fec031b223fe1643fbf58fd6c85c67d29d6deb4cd30cafb137",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "2c8b97d9"
+    },
+    {
+      "environment_content_sha256": "882d07b6b605191d98f2df93c2ab1994eb0f8986595d6fbc219e42756f3586b1",
+      "environment_files_sha256": {
+        "metadata.json": "1a1480bc459b8b9594775e68cad28f1521583e1860bc61aa1651c2b28774ed7a",
+        "sf2048.py": "0bc5d0d96d11b40e991c2dbe0aaf45bf12465085ac9e7b32c050cc913ee6b5be"
+      },
+      "environment_path": "third_party/nvidia/environment_files/sf2048/f3d334c1",
+      "game": "sf2048",
+      "levels": 8,
+      "native_game_id": "sf2048-f3d334c1",
+      "native_recording_game_id": "sf2048-f3d334c1",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 110,
+        "native_policy_actions": 102,
+        "native_responses": 103,
+        "unknown_native_timestamps": 103
+      },
+      "recording_path": "trajectories/nvidia/recordings/sf2048.recording.jsonl.gz",
+      "recording_sha256": "5e6e5dfdaf1469957059db3d662c049a4630f4e4bb40a78ecca9e71e53ba072f",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "f3d334c1"
+    },
+    {
+      "environment_content_sha256": "49629a9a7bccb64d14cf6ed74c4dc712713ea3289b05fae62d3f45eba981158c",
+      "environment_files_sha256": {
+        "metadata.json": "0c3ecc37c04fb9b7bc81a952de0d56c6f2c39bd9e6a9ad8fc9640a2a3867dc36",
+        "sl4821.py": "e8e9b19d64f586b89d5b7aff74de6637a9c131dc4c6356477c3a7c751ab58a6f"
+      },
+      "environment_path": "third_party/nvidia/environment_files/sl4821/3b4e1b22",
+      "game": "sl4821",
+      "levels": 8,
+      "native_game_id": "sl4821-3b4e1b22",
+      "native_recording_game_id": "sl4821-3b4e1b22",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 60,
+        "native_policy_actions": 52,
+        "native_responses": 53,
+        "unknown_native_timestamps": 53
+      },
+      "recording_path": "trajectories/nvidia/recordings/sl4821.recording.jsonl.gz",
+      "recording_sha256": "25190a0ddaf18c2a7da85003b08b1319b9428bec78e2cb863a02fd91c0008cb4",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "3b4e1b22"
+    },
+    {
+      "environment_content_sha256": "222dcb94fd5d5c2b680cc412ad0e373c7cc4564638d0e106f3095d572c6364fb",
+      "environment_files_sha256": {
+        "metadata.json": "38d47eadd8822f0ffdadd3f60f534a510e27eaf6d1dce680aba9413e3a6d8881",
+        "ss6041.py": "3dc369100e8537c67bb96bb727bc9d3e36e109aad003d75c79b8a1671c270495"
+      },
+      "environment_path": "third_party/nvidia/environment_files/ss6041/1abeadb2",
+      "game": "ss6041",
+      "levels": 8,
+      "native_game_id": "ss6041-1abeadb2",
+      "native_recording_game_id": "ss6041-1abeadb2",
+      "native_statistics": {
+        "current_level_resets": 0,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 153,
+        "native_policy_actions": 145,
+        "native_responses": 146,
+        "unknown_native_timestamps": 146
+      },
+      "recording_path": "trajectories/nvidia/recordings/ss6041.recording.jsonl.gz",
+      "recording_sha256": "d2be62efe506fdac9f3d065108c19cd44d1146d1dfb806a6573452eaa93f32e7",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "1abeadb2"
+    },
+    {
+      "environment_content_sha256": "22160da7a7e25bd8fb9158074992c4bd228bd6b0a5d2a702b989603bfbc89ed1",
+      "environment_files_sha256": {
+        "metadata.json": "5861a9cc4f64b273527017bc11d1f3c54f3608124e8f3a146f9c44c2d3929751",
+        "td4826.py": "69843aa4d787c654f55900ee6d1641c401bb9db41bb18851ab9ce9843fcb7f8d"
+      },
+      "environment_path": "third_party/nvidia/environment_files/td4826/33bf03a4",
+      "game": "td4826",
+      "levels": 8,
+      "native_game_id": "td4826-33bf03a4",
+      "native_recording_game_id": "td4826-33bf03a4",
+      "native_statistics": {
+        "current_level_resets": 4,
+        "game_wins": 1,
+        "initialisation_resets": 1,
+        "native_game_over_responses": 0,
+        "native_palette_frames": 200,
+        "native_policy_actions": 188,
+        "native_responses": 193,
+        "unknown_native_timestamps": 193
+      },
+      "recording_path": "trajectories/nvidia/recordings/td4826.recording.jsonl.gz",
+      "recording_sha256": "d4fa68aea64616bbd28740c012f1a8946687c801ba6c9a293c7e9dc9b73134f4",
+      "seed": 0,
+      "source_collection": "nvidia",
+      "source_provenance": {
+        "commit": "bffef22f3e50fb7dcd6b2dc20005e6986e1479e9",
+        "license": "Apache-2.0",
+        "original_environments": "https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3",
+        "repository": "https://github.com/NVIDIA/dream-team"
+      },
+      "version": "33bf03a4"
+    }
+  ],
+  "human_trajectories_included": false,
+  "input_identity": {
+    "checksums_sha256": "edc18c0a0258ef27c3fe37f4c054abd97a0e5e61d15ddaecd428a9f99ed866ed",
+    "dataset_version": "arc3-meta-informed-agent-20261002-v1",
+    "manifest_sha256": "357b70b9a4c2320eb1649f2e6370b36b75a40677c24f338ffd7d879fb74cdeac",
+    "projection": "Immutable verified input; no native environment modifications or new gameplay."
+  },
+  "interpretation": "Privileged source-informed direct-agent gameplay. Actors reported no bundled solver/search/solution-path use; replay proves recorded execution, not their mental process.",
+  "license": "Apache-2.0",
+  "license_path": "third_party/nvidia/LICENSE",
+  "runtime_support_content_sha256": "ec71ace239695d182ddd5c559636ee8cfbf01b3d6075a3771718fa8af96cb8b0",
+  "runtime_support_path": "third_party/nvidia/runtime_support",
+  "schema_version": "arc3-public-agent-trajectories/1",
+  "source_collection": "nvidia",
+  "source_informed": true,
+  "statistics": {
+    "actions_per_segment": {
+      "max": 78,
+      "mean": 17.887805,
+      "median": 15,
+      "min": 2
+    },
+    "attempts": 205,
+    "clicks": 1809,
+    "current_level_resets": 5,
+    "first_attempt_solved_levels": 197,
+    "game_wins": 25,
+    "games": 25,
+    "initialisation_resets": 25,
+    "levels": 200,
+    "native_game_over_responses": 0,
+    "native_palette_frames": 3872,
+    "native_responses": 3697,
+    "policy_actions": 3667,
+    "segments": 205,
+    "short_segments": 8,
+    "solved_segments": 200,
+    "success_rate": 0.975609756097561,
+    "terminal_reasons": {
+      "level_solved": 175,
+      "native_level_reset": 5,
+      "win": 25
+    },
+    "terminal_segments": 200,
+    "truncated_segments": 5,
+    "undo_actions": 0,
+    "unknown_native_timestamps": 3697,
+    "unsolved_segments": 5
+  }
+}

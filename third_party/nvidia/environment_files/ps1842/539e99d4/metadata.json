@@ -1,0 +1,19 @@
+{
+  "game_id": "ps1842-539e99d4",
+  "title": "PS1842",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    2,
+    6,
+    2,
+    6,
+    13,
+    14,
+    13,
+    7
+  ],
+  "class_name": "Ps1842"
+}

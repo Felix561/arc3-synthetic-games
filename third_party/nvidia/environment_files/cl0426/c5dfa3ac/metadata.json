@@ -1,0 +1,19 @@
+{
+  "game_id": "cl0426-c5dfa3ac",
+  "title": "CL0426",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    8,
+    10,
+    6,
+    8,
+    10,
+    10,
+    10,
+    12
+  ],
+  "class_name": "Cl0426"
+}

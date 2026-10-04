@@ -1,8 +1,8 @@
 # Validation
 
-The collection contains 30 games, 210 levels and 60 native source/metadata files.
+The Studio environment collection contains 30 games, 210 levels and 60 native source/metadata files.
 Catalog IDs and SHA-256 hashes bind each game to its exact native version.
-Release 1.0.3 preserves all native game files from 1.0.0.
+Release 1.1.0 preserves all native game files from 1.0.0.
 
 ## Native runtime and player
 
@@ -32,7 +32,34 @@ browser storage. GitHub and the runtime CDN receive ordinary asset requests.
 Release packages are checked for native file hashes, licenses, document links,
 credentials, personal paths and unwanted internal files. The 31 PNGs and six
 human-played GIFs contain only game pixels, without identifying media metadata.
-The releases include no raw trajectories, generation pipeline or solution files.
+The Studio player/browser/environments releases remain separate from the agent
+trajectory dataset. Neither includes private human trajectories, the generation
+pipeline or private solution witnesses. The repository additionally contains
+NVIDIA's unchanged native packages with their original public source, including
+upstream helper definitions, under their retained licenses.
+
+## Source-informed agent recordings
+
+The October 2 frozen collection contains 55 completed game runs: 30 Studio games
+(210 levels) and 25 NVIDIA games (200 levels). All 55 saved runs passed independent
+fresh replay to native WIN using Python 3.12.10, arcengine 0.9.3, arc-agi 0.9.8,
+NumPy 2.5.3 and the pinned native packages/support. Replays compared every native
+response and animation frame, not just final completion flags.
+
+Independent content checks validated recorded action order, palette pixels,
+click coordinates, the 355 measured old-level completion targets, resets and
+segment accounting. The private collection has 6,011 policy actions, 6,071
+responses and 6,784 native frames. Its 415 canonical segments include 410 solved
+and five reset-interrupted attempts; all 103 short segments are retained.
+Recorded timestamps remain null. Current-level resets are separate from policy
+actions; native GAME_OVER was not observed in these recordings.
+
+The public preparation preserves native recording bytes and gameplay content
+while replacing private IDs/provenance with a public allowlist. Public inventories
+bind the new compressed canonical files and retained exact native files.
+The verification summary reports the saved replay evidence; preparing the public
+package does not constitute new source-blind evaluation or human approval.
+Public tools can verify checksums and record structure without executing games.
 
 ## Reproduce
 
@@ -46,5 +73,6 @@ isolated development/CI environment. Browser checks are in `tools/check_browser.
 and `.github/workflows/checks.yml`. Native reference generation also executes
 game code and belongs in an isolated environment.
 
-These checks do not prove complete solvability of every level or establish
-calibrated human-efficiency baselines.
+Recorded paths establish solvability for these exact packages and seed, while
+human discoverability, source-blind performance, optimality, all-seed solvability
+and calibrated human-efficiency baselines remain unverified.

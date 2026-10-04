@@ -7,7 +7,7 @@ from arc3_synthetic_games.dataset import catalog, dataset_root, find_game, verif
 def test_exact_native_inventory_and_assets():
     assert verify_dataset() == {
         "verified": True,
-        "version": "1.0.3",
+        "version": "1.1.0",
         "games": 30,
         "levels": 210,
         "native_files": 60,

@@ -1,0 +1,557 @@
+{
+  "canonical_pixels_actions_boundaries_checked": true,
+  "canonical_sha256": "17de119f3ad45a496e063e4bd57f998a32108cb5ba3e011ccc497de71f8823c6",
+  "dataset_version": "arc3-source-informed-agent-20261002-v1",
+  "games": [
+    {
+      "environment_content_sha256": "66c5084f6df17b8ea9446c116528d5525bb48861c4fe50c2f07c8304ef667864",
+      "game": "sg01",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg01-4ac0337b8857411e",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 356,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "692dbf50928d891b9e6b94eee25eba9fc54175c56f8aeea273a89c3c70c3383a"
+    },
+    {
+      "environment_content_sha256": "381d58cbba5b49728c54446151d49dc53dba6c67b3359536fea7fb7a8b19a3f4",
+      "game": "sg02",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg02-a882427e821f494d",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 84,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "2a6d2febd83d6b10de54e32c545f35fad20fe62e0821a06d572ef722f2b25a36"
+    },
+    {
+      "environment_content_sha256": "5df14581912fa95ca7e79f4fe2e40d6e56edaa6b474104069f11e1382a7cffed",
+      "game": "sg03",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg03-94fea60caf164173",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 20,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "6686df740a26fa4b62da7012cef40b4f078ac7de33ad95920941462918564245"
+    },
+    {
+      "environment_content_sha256": "1a42f745925b521a7c894c715e4552b2b5190d54de832f62ed8feb89b68f773b",
+      "game": "sg04",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg04-e137c80d4e4d4034",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 41,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "70988faf75f19d6f418aba42dc8948ae52a0db129d0b691bf39d09bb3cb37fae"
+    },
+    {
+      "environment_content_sha256": "d601051cb31e5846a707000599275065bea8e5453e482d35bbece596c44de420",
+      "game": "sg05",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg05-60ba78a9efe1498a",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 24,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "3339b22da7f3e2479593a7512904678c4cd8c6d500aed5e5c98359564b1970f6"
+    },
+    {
+      "environment_content_sha256": "d56023c5dc39aa79a6e3f769a08f66f8231364734b2f9b2a7626de6bbfb271a5",
+      "game": "sg06",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg06-28c20e5036544f64",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 40,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "859432da09c4525b3d11f5f09d60c0deebdd7920ad28a32bd5cd263e9ee9fde0"
+    },
+    {
+      "environment_content_sha256": "974467fb4df6e0cc080c9a676a8b95d4208875b0c79fab02ef344ab2dc0714ab",
+      "game": "sg07",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg07-2ddb082daf9c4b50",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 69,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "3aa630d4215c64a91565c82ef1685b2a17a48957a7facd8aabffe0a127c01e50"
+    },
+    {
+      "environment_content_sha256": "342427ebc033d7dce358073563ff9bdf25532cadd5dbb109269ea0e7ffd14041",
+      "game": "sg08",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg08-4a1496ac8a7c47e3",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 64,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "c7a5d4c4e8a0b10d2e58c8e5d7da74aabf257f7107abbcf9034c9faadc38b06c"
+    },
+    {
+      "environment_content_sha256": "6d0ad626ae02cef9c74debe8bb12c13ae238ce34140df271e69b6a88e6ba1969",
+      "game": "sg09",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg09-bf0d447a5c554cdc",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 190,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "f2f4a4ebc0a929e32fd0606dd9e9a67a39330680d250494de5bc6bc688ebf0b6"
+    },
+    {
+      "environment_content_sha256": "002b629efe19842eef5af02aca4da5a31fa5da2e2dff6edd76436c83996bed60",
+      "game": "sg10",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg10-7b32ef91e45147d7",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 61,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "969a26aa01a1c250f4aeba1c7a024e97e339059d9bed3d447dd04e4e22baf772"
+    },
+    {
+      "environment_content_sha256": "21b7400cf62b67b3123c0dfc862de35feece47015478a111895d294e1e38ec93",
+      "game": "sg11",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg11-106d370a94b94f84",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 68,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "d86fbe60560335ab2c252cb4f7755d892cf5b7f7f1e7a818b09c30a079bb044d"
+    },
+    {
+      "environment_content_sha256": "8d45dc10f40729a8210c53f53d0ebb080c942084583741774932b0746e810741",
+      "game": "sg12",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg12-d5101b0e3113467e",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 82,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "aea509f1d86b4b9501ff9c265e6cdd16ed7e7cb82562d6612e93cfc1262376bc"
+    },
+    {
+      "environment_content_sha256": "487efe5fd3b10474c2fdaafbe278381b3e86cccd1d0274be3667c67d45be1260",
+      "game": "sg13",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg13-3c8c8fdc6c6649c2",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 121,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "0a3842866bb3cf35ceb52037dfbe57a3b54f78c856de7063176b0a2c98af82d5"
+    },
+    {
+      "environment_content_sha256": "0a7d81db2845074a8a7873249c05b065aee8e16852fdf86dac6e248f8c5b51a5",
+      "game": "sg14",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg14-c58da490e7e443bd",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 155,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "247739b0255e8fd00cce620b9e679d73fe961a4cb0517e50bdf0ce2651e2f3a8"
+    },
+    {
+      "environment_content_sha256": "3c8c241b4555c2a0665cbfbd585f7d7003aaf2615f3e31ac5a72317ac44f54f8",
+      "game": "sg15",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg15-b1f511b9708042eb",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 30,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "8ad1fe74e0bb626e4594166b7e154946f2241c0f8e040af1c6f4adb6e64b4609"
+    },
+    {
+      "environment_content_sha256": "62701eb694597bf15c104f1e690a7e5628b2982ff44089711d1ce5c24741a629",
+      "game": "sg16",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg16-a9e5cdf05c8e4859",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 24,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "2870b27e1f3f8b0cb28a124632755d38da60caa32e63f45bc04ddbd975fa438f"
+    },
+    {
+      "environment_content_sha256": "d5ceb5260c30024fb04ab848a2564023bfaeb789ff8b5c3b8af2c2b240da53ce",
+      "game": "sg17",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg17-fb94f8992a9540b1",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 101,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "23a996b4b779a6ab1b8c2ebc1fdd6543763a26403588da3d3d824b820eb0b87f"
+    },
+    {
+      "environment_content_sha256": "fcf1980a7e2e8e6c0df90eeaf8186875f30ffe95c2060ae2c0c6a174a8518e04",
+      "game": "sg18",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg18-af8d11e58ac94cd7",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 107,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "6b5ad194eec69e7292bd838d6c0cdce9d9639ea8f3946a031c635d2d0ed7dc3c"
+    },
+    {
+      "environment_content_sha256": "1130c221ae2fd9f2b164b1c03fb5e7858e9c08dd6a704b13947a4799a9bc7ba0",
+      "game": "sg19",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg19-25a14e907e1c463d",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 45,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "4c2984d9a8113484485bbc3eb7ebab33081493823447fa55c708b3c35fd6ead2"
+    },
+    {
+      "environment_content_sha256": "db8885a124d7de92ede2d0974b6b55044c00758488601e602e9c27d7fe87b0cd",
+      "game": "sg20",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg20-a3b73a0fda9e4006",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 53,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "c7ae4e26755f1cd5954ee15d3df73d83ea7b612482311196bb1c9637fe89172a"
+    },
+    {
+      "environment_content_sha256": "5e1321e82e2beef7c836f34b200932e76728c06ede59bf0a2c1fa4fc7ef56d17",
+      "game": "sg21",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg21-809cfa39d3fa4757",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 36,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "26988b6c14eab09931e5d50c10ab7cdbbe8010eba89883f5ddc43013d08ffe86"
+    },
+    {
+      "environment_content_sha256": "6c9df5e69413422a362f439308f4fc722f055fa0e708227ceb25a2cb2f135c52",
+      "game": "sg22",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg22-a911173626904645",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 54,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "90e874f3df12af95c3dffa37032b6cd9dd5b2d107cccc7f24e49f3d83149e33f"
+    },
+    {
+      "environment_content_sha256": "0c969c8ef2ffe510801b0f2d059961c5dca175bb9c4578881e050d7d8c2df8b2",
+      "game": "sg23",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg23-bb0b94dd75ad4169",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 32,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "f06a8112c51d1686b5a7a5377ed45ddeb7a350ac97ac800d185de3320af86e5e"
+    },
+    {
+      "environment_content_sha256": "0c03da9d85580767f3becfedc58842488ff3c75c2a459239004493b5497f0a39",
+      "game": "sg24",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg24-c5553d90bc44437d",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 200,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "9a6bf91974062f68f29046277e01e79f541b537ea537cf49c2eb17e2abe01c88"
+    },
+    {
+      "environment_content_sha256": "775cefab8752c671a6070f2e287b40ad5c8c84a2d991578acf6d65215637f3ce",
+      "game": "sg25",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg25-1ec41211c870430e",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 54,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "186aebebda12e9a5435b1f5edb237411fd3c5ab774bf21ef23637372190d3786"
+    },
+    {
+      "environment_content_sha256": "4bcc0854a4cf1f7dd7443c9df72ccebfcb1e455f4c46f6bc54587039a4971184",
+      "game": "sg26",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg26-552d5d2ce2b44fe2",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 30,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "0a5aa128e489f3d1d2397eee1d2d0ab327d0ad10d029223f5f9e6cbde6c27be9"
+    },
+    {
+      "environment_content_sha256": "17274f62462d3cfd2bd697400f8aa4bd6a5761140200e0e2a5604c9829dde693",
+      "game": "sg27",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg27-1b5a0ff3fa874c96",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 85,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "c8c4aef503b1f53a8d202bc67c71eecc4813c7f4a259d54fa4a1701191122af9"
+    },
+    {
+      "environment_content_sha256": "dd269841eec8f1fc608a0131ba78c9d95e3b2d80402d9729c555aeed9e7a7ef8",
+      "game": "sg28",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg28-c27ff0a54fbd4413",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 56,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "bfbb70916d3a3070bdab707d47a98be54196d47b4ed4cc979de1d78b1c7577ff"
+    },
+    {
+      "environment_content_sha256": "3b37a91a48098075fee6450656c3f65accd85d2665007299f3a703043e8d140e",
+      "game": "sg29",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg29-2ece60f659c04e37",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 67,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "7b58e2e41d4b4d19379617bee74e9831e318a7e1badbd620a9568ddfb2c1b2dc"
+    },
+    {
+      "environment_content_sha256": "3a58ec148344ef8532e31384b0d57426014b85553e7696bdf269484c903a6f86",
+      "game": "sg30",
+      "human_playtest_or_approval": false,
+      "native_game_id": "sg30-8570298dc9744ad3",
+      "public_projection": "Data-only provenance sanitization; gameplay was not rerun for publication.",
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 25,
+        "verified": true
+      },
+      "scope": "Original fresh replay checked the unchanged native requests and every animation frame. Public native recording bytes are preserved; canonical pixels/actions/boundaries are checked against them.",
+      "source_receipt_sha256": "70b7ed2e27929dc1b9d5d74177c2d6f000eb68f7d2e5ebf567f9f410bfb0bfd2"
+    }
+  ],
+  "input_identity": {
+    "checksums_sha256": "edc18c0a0258ef27c3fe37f4c054abd97a0e5e61d15ddaecd428a9f99ed866ed",
+    "dataset_version": "arc3-meta-informed-agent-20261002-v1",
+    "manifest_sha256": "357b70b9a4c2320eb1649f2e6370b36b75a40677c24f338ffd7d879fb74cdeac",
+    "projection": "Immutable verified input; no native environment modifications or new gameplay."
+  },
+  "native_recordings_byte_preserved": true,
+  "publication_preparation_performed_native_replays": false,
+  "schema_version": "arc3-public-replay-verification/1",
+  "source_collection": "studio"
+}

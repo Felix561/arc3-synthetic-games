@@ -1,0 +1,19 @@
+{
+  "game_id": "td4826-33bf03a4",
+  "title": "TD4826",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    12,
+    14,
+    23,
+    9,
+    23,
+    15,
+    15,
+    23
+  ],
+  "class_name": "Td4826"
+}

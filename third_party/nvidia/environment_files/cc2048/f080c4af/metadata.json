@@ -1,0 +1,19 @@
+{
+  "game_id": "cc2048-f080c4af",
+  "title": "CC2048",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    16,
+    20,
+    20,
+    19,
+    21,
+    21,
+    20,
+    21
+  ],
+  "class_name": "Cc2048"
+}

@@ -1,0 +1,19 @@
+{
+  "game_id": "ml2048-a6677a07",
+  "title": "ML2048",
+  "default_fps": 6,
+  "tags": [
+    "keyboard_click"
+  ],
+  "baseline_actions": [
+    10,
+    15,
+    15,
+    15,
+    20,
+    25,
+    30,
+    30
+  ],
+  "class_name": "Ml2048"
+}

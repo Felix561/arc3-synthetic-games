@@ -1,0 +1,19 @@
+{
+  "game_id": "hr2048-b96419ed",
+  "title": "HR2048",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    10,
+    15,
+    18,
+    19,
+    15,
+    15,
+    18,
+    18
+  ],
+  "class_name": "Hr2048"
+}

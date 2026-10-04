@@ -1,0 +1,19 @@
+{
+  "game_id": "os1842-ca39ae90",
+  "title": "OS1842",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    4,
+    10,
+    6,
+    7,
+    8,
+    7,
+    9,
+    10
+  ],
+  "class_name": "Os1842"
+}

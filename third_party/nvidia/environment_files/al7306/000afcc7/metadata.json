@@ -1,0 +1,19 @@
+{
+  "game_id": "al7306-000afcc7",
+  "title": "AL7306",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    9,
+    17,
+    17,
+    21,
+    21,
+    23,
+    29,
+    37
+  ],
+  "class_name": "Al7306"
+}

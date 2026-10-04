@@ -1,0 +1,19 @@
+{
+  "game_id": "gc4721-78997285",
+  "title": "GC4721",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    14,
+    14,
+    16,
+    13,
+    16,
+    20,
+    21,
+    17
+  ],
+  "class_name": "Gc4721"
+}

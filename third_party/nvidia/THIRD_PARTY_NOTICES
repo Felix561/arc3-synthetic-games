@@ -1,0 +1,202 @@
+DreamTeam Third-Party Notices
+================================
+
+This file identifies third-party source incorporated into this repository and
+the declared direct dependencies used to build or run the project. The
+top-level Apache License 2.0 applies to NVIDIA-authored portions of DreamTeam.
+Third-party portions remain subject to the licenses identified below.
+
+1. BeamDS 2.8.3
+----------------
+
+The beam/ subtree is derived from BeamDS 2.8.3.
+
+Source: https://github.com/mlutils/beamds
+Version-specific source: https://files.pythonhosted.org/packages/1c/d9/75f003bb01ad4ffd0e02d7c497d45f12ee56de96806aa79172533ea3e98a/beam_ds-2.8.3.tar.gz
+Source SHA-256: c011ab887c4d5da1d9b2b78cdbe4bcdbe41c263ad25c778595a3cde888507875
+Upstream 2.8.3 version commit: https://github.com/mlutils/beamds/tree/7087f72e6f555624999750cb052d6be361d85311
+License: MIT
+
+MIT License
+
+Copyright (c) 2021 elad
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. FastChat
+-----------
+
+The following files contain code copied or adapted from FastChat:
+
+- beam/llm/conversation.py
+- beam/llm/model_adapter.py
+
+Source: https://github.com/lm-sys/FastChat
+License: Apache License 2.0
+
+The retained source identified FastChat's mutable main branch; the original
+upstream revision was not recorded. These files have been modified for BeamDS
+and DreamTeam. FastChat's Apache License 2.0 is reproduced in the top-level
+LICENSE file. The FastChat repository did not contain a NOTICE file when this
+notice was prepared.
+
+3. Deep Agents
+--------------
+
+Portions of beam/agent/utils.py are adapted from Deep Agents.
+
+Source: https://github.com/langchain-ai/deepagents
+Reviewed version: 0.4.3
+Reviewed commit: https://github.com/langchain-ai/deepagents/tree/18ad5b7866f38e39e5c1ae68708aa270856ff135
+License: MIT
+
+MIT License
+
+Copyright (c) LangChain, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+4. Declared direct Python dependencies
+--------------------------------------
+
+The packages below are installed separately and are not vendored into the
+DreamTeam source tree. Version constraints are recorded in pyproject.toml.
+
+Apache-2.0:
+
+- boto3
+- kubernetes
+- names-generator
+- openai
+- requests
+- pytest-asyncio (development)
+
+MIT:
+
+- arc-agi
+- arcengine
+- anthropic
+- build (development)
+- fastapi
+- jsonschema
+- langchain
+- langchain-anthropic
+- langchain-core
+- langchain-mcp-adapters
+- langchain-openai
+- langgraph
+- loguru
+- mcp
+- mnemonic
+- pip (development)
+- pydantic
+- pytest (development)
+- PyYAML
+- rich
+- setuptools (development)
+- termcolor
+- textual
+- tiktoken
+- urllib3
+- watchfiles
+- wheel (development)
+
+BSD-3-Clause or a compatible BSD license:
+
+- httpx
+- Jinja2
+- jsonpatch
+- NumPy
+- pandas
+- python-dotenv
+- scikit-image
+- SciPy
+- uvicorn
+- websockets
+
+Other permissive or dual-license terms:
+
+- matplotlib — Matplotlib/PSF license
+- Pillow — MIT-CMU
+- tqdm — MPL-2.0 AND MIT
+
+5. Viewer frontend direct dependencies
+--------------------------------------
+
+The frontend dependency versions are locked in
+arc_agi_3/arc_league/viewer/frontend/package-lock.json.
+
+MIT:
+
+- @eslint/js 9.39.3
+- @tailwindcss/vite 4.2.1
+- @types/node 24.11.0
+- @types/react 19.2.14
+- @types/react-dom 19.2.3
+- @vitejs/plugin-react 5.1.4
+- clsx 2.1.1
+- eslint 9.39.3
+- eslint-plugin-react-hooks 7.0.1
+- eslint-plugin-react-refresh 0.4.26
+- globals 16.5.0
+- react 19.2.4
+- react-dom 19.2.4
+- react-router-dom 7.18.0
+- recharts 3.7.0
+- tailwind-merge 3.5.0
+- tailwindcss 4.2.1
+- typescript-eslint 8.56.1
+- vite 7.3.6
+- zustand 5.0.11
+
+Other:
+
+- lucide-react 0.575.0 — ISC
+- TypeScript 5.9.3 — Apache-2.0
+
+6. Media assets
+---------------
+
+The four GIF files under runs/analysis/animation_generator/assets/ are
+generated DreamTeam run visualizations retained as documentation examples.
+beam/serve/resource/beam-server.webp is part of the BeamDS 2.8.3 source
+distribution and is covered by the BeamDS notice above.
+
+No third-party model weights or ARC environment source files are distributed
+in this repository.
+
+This inventory covers direct declarations and specifically incorporated
+source. A complete release SBOM and automated license scan should be generated
+from the final locked dependency resolution before publication.

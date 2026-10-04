@@ -1,0 +1,19 @@
+{
+  "game_id": "df4821-818c2c5e",
+  "title": "DF4821",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    14,
+    20,
+    18,
+    16,
+    32,
+    20,
+    26,
+    26
+  ],
+  "class_name": "Df4821"
+}

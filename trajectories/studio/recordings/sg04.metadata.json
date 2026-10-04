@@ -1,0 +1,64 @@
+{
+  "actor_type": "online_agent",
+  "agent": {
+    "effective_model_metadata": "inherited_session_not_independently_measured",
+    "requested_effort": "ultra",
+    "requested_model": "gpt-6.1-sol"
+  },
+  "all_animation_frames_preserved": true,
+  "dataset_version": "arc3-source-informed-agent-20261002-v1",
+  "format": "ARC Prize Recorder timestamp/data/native FrameData envelope",
+  "format_reference": "https://github.com/arcprize/ARC-AGI-3-Agents/blob/main/agents/recorder.py",
+  "game": "sg04",
+  "native_game_id": "sg04-e137c80d4e4d4034",
+  "native_recording_game_id": "sg04-v1",
+  "native_statistics": {
+    "current_level_resets": 0,
+    "game_wins": 1,
+    "initialisation_resets": 1,
+    "native_game_over_responses": 0,
+    "native_palette_frames": 47,
+    "native_policy_actions": 40,
+    "native_responses": 41,
+    "unknown_native_timestamps": 41
+  },
+  "recording_sha256": "a85dc27505cb4cb8f6e90054e347d5c8212bcfc3e8c5ae25ae4fe687e5b3f078",
+  "runtime_identity": {
+    "adapter_files": {
+      "engine_adapter.py": "8478d44ca3061b6923efc12c1f4cff417904ded969a21056f35eebc33a2d75d4",
+      "isolation.py": "ff802804110fcdec3beec2c61270b163cea52f1a32a1a33e66861b8dbacb1c22",
+      "validation/contracts.py": "1fd7086ba4f066079f339d1db94e0f9486e88045f242707b9e953cf28fdf5901",
+      "validation/probes.py": "c7a5a8b2393dcd06b5c7e7445d908fd11fd9ff32f9e60a87f8faf28b3ada4c50",
+      "validation/witnesses.py": "b7261b374aa16f5788c147f8eacd92e8ba4da4f3dd04dd424079adb048c4da48",
+      "worker.py": "68e1447ccd2912162472703e190a682dc1a9551f6f36967bfe994f9140549f13"
+    },
+    "backend": "docker",
+    "dependencies": {
+      "arc-agi": "0.9.8",
+      "arcengine": "0.9.3",
+      "numpy": "2.5.3"
+    },
+    "identity_sha256": "5169208e215c21d97f8c12c163dde1ec7fb108426b8a62f6482ecdd361968425",
+    "image_id": "sha256:50c119d36bb0558c6fbd16a70de5467d0206265819c77f3f75c0dba247df263d",
+    "package_identity": {
+      "bytes": 19611,
+      "content_sha256": "1a42f745925b521a7c894c715e4552b2b5190d54de832f62ed8feb89b68f773b",
+      "file_sha256": {
+        "metadata.json": "1fc2b5d73216d4f06c2f8fe0bcb1e862630cf71a7d6fa42dd6a0b0b2536ebeb5",
+        "sg04.py": "db797e69706b9bddadf2ddf9882a1bec47c0b7714d214e992a00eaf75d50d998"
+      },
+      "files": 2
+    },
+    "python": "3.12.10",
+    "support_identity": null,
+    "worker_files": {
+      "runtime.py": "6c54efa8538e66ecac3b40e8299ed95f9da3559afc83d13db63d5e77d768bbb5",
+      "worker.py": "949aaf033e0e7da8610035a908a9bff04758ddfc3b7d7d6ae4fb976deac275af"
+    }
+  },
+  "schema_version": "arc3-public-agent-trajectories/1",
+  "source_collection": "studio",
+  "source_informed": true,
+  "timestamp_policy": "null: original response times were not recorded",
+  "timing_or_human_actor_compatibility_claimed": false
+}

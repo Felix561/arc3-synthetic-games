@@ -1,0 +1,19 @@
+{
+  "game_id": "rl2048-8deeab8c",
+  "title": "RL2048",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    10,
+    12,
+    18,
+    14,
+    22,
+    12,
+    14,
+    24
+  ],
+  "class_name": "Rl2048"
+}

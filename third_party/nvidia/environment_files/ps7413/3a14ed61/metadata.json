@@ -1,0 +1,19 @@
+{
+  "game_id": "ps7413-3a14ed61",
+  "title": "PS7413",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    8,
+    19,
+    32,
+    33,
+    51,
+    48,
+    76,
+    78
+  ],
+  "class_name": "Ps7413"
+}

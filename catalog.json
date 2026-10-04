@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ARC3 Synthetic Games",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "native_runtime": {
     "python": "3.12",

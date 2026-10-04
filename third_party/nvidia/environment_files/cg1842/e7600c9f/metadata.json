@@ -1,0 +1,19 @@
+{
+  "game_id": "cg1842-e7600c9f",
+  "title": "CG1842",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    15,
+    20,
+    20,
+    18,
+    20,
+    22,
+    22,
+    27
+  ],
+  "class_name": "Cg1842"
+}

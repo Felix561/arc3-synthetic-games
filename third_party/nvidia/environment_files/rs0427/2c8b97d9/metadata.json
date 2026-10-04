@@ -1,0 +1,19 @@
+{
+  "game_id": "rs0427-2c8b97d9",
+  "title": "RS0427",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    8,
+    10,
+    9,
+    12,
+    23,
+    25,
+    21,
+    37
+  ],
+  "class_name": "Rs0427"
+}

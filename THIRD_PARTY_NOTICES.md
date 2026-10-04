@@ -1,5 +1,47 @@
 # Third-party acknowledgments
 
+## NVIDIA DreamTeam synthetic environments and derived agent data
+
+Source: [NVIDIA/dream-team](https://github.com/NVIDIA/dream-team), pinned to
+[`bffef22f3e50fb7dcd6b2dc20005e6986e1479e9`](https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9).
+
+Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+The 25 generated native game modules and included runtime adapter declare
+`SPDX-License-Identifier: Apache-2.0`.
+
+The repository separately includes unchanged NVIDIA game packages/support under
+`third_party/nvidia/`, recordings under `trajectories/nvidia/`, and derived GIFs
+in `media/agent-demos/nvidia/`. NVIDIA-based recordings and renderings
+are distributed with Apache-2.0 attribution. Original Studio content remains MIT;
+the root MIT license does not replace upstream rights.
+
+Full license/notice texts are retained in the NVIDIA subtree and included in
+the standalone trajectory archive:
+
+- [Pinned LICENSE](https://github.com/NVIDIA/dream-team/blob/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/LICENSE), including applicable MIT third-party terms.
+- [Pinned NOTICE](https://github.com/NVIDIA/dream-team/blob/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/NOTICE).
+- [Pinned THIRD_PARTY_NOTICES](https://github.com/NVIDIA/dream-team/blob/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/THIRD_PARTY_NOTICES).
+
+NVIDIA's NOTICE reads:
+
+```text
+DreamTeam
+Copyright 2026 NVIDIA Corporation
+
+This product includes software developed by NVIDIA Corporation.
+
+Portions of this distribution incorporate or are adapted from BeamDS,
+FastChat, and Deep Agents. Their applicable copyright and license notices
+are reproduced in THIRD_PARTY_NOTICES.
+```
+
+The Studio player/browser/wheel packages do not include the NVIDIA game tree or
+agent trajectory data. Combined statistics/graphics are original project
+analysis; NVIDIA-derived game pixels retain the source's attribution.
+NVIDIA and ARC Prize do not endorse this independently maintained dataset.
+
+## Studio player dependencies
+
 This independent collection uses the ARC Prize Foundation's ARC engine and
 [ARC-AGI toolkit](https://github.com/arcprize/ARC-AGI), pinned as `arcengine==0.9.3`
 and `arc-agi==0.9.8`. Both installed distributions identify their license as MIT.

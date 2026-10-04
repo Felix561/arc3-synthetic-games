@@ -10,7 +10,7 @@ build/
 .env.*
 *.log
 *.sqlite*
-recordings/
+/recordings/
 scorecards/
 test-results/
 playwright-report/

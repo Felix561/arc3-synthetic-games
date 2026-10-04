@@ -1,0 +1,19 @@
+{
+  "game_id": "ss6041-1abeadb2",
+  "title": "SS6041",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    16,
+    19,
+    13,
+    20,
+    19,
+    17,
+    20,
+    21
+  ],
+  "class_name": "Ss6041"
+}

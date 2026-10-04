@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0 — 2026-10-04
+
+- Separate Studio and NVIDIA source-informed AI-agent trajectory partitions.
+- 55 completed game runs, 410 solved levels and 415 recorded level attempts,
+  retaining unsuccessful attempts and short segments.
+- Compact palette JSONL/gzip, public provenance, checksums and replay summaries.
+- NVIDIA's exact native packages/support, license notices and upstream attribution.
+- Eight looping AI-agent replay GIFs, action-count graphics and per-game statistics.
+- Broader dataset documentation; unchanged Studio games and player controls.
+
 ## 1.0.3 — 2026-09-30
 
 - Classic desktop styling with gray window frames, blue title bars and beveled controls.

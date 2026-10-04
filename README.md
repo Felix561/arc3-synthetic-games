@@ -1,30 +1,119 @@
-# ARC3 Synthetic Games
+# ARC3 Synthetic Games & Agent Trajectories
 
-**30 games · 210 levels · native 64×64 ARC3 environments**
+**30 original games · 55 games with agent demonstrations · 410 recorded level solves**
 
-An independent collection of abstract, turn-based games for people and reasoning
-agents. Each game has a distinct set of rules and seven fixed levels. Explore,
-experiment, and discover how each world works.
+Abstract, turn-based ARC3-compatible games and compact source-informed AI-agent
+trajectories for studying environment models, planning and learning.
 
-**[Play in your browser](https://felix561.github.io/arc3-synthetic-games/)** ·
-[Download a release](https://github.com/Felix561/arc3-synthetic-games/releases/latest) ·
-[Browse all 30 games](GAMES.md)
+**[Play the 30 Studio games](https://felix561.github.io/arc3-synthetic-games/)** ·
+[Game index](GAMES.md) · [Trajectory format](TRAJECTORIES.md) ·
+[Statistics](STATISTICS.md) · [Player releases](https://github.com/Felix561/arc3-synthetic-games/releases/latest)
 
-![Six representative initial boards](media/overview.png)
+<table>
+<tr>
+<td><img src="media/agent-demos/studio/sg07-level-07.gif" width="180" alt="Studio SG07 level 7, recorded source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/studio/sg18-level-07.gif" width="180" alt="Studio SG18 level 7, recorded source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/studio/sg24-level-06.gif" width="180" alt="Studio SG24 level 6, recorded source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/studio/sg25-level-07.gif" width="180" alt="Studio SG25 level 7, recorded source-informed AI-agent solution"></td>
+</tr>
+<tr>
+<td align="center"><sub>Studio SG07 · level 7</sub></td>
+<td align="center"><sub>Studio SG18 · level 7</sub></td>
+<td align="center"><sub>Studio SG24 · level 6</sub></td>
+<td align="center"><sub>Studio SG25 · level 7</sub></td>
+</tr>
+<tr>
+<td><img src="media/agent-demos/nvidia/cc2048-level-07.gif" width="180" alt="NVIDIA CC2048 level 7, recorded source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/nvidia/df4821-level-07.gif" width="180" alt="NVIDIA DF4821 level 7, recorded source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/nvidia/ss6041-level-07.gif" width="180" alt="NVIDIA SS6041 level 7, recorded source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/nvidia/fw4821-level-07.gif" width="180" alt="NVIDIA FW4821 level 7, recorded source-informed AI-agent solution"></td>
+</tr>
+<tr>
+<td align="center"><sub>NVIDIA CC2048 · level 7</sub></td>
+<td align="center"><sub>NVIDIA DF4821 · level 7</sub></td>
+<td align="center"><sub>NVIDIA SS6041 · level 7</sub></td>
+<td align="center"><sub>NVIDIA FW4821 · level 7</sub></td>
+</tr>
+</table>
 
-The browser demo runs the original Python games through WebAssembly. There is
-nothing to install and no account or API key. The first game downloads a runtime
-from a CDN, so an internet connection is needed. Actions and progress stay in
-your tab's memory; the player does not record or upload gameplay. GitHub and the
-runtime CDN handle ordinary web requests under their own privacy policies.
+<sub><b>AI-agent gameplay, with source access.</b> Eight complete solved-level excerpts from saved palette observations; these previews reveal solutions. GIFs loop at presentation-paced timing, not recorded wall-clock speed. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
 
-Integrity, compatibility and player tests have been run. Complete solvability
-of every level has not been independently verified; see [validation](VALIDATION.md).
+Play the original Studio games, or use the trajectory dataset spanning Studio and
+25 synthetic environments from
+[NVIDIA DreamTeam](https://github.com/NVIDIA/dream-team/tree/main/arc_agi_3).
+The two sources stay in separate, attributed partitions.
+
+## What's included
+
+| Source | Games | Levels | Recorded level attempts | Solved / unsolved | Policy actions |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| [Studio](trajectories/studio) — our SG01–SG30 games | 30 | 210 | 210 | 210 / 0 | 2,344 |
+| [NVIDIA DreamTeam](trajectories/nvidia) — third-party synthetic games | 25 | 200 | 205 | 200 / 5 | 3,667 |
+| **Total** | **55** | **410** | **415** | **410 / 5** | **6,011** |
+
+Each game has one recorded agent run through all its levels. All 55 runs reached
+native WIN and passed fresh replay on the exact package versions and recorded seed.
+The five unsolved attempts were interrupted by current-level resets and are
+retained. These counts describe this collected experience, not blind benchmark
+performance, optimality or human-efficiency scores.
+
+**These trajectories are AI-played, not human-played.** Dedicated Codex agents
+could inspect mechanics and game source before choosing actions. The collection
+requested **GPT-6.1-sol / ultra** with inherited session settings; effective model
+identity was not independently captured. Assistance and source-exposure limits
+are documented in [the trajectory card](TRAJECTORIES.md). All demonstrations were
+collected for this project; NVIDIA authored its environments, not these agent runs.
+
+## Use the trajectory data
+
+The two partitions are independent. Load both to use all 415 segments; there is
+no duplicate combined file or prescribed sampling quota.
+
+```python
+import gzip
+import json
+from pathlib import Path
+
+for source in ("studio", "nvidia"):
+    path = Path("trajectories") / source / "trajectories.jsonl.gz"
+    with gzip.open(path, "rt", encoding="utf-8") as stream:
+        for line in stream:
+            episode = json.loads(line)
+            # Palette observations: [actions + 1, 64, 64], integer values 0–15.
+            observations = episode["observations"]
+            actions = episode["actions"]
+            solved = episode["is_solved"]
+```
+
+Canonical rows contain observations, actions, valid-action information and truthful
+outcome flags. Native per-game recordings additionally preserve every animation
+frame in the ARC Prize Recorder-style `timestamp` / `data` JSONL envelope.
+Everything is losslessly gzip-compressed; RGB images are not the training format.
+Unknown recording times remain `null`.
+
+Start with [TRAJECTORIES.md](TRAJECTORIES.md) for loading, resets, coordinate
+conventions, provenance and license scope. [Machine-readable statistics](trajectories/statistics.json)
+and CSVs support independent analysis. The player wheel and environments-only
+release remain lightweight Studio packages; use this repository or the separate
+trajectory archive for the agent data and NVIDIA dependencies.
+
+## Explore the statistics
+
+![Actions per recorded level attempt, separated by source](media/trajectory-stats/action-distribution.svg)
+
+<sub><b>Figure 1.</b> Policy-action counts in five-action bins, on common scales: Studio has 210 attempts (median 6 actions); NVIDIA has 205 (median 15). All 415 attempts are included: 410 solved and five reset-interrupted. Reset controls are counted separately.</sub>
+
+<sub><b>Interpretation.</b> One source-informed AI-agent run per game, with retries retained. These are descriptive action lengths, not blind success rates, human-efficiency scores or optimal solution lengths.</sub>
+
+The [statistics page](STATISTICS.md) includes per-game attempts, outcomes, total
+actions and segment-length distributions. Its charts use the dark, restrained
+presentation of ARC Prize's
+[human-dataset analysis](https://arcprize.org/blog/arc-agi-3-human-dataset)
+as a visual reference; the plotted data comes entirely from this collection.
 
 ## Play locally
 
-Use **Python 3.12**. Download and extract the source release, or clone this
-repository, then run from its directory:
+Use **Python 3.12**. From this repository, or an extracted Studio source release:
 
 ```bash
 python -m pip install -e .
@@ -32,42 +121,35 @@ arc3-synthetic-games play
 ```
 
 The browser opens at **http://127.0.0.1:8780**. No Docker, API key, account or
-internet connection is needed to play after installation. You can select any
-of the seven levels, reset a level, or restart a game. Available controls are
-arrows, Space, clicking and Undo (`Z`), depending on the game.
-
-Mechanics explanations and human-played demonstrations are opt-in. Gameplay
-stays in memory. The local player executes the curated game sources; keep it
-on your own computer.
+internet connection is needed to play after installation. Select any of the
+seven levels, reset a level, or restart a game. Controls are arrows, Space,
+clicking and Undo (`Z`), depending on the game.
 
 ```bash
 arc3-synthetic-games play --port 8781 --no-browser
 arc3-synthetic-games verify
 arc3-synthetic-games list
-# Equivalent module entry point:
-python -m arc3_synthetic_games play
 ```
 
-You can also install the release wheel with `python -m pip install <wheel-file>`.
+The local and GitHub Pages players currently cover **Studio's 30 games**.
+Mechanics explanations and the existing, separately labelled human GIF excerpts
+are opt-in. They are distinct from the newly released AI trajectories. Gameplay
+stays in memory; neither player records or uploads your actions.
+
+The browser demo runs the original Python games through WebAssembly, without an
+account or API key. Its first runtime download needs internet access. GitHub and
+the runtime CDN handle ordinary asset requests under their own privacy policies.
 
 ## Use the native environments
 
-The `environment_files/` directory has the same native package arrangement as
-public ARC3 environments: one game/version directory with Python source and
-`metadata.json`. Copy that directory into an existing offline ARC3 project, or
-use it directly with the official SDK. No player or custom Studio adapter is
-required by the games.
-
-The **environments ZIP** provides these files with the catalog and documentation.
-All 30 games are available without a prescribed split or sampling quota.
-
-For native-only use, install the validated dependencies on Python 3.12:
+Studio's `environment_files/` uses the public ARC3 package arrangement: one
+game/version directory with Python source and `metadata.json`. Use exact IDs and
+hashes in `catalog.json`; the trajectory manifest binds the same native versions.
+For reproducible native use, the validated dependencies are:
 
 ```bash
 python -m pip install arc-agi==0.9.8 arcengine==0.9.3 numpy==2.5.3
 ```
-
-From the repository directory:
 
 ```python
 import json
@@ -76,73 +158,61 @@ from arcengine import GameAction
 
 with open("catalog.json", encoding="utf-8") as file:
     catalog = json.load(file)
-
-arcade = Arcade(
-    operation_mode=OperationMode.OFFLINE,
-    environments_dir="environment_files",
-)
-game_id = catalog["games"][0]["game_id"]  # Exact SG01 native version
-game = arcade.make(game_id, seed=0, save_recording=False)
-assert game is not None
+arcade = Arcade(operation_mode=OperationMode.OFFLINE,
+                environments_dir="environment_files")
+game = arcade.make(catalog["games"][0]["game_id"], seed=0, save_recording=False)
 observation = game.reset()
 observation = game.step(GameAction.ACTION1)
 ```
 
-Use the exact `game_id` values in the catalog to bind experiments to this release.
-The catalog supplies file SHA-256 hashes and human-facing descriptions; learner
-inputs can remain limited to native observations and available actions. These
-environments have no measured official human-efficiency baselines. SDK scorecard
-values must not be interpreted as comparable official benchmark scores.
+NVIDIA's unchanged packages are separate under
+[`third_party/nvidia/environment_files/`](third_party/nvidia/environment_files).
+Their pinned runtime support, upstream revision, checksums and licenses are
+included; they have **eight levels**, rather than Studio's seven. See the
+[NVIDIA setup](TRAJECTORIES.md#nvidia-environments) before replaying them.
+Native code executes Python; run unfamiliar environments in isolation.
 
-## Browse the collection
+## Validation and limitations
 
-See [the game index](GAMES.md) for short discovery-first descriptions, and the
-[dataset card](DATASET_CARD.md) for composition, validation and limitations.
-Native metadata keeps the stable SG labels; descriptive titles live in the
-catalog and player.
+Recorded trajectories were independently replayed to native WIN for all 55 exact
+game versions and seed 0. Pixel/action alignment, completion boundaries, retries
+and dataset accounting were checked. [Validation](VALIDATION.md) distinguishes
+this evidence from player compatibility and human playtesting.
 
-<details>
-<summary>Show six human-played demonstrations — contains early-level spoilers</summary>
-
-The following excerpts show real current-version gameplay. Only native game
-pixels are included; pauses are shortened. Raw trajectories and identifying
-recording metadata are not distributed.
-
-| SG01 | SG06 | SG08 |
-| --- | --- | --- |
-| ![SG01 human gameplay](media/demos/sg01.gif) | ![SG06 human gameplay](media/demos/sg06.gif) | ![SG08 human gameplay](media/demos/sg08.gif) |
-
-| SG24 | SG26 | SG28 |
-| --- | --- | --- |
-| ![SG24 human gameplay](media/demos/sg24.gif) | ![SG26 human gameplay](media/demos/sg26.gif) | ![SG28 human gameplay](media/demos/sg28.gif) |
-
-</details>
+The dataset is small and source-informed, with one actor per game. It does not
+measure source-blind exploration, human discoverability, optimal solutions,
+all-seed solvability or generalization. Official ARC3 human baselines and scores
+are not supplied. Keep source, mechanics and provenance out of a learner's
+observation inputs unless deliberately studying privileged information.
 
 ## Development and hosting
 
 ```bash
 python -m pip install -e ".[dev]"
 python -m pytest -q
-python tools/build_preview.py  # Static site in _site/
+python tools/build_preview.py  # Static Studio site in _site/
 ```
 
-Native tests execute game Python. Run them in an isolated development/CI
-environment. No raw human trajectories or solutions are required by the tests.
-Use `arc3-synthetic-games verify` for data-only integrity checks.
-
-The static demo can be hosted on GitHub Pages without a backend.
-[Publishing instructions](PUBLICATION.md) describe the one-time Pages setup and
-release packages. GitHub README files link to the demo rather than embed scripts.
+Native tests execute game Python; run them in an isolated development/CI
+environment. Data-only trajectory checks do not require executing games.
+[Publishing instructions](PUBLICATION.md) describe package scopes and GitHub Pages.
 
 ## License and citation
 
-Original games, player, documentation and demonstration assets are available
-under the [MIT license](LICENSE). The [official ARC-AGI toolkit](https://github.com/arcprize/ARC-AGI)
-and ARC engine are separate dependencies; see [third-party acknowledgments](THIRD_PARTY_NOTICES.md).
-Citation metadata is in [CITATION.cff](CITATION.cff).
+Original Studio games, player, documentation, Studio agent data and original
+presentation assets are [MIT-licensed](LICENSE). NVIDIA game code, runtime support,
+NVIDIA-based agent recordings and derived presentation assets are distributed
+with [Apache-2.0 and applicable retained third-party notices](third_party/nvidia/LICENSE).
+The repository's MIT license does not replace NVIDIA's license or attribution.
+See [third-party acknowledgments](THIRD_PARTY_NOTICES.md) and [CITATION.cff](CITATION.cff).
+
+This is an independent research dataset, with no NVIDIA or ARC Prize endorsement.
+No official ARC3 environments or human trajectory dataset are redistributed.
 
 ## AI disclosure
 
-This collection was created with substantial AI assistance in game design,
-implementation and documentation, informed by human feedback and playtesting.
-The demonstration GIFs show actual human gameplay.
+AI assisted the design, implementation and documentation of the Studio games,
+informed by human feedback and playtesting. The new trajectory dataset and its
+eight agent replay GIFs are **source-informed AI-agent gameplay**. The older,
+separately labelled human GIF excerpts remain human gameplay; no raw human
+trajectories are included.

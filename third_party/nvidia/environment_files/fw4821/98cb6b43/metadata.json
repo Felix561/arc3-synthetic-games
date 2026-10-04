@@ -1,0 +1,19 @@
+{
+  "game_id": "fw4821-98cb6b43",
+  "title": "FW4821",
+  "default_fps": 6,
+  "tags": [
+    "click"
+  ],
+  "baseline_actions": [
+    8,
+    10,
+    9,
+    8,
+    11,
+    11,
+    13,
+    15
+  ],
+  "class_name": "Fw4821"
+}

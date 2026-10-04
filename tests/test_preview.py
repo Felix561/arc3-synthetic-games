@@ -22,7 +22,7 @@ def test_preview_contains_exact_native_bytes_and_only_public_assets(tmp_path, mo
     manifest = builder.build(first, dependency)
     builder.build(second, dependency)
     assert (first / "browser/runtime.zip").read_bytes() == (second / "browser/runtime.zip").read_bytes()
-    catalog = json.loads((first / "catalog.json").read_text())
+    catalog = json.loads((first / "catalog.json").read_text(encoding="utf-8"))
     with zipfile.ZipFile(first / "browser/runtime.zip") as archive:
         native = [name for name in archive.namelist() if "/environment_files/" in name]
         assert len(native) == 60
@@ -40,7 +40,7 @@ def test_preview_contains_exact_native_bytes_and_only_public_assets(tmp_path, mo
     assert {p.relative_to(first).as_posix() for p in (first / "media").rglob("*") if p.is_file()} == expected_media
     for entry in manifest["files"]:
         assert hashlib.sha256((first / "browser" / entry["path"]).read_bytes()).hexdigest() == entry["sha256"]
-    html = (first / "index.html").read_text()
+    html = (first / "index.html").read_text(encoding="utf-8")
     assert html.index("browser/client.js") < html.index("static/app.js")
     assert 'src="/static/' not in html
 

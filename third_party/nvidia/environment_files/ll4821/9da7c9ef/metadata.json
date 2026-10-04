@@ -1,0 +1,19 @@
+{
+  "game_id": "ll4821-9da7c9ef",
+  "title": "LL4821",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    8,
+    10,
+    22,
+    30,
+    21,
+    17,
+    25,
+    27
+  ],
+  "class_name": "Ll4821"
+}

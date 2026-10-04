@@ -1,0 +1,19 @@
+{
+  "game_id": "mb2741-094cefb3",
+  "title": "MB2741",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    10,
+    14,
+    12,
+    15,
+    16,
+    15,
+    15,
+    17
+  ],
+  "class_name": "Mb2741"
+}

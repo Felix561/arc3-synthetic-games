@@ -1,0 +1,19 @@
+{
+  "game_id": "ne4172-fe2b50a3",
+  "title": "NE4172",
+  "default_fps": 6,
+  "tags": [
+    "keyboard"
+  ],
+  "baseline_actions": [
+    15,
+    21,
+    21,
+    35,
+    27,
+    27,
+    27,
+    35
+  ],
+  "class_name": "Ne4172"
+}
