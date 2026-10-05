@@ -160,12 +160,21 @@ def test_wheel_and_sdist_keep_nvidia_and_agent_bulk_separate():
 
 def test_data_only_document_links_preserve_data_and_point_to_omitted_source():
     document = (b"[Data](trajectories/studio/manifest.json) [Native](environment_files/sg01/game.py) "
-                b"![Agent GIF](media/agent-demos/nvidia.gif) [Details](TRAJECTORIES.md#format)")
-    result = builder.scope_document_links(document, {"trajectories/studio/manifest.json", "TRAJECTORIES.md"})
+                b"![Agent GIF](media/agent-demos/nvidia.gif) [Details](docs/TRAJECTORIES.md#format)")
+    result = builder.scope_document_links(document, {"trajectories/studio/manifest.json", "docs/TRAJECTORIES.md"})
     assert b"[Data](trajectories/studio/manifest.json)" in result
     assert b"blob/main/environment_files/sg01/game.py" in result
     assert b"raw.githubusercontent.com/Felix561/arc3-synthetic-games/main/media/agent-demos/nvidia.gif" in result
-    assert b"[Details](TRAJECTORIES.md#format)" in result
+    assert b"[Details](docs/TRAJECTORIES.md#format)" in result
+
+
+def test_nested_document_links_resolve_relative_to_the_document():
+    document = b"[Data](../trajectories/manifest.json) [Guide](TRAJECTORIES.md) [Player](../src/app.py)"
+    result = builder.scope_document_links(
+        document, {"trajectories/manifest.json", "docs/TRAJECTORIES.md"}, "docs/STATISTICS.md")
+    assert b"[Data](../trajectories/manifest.json)" in result
+    assert b"[Guide](TRAJECTORIES.md)" in result
+    assert b"blob/main/src/app.py" in result
 
 
 def test_official_release_requires_clean_committed_source(tmp_path, monkeypatch):

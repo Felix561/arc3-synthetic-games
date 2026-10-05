@@ -25,7 +25,16 @@ def test_publication_rejects_internal_markdown():
 
 
 def test_public_docs_contain_no_conversation_or_todo_notes():
-    assert {path.name for path in ROOT.glob("*.md")} == builder.PUBLIC_DOCS
+    assert {path.relative_to(ROOT).as_posix() for path in [*ROOT.glob("*.md"), *ROOT.glob("docs/*.md")]} == builder.PUBLIC_DOCS
     pattern = re.compile(r"\b(?:TODO|FIXME)\b|please\s+(?:move|change|update)|next\s+agent", re.IGNORECASE)
     for name in builder.PUBLIC_DOCS:
         assert not pattern.search((ROOT / name).read_text(encoding="utf-8")), name
+
+
+def test_public_document_local_links_survive_reorganization():
+    for name in builder.PUBLIC_DOCS:
+        document = ROOT / name
+        for target in re.findall(r"!?\[[^\]]*\]\(([^\s)]+)\)", document.read_text(encoding="utf-8")):
+            if target.startswith(("https:", "http:", "#", "mailto:")):
+                continue
+            assert (document.parent / target.split("#", 1)[0]).exists(), (name, target)

@@ -14,7 +14,7 @@
       "svg_sha256": "b40d4b87a1931298ac986d3c24b0b4889b7aa5d04a0f9236f467d81f49b377f8"
     }
   ],
-  "definitions": "STATISTICS.md",
+  "definitions": "docs/STATISTICS.md",
   "grain": "One recorded level attempt per canonical segment; all 415 attempts included.",
   "limitations": "One source-informed AI-agent playthrough per game. No human or optimal-policy comparison.",
   "policy_actions": "Current-level reset controls are excluded; unsuccessful reset-truncated attempts remain included.",

@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.1
+
+- Clarify independent synthetic game provenance in the repository description.
+- Speed up the eight AI demo GIFs by 2?, within GIF timing precision.
+- Organize reader guides under `docs/` and preserve licensing at the root.
+- Add a complete 55-environment dataset ZIP and a standard-library streaming loader.
+- Preserve all native game versions and trajectory data without modification.
+
+
 ## 1.1.0 — 2026-10-04
 
 - Separate Studio and NVIDIA source-informed AI-agent trajectory partitions.

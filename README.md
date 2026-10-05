@@ -1,13 +1,13 @@
 # ARC3 Synthetic Games & Agent Trajectories
 
-**30 original games · 55 games with agent demonstrations · 410 recorded level solves**
+**30 independently created synthetic games · 55 games with agent demonstrations · 410 recorded level solves**
 
 Abstract, turn-based ARC3-compatible games and compact source-informed AI-agent
 trajectories for studying environment models, planning and learning.
 
 **[Play the 30 Studio games](https://felix561.github.io/arc3-synthetic-games/)** ·
-[Game index](GAMES.md) · [Trajectory format](TRAJECTORIES.md) ·
-[Statistics](STATISTICS.md) · [Player releases](https://github.com/Felix561/arc3-synthetic-games/releases/latest)
+[Game index](docs/GAMES.md) · [Trajectory format](docs/TRAJECTORIES.md) ·
+[Statistics](docs/STATISTICS.md) · [Player releases](https://github.com/Felix561/arc3-synthetic-games/releases/latest)
 
 <table>
 <tr>
@@ -36,9 +36,9 @@ trajectories for studying environment models, planning and learning.
 </tr>
 </table>
 
-<sub><b>AI-agent gameplay, with source access.</b> Eight complete solved-level excerpts from saved palette observations; these previews reveal solutions. GIFs loop at presentation-paced timing, not recorded wall-clock speed. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
+<sub><b>AI-agent gameplay, with source access.</b> Eight complete solved-level excerpts from saved palette observations; these previews reveal solutions. GIFs loop at 2? the previous presentation speed (rounded to GIF timing precision), not recorded wall-clock speed. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
 
-Play the original Studio games, or use the trajectory dataset spanning Studio and
+Play the Studio synthetic games, or use the trajectory dataset spanning Studio and
 25 synthetic environments from
 [NVIDIA DreamTeam](https://github.com/NVIDIA/dream-team/tree/main/arc_agi_3).
 The two sources stay in separate, attributed partitions.
@@ -61,8 +61,28 @@ performance, optimality or human-efficiency scores.
 could inspect mechanics and game source before choosing actions. The collection
 requested **GPT-6.1-sol / ultra** with inherited session settings; effective model
 identity was not independently captured. Assistance and source-exposure limits
-are documented in [the trajectory card](TRAJECTORIES.md). All demonstrations were
+are documented in [the trajectory card](docs/TRAJECTORIES.md). All demonstrations were
 collected for this project; NVIDIA authored its environments, not these agent runs.
+
+## Download the dataset
+
+**[Download all 55 synthetic environments and AI trajectories (ZIP)](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-dataset.zip)**
+
+Extract into an empty folder and run `python tools/load_dataset.py`. No installation
+is needed to read the data. The archive includes exact native game packages,
+compact palette-grid training rows, Recorder-style native replays, checksums and
+separate Studio/NVIDIA licenses. See [download and loading guide](docs/DOWNLOADS.md).
+
+| Download | Choose this when? |
+| --- | --- |
+| [Complete dataset](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-dataset.zip) | You want all 55 environments and their AI recordings |
+| [Trajectories only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-agent-trajectories.zip) | You already have the exact environments |
+| [Studio environments only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-environments.zip) | You want just our 30 games in native ARC3-compatible layout |
+| [Source and player](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-source.zip) | You want the local player, code and documentation |
+
+These are independent synthetic games, **not official ARC Prize training games**.
+Native replay envelopes follow the Recorder style; segmented training rows use our
+[documented schema](docs/TRAJECTORIES.md), so check your loader's field expectations.
 
 ## Use the trajectory data
 
@@ -91,7 +111,7 @@ frame in the ARC Prize Recorder-style `timestamp` / `data` JSONL envelope.
 Everything is losslessly gzip-compressed; RGB images are not the training format.
 Unknown recording times remain `null`.
 
-Start with [TRAJECTORIES.md](TRAJECTORIES.md) for loading, resets, coordinate
+Start with [TRAJECTORIES.md](docs/TRAJECTORIES.md) for loading, resets, coordinate
 conventions, provenance and license scope. [Machine-readable statistics](trajectories/statistics.json)
 and CSVs support independent analysis. The player wheel and environments-only
 release remain lightweight Studio packages; use this repository or the separate
@@ -105,7 +125,7 @@ trajectory archive for the agent data and NVIDIA dependencies.
 
 <sub><b>Interpretation.</b> One source-informed AI-agent run per game, with retries retained. These are descriptive action lengths, not blind success rates, human-efficiency scores or optimal solution lengths.</sub>
 
-The [statistics page](STATISTICS.md) includes per-game attempts, outcomes, total
+The [statistics page](docs/STATISTICS.md) includes per-game attempts, outcomes, total
 actions and segment-length distributions. Its charts use the dark, restrained
 presentation of ARC Prize's
 [human-dataset analysis](https://arcprize.org/blog/arc-agi-3-human-dataset)
@@ -169,14 +189,14 @@ NVIDIA's unchanged packages are separate under
 [`third_party/nvidia/environment_files/`](third_party/nvidia/environment_files).
 Their pinned runtime support, upstream revision, checksums and licenses are
 included; they have **eight levels**, rather than Studio's seven. See the
-[NVIDIA setup](TRAJECTORIES.md#nvidia-environments) before replaying them.
+[NVIDIA setup](docs/TRAJECTORIES.md#nvidia-environments) before replaying them.
 Native code executes Python; run unfamiliar environments in isolation.
 
 ## Validation and limitations
 
 Recorded trajectories were independently replayed to native WIN for all 55 exact
 game versions and seed 0. Pixel/action alignment, completion boundaries, retries
-and dataset accounting were checked. [Validation](VALIDATION.md) distinguishes
+and dataset accounting were checked. [Validation](docs/VALIDATION.md) distinguishes
 this evidence from player compatibility and human playtesting.
 
 The dataset is small and source-informed, with one actor per game. It does not
@@ -195,7 +215,7 @@ python tools/build_preview.py  # Static Studio site in _site/
 
 Native tests execute game Python; run them in an isolated development/CI
 environment. Data-only trajectory checks do not require executing games.
-[Publishing instructions](PUBLICATION.md) describe package scopes and GitHub Pages.
+[Publishing instructions](docs/PUBLICATION.md) describe package scopes and GitHub Pages.
 
 ## License and citation
 

@@ -13,11 +13,14 @@ does not download NVIDIA game code or trajectory data.
 | `browser-preview.zip` | A static player for the 30 Studio games. It contains no NVIDIA environment code or trajectory recordings. |
 | `.whl` / `.tar.gz` | The installable 30-game Studio player. Large trajectory datasets, NVIDIA code and agent demonstration assets are excluded. |
 | `agent-trajectories.zip` | Data-only Studio and NVIDIA partitions: compressed canonical rows, native recordings, manifests, statistics and relevant licenses/notices. No game Python, player or raw human trajectories. |
+| `dataset.zip` | All 55 exact synthetic environments, NVIDIA runtime support, both agent-data partitions, licenses, loading guide and dependency-free streaming loader. No player, GIFs or generation setup. |
 | `SHA256SUMS.txt` | SHA-256 checksums for the release artifacts. The trajectory ZIP also contains checksums for its own data, docs and licenses. |
 
 Native Studio IDs, versions and source/metadata hashes remain those of release
 1.0.3. Adding agent data does not change the games or redefine earlier releases.
 Release 1.1.0 adds the separately packaged agent data and refreshed presentation.
+Release 1.1.1 adds the complete dataset download, reorganizes guides under `docs/`
+and doubles demo GIF playback speed without altering game or trajectory data.
 Every later combined source/player release must use a new project/package version
 and Git tag; do not overwrite earlier published artifacts. The trajectory
 dataset has its own immutable version, `arc3-source-informed-agent-20261002-v1`.

@@ -2,7 +2,7 @@
 
 ## Contents
 
-Release 1.1.0 contains one current version of each SG01–SG30 game, unchanged from 1.0.3:
+Release 1.1.1 contains one current version of each SG01–SG30 game, unchanged from 1.0.3:
 30 native Python environments with seven fixed levels each, 210 levels in total.
 Observations use the native 64×64 grid and 16-color ARC3 palette. Depending on
 the environment, actions use arrows, Space, clicks and Undo. Exact action masks
@@ -78,7 +78,7 @@ SDK release. Custom environments are used in offline mode without an API key.
 The optional browser preview uses Pyodide 314.0.7 (Python 3.14), arcengine 0.9.3
 and Pyodide's NumPy 2.4.6/Pydantic 2.12.5 builds. It is a convenience demo, with
 native-frame parity checks documented in VALIDATION.md. Use the pinned Python
-3.12 runtime above for reproducible SDK experiments. Release 1.1.0 changes no
+3.12 runtime above for reproducible SDK experiments. Release 1.1.1 changes no
 native game versions or file hashes from 1.0.0.
 
 Use exact native IDs and release hashes when reporting results. Changes to
@@ -112,4 +112,4 @@ renderings are distributed separately with Apache-2.0 and retained applicable
 third-party notices. The root MIT license does not replace these rights.
 The engine and SDK are separate MIT-licensed dependencies of the ARC Prize
 Foundation. This project claims neither NVIDIA nor ARC Prize endorsement.
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for exact source attribution.
+See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) for exact source attribution.

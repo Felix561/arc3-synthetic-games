@@ -7,6 +7,7 @@ Official source/player releases still require a clean committed tree.
 import argparse
 import hashlib
 import json
+import posixpath
 import re
 import zipfile
 from pathlib import Path, PurePosixPath
@@ -15,7 +16,7 @@ from build_preview import ROOT, write_zip
 
 SCHEMA = "arc3-public-agent-trajectories/1"
 SOURCES = {"studio", "nvidia"}
-DOCS = {"TRAJECTORIES.md", "STATISTICS.md"}
+DOCS = {"docs/TRAJECTORIES.md", "docs/STATISTICS.md"}
 LICENSES = {"LICENSE", "third_party/nvidia/LICENSE", "third_party/nvidia/NOTICE",
             "third_party/nvidia/THIRD_PARTY_NOTICES"}
 ROOT_DATA = {"manifest.json", "statistics.json", "per-game.csv", "per-segment.csv", "SHA256SUMS.txt"}
@@ -188,8 +189,8 @@ games: Studio synthetic games and NVIDIA Dream Team synthetic games. The records
 were produced by source-informed AI agents, not human players. Source access and
 mechanics information were available; this is not a blind benchmark result.
 
-See [TRAJECTORIES.md](TRAJECTORIES.md) for formats, provenance and limitations, and
-[STATISTICS.md](STATISTICS.md) for attempts, outcomes and action counts. The
+See [trajectory documentation](docs/TRAJECTORIES.md) for formats, provenance and limitations, and
+[statistics](docs/STATISTICS.md) for attempts, outcomes and action counts. The
 `trajectories/` manifests bind every data file to its SHA-256 hash. `SHA256SUMS.txt`
 at this archive's root additionally covers the documentation and license files.
 
@@ -207,16 +208,19 @@ testing, with no prescribed sampling quota.
 """.encode()
 
 
-def scope_document_links(content, archive_names):
+def scope_document_links(content, archive_names, document_path="README.md"):
     """Keep the data ZIP useful without implying it contains the playable source."""
     def replace(match):
         prefix, target, suffix = match.groups()
         if target.startswith(("https://", "http://", "#", "mailto:")):
             return match.group(0)
-        path = target.split("#", 1)[0]
+        relative, separator, anchor = target.partition("#")
+        path = posixpath.normpath(posixpath.join(posixpath.dirname(document_path), relative))
         checked_name(path)
+        target = path + (separator + anchor if separator else "")
         if path in archive_names:
-            return match.group(0)
+            destination = posixpath.relpath(path, posixpath.dirname(document_path) or ".")
+            return prefix + destination + (separator + anchor if separator else "") + suffix
         host = ("https://raw.githubusercontent.com/Felix561/arc3-synthetic-games/main/"
                 if prefix.startswith("!") else
                 "https://github.com/Felix561/arc3-synthetic-games/blob/main/")
@@ -255,7 +259,7 @@ def build(output, root=ROOT):
             raise ValueError("Statistics graphics manifest is incomplete")
     archive_names = set(files) | DOCS | {"README.md", "SHA256SUMS.txt"}
     for name in DOCS:
-        files[name] = scope_document_links(read_public(root, name), archive_names)
+        files[name] = scope_document_links(read_public(root, name), archive_names, name)
     files["README.md"] = archive_readme(manifest)
     files["SHA256SUMS.txt"] = "".join(f"{sha256(content)}  {name}\n"
                                           for name, content in sorted(files.items())).encode("utf-8")

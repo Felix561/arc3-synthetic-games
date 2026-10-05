@@ -36,8 +36,8 @@ human discoverability, source-blind success or all-seed solvability.
 
 | Partition | Native environments | Levels per game | License |
 | --- | --- | ---: | --- |
-| `trajectories/studio/` | SG01–SG30 in `environment_files/` | 7 | [MIT](LICENSE) |
-| `trajectories/nvidia/` | 25 unchanged packages in `third_party/nvidia/environment_files/` | 8 | [Apache-2.0 and retained notices](third_party/nvidia/LICENSE) |
+| `trajectories/studio/` | SG01–SG30 in `environment_files/` | 7 | [MIT](../LICENSE) |
+| `trajectories/nvidia/` | 25 unchanged packages in `third_party/nvidia/environment_files/` | 8 | [Apache-2.0 and retained notices](../third_party/nvidia/LICENSE) |
 
 NVIDIA source: [DreamTeam](https://github.com/NVIDIA/dream-team), revision
 [`bffef22f3e50fb7dcd6b2dc20005e6986e1479e9`](https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9).

@@ -2,7 +2,7 @@
 
 The Studio environment collection contains 30 games, 210 levels and 60 native source/metadata files.
 Catalog IDs and SHA-256 hashes bind each game to its exact native version.
-Release 1.1.0 preserves all native game files from 1.0.0.
+Release 1.1.1 preserves all native game files from 1.0.0.
 
 ## Native runtime and player
 

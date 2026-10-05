@@ -97,6 +97,17 @@ def draw_clips(rows: list[tuple[str, dict]], data_root: Path, output: Path) -> l
             assert recorded["frame"][native_frame_indices[i]] == row["observations"][i + 1]
         step_ms = max(180, min(750, (16000 // max(total, 1)) // 10 * 10))
         durations = [1200] + [step_ms] * max(total - 1, 0) + [2800]
+        # GIF delays have 10 ms precision. Round cumulative time so 2x playback
+        # keeps total duration within 5 ms without steadily accumulating error.
+        elapsed = 0
+        previous = 0
+        accelerated = []
+        for duration in durations:
+            elapsed += duration
+            rounded = (elapsed + 10) // 20 * 10
+            accelerated.append(rounded - previous)
+            previous = rounded
+        durations = accelerated
         frames = []
         frame_hashes = []
         for grid in row["observations"]:
@@ -251,11 +262,11 @@ def main() -> None:
         write_json(args.output / "agent-demos/manifest.json", {
             "schema_version": 1, "actor_type": "online_agent", "source_informed": True,
             "selection": "Eight illustrative solved level excerpts: four Studio and four NVIDIA games; not a random sample or a performance comparison.",
-            "timing": "Replay-paced display. Native response timestamps were not recorded; no wall-clock speed is claimed.",
+            "timing": "2x previous presentation speed, rounded to GIF's 10 ms precision. Native response timestamps were not recorded; no wall-clock speed is claimed.",
             "frame_policy": "Canonical initial plus every settled post-action observation, including the old-level completion frame.",
             "animation_policy": "Intermediate animation frames are preserved in native recordings, but omitted from settled-observation clips.",
             "rendering": "Native 64x64 ARC3 palette pixels scaled 5x by nearest-neighbor into board-only 320x320 looping GIFs; captions and notices are below the README gallery.",
-            "documentation": "TRAJECTORIES.md", "attribution_and_licensing": "THIRD_PARTY_NOTICES.md",
+            "documentation": "docs/TRAJECTORIES.md", "attribution_and_licensing": "THIRD_PARTY_NOTICES.md",
             "regenerate": "python tools/render_trajectory_media.py --only clips; optional authoring dependency: Pillow",
             "palette": PALETTE, "clips": clips,
         })
@@ -267,7 +278,7 @@ def main() -> None:
             "grain": "One recorded level attempt per canonical segment; all 415 attempts included.",
             "limitations": "One source-informed AI-agent playthrough per game. No human or optimal-policy comparison.",
             "policy_actions": "Current-level reset controls are excluded; unsuccessful reset-truncated attempts remain included.",
-            "definitions": "STATISTICS.md", "authoritative_values": "trajectories/statistics.json",
+            "definitions": "docs/STATISTICS.md", "authoritative_values": "trajectories/statistics.json",
             "style_reference": "https://arcprize.org/blog/arc-agi-3-human-dataset",
             "presentation": "ARC Prize-inspired dark figures; interpretation captions are below charts in README.md and STATISTICS.md.",
         })

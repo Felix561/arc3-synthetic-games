@@ -7,6 +7,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from build_dataset_release import build as build_dataset_archive
 from build_preview import ROOT, write_zip
 from build_trajectory_release import build as build_trajectory_archive
 
@@ -15,8 +16,9 @@ def git(*args):
     return subprocess.check_output(["git", "-C", str(ROOT), *args])
 
 
-PUBLIC_DOCS = {"README.md", "DATASET_CARD.md", "GAMES.md", "VALIDATION.md", "PUBLICATION.md",
-               "THIRD_PARTY_NOTICES.md", "CHANGELOG.md", "TRAJECTORIES.md", "STATISTICS.md"}
+PUBLIC_DOCS = {"README.md", "docs/DATASET_CARD.md", "docs/GAMES.md", "docs/VALIDATION.md", "docs/PUBLICATION.md",
+               "THIRD_PARTY_NOTICES.md", "docs/CHANGELOG.md", "docs/TRAJECTORIES.md", "docs/STATISTICS.md",
+               "docs/DOWNLOADS.md"}
 
 
 def check_public_docs(paths):
@@ -66,7 +68,7 @@ observation = game.reset()
 These game sources execute Python; use an isolated environment for untrusted
 experiments. No official human-efficiency baseline or comparable ARC Prize score
 is provided. Original Studio content is MIT-licensed; see `LICENSE` and
-`THIRD_PARTY_NOTICES.md`. `GAMES.md` describes the included game collection.
+`THIRD_PARTY_NOTICES.md`. `docs/GAMES.md` describes the included game collection.
 """.encode()
 
 
@@ -77,7 +79,7 @@ This archive contains only the 30 Studio native environments and their public
 presentation assets. At packaging time, all 60 native source/metadata files are
 checked against `catalog.json`. Native initialization, controls and player tests
 are documented in the source repository:
-https://github.com/Felix561/arc3-synthetic-games/blob/main/VALIDATION.md
+https://github.com/Felix561/arc3-synthetic-games/blob/main/docs/VALIDATION.md
 
 The pinned native runtime is Python 3.12, arcengine 0.9.3, arc-agi 0.9.8 and NumPy
 2.5.3. Runtime compatibility is distinct from human discoverability or independent
@@ -86,7 +88,7 @@ runs provide finite evidence, not a universal solvability guarantee.
 
 Source-informed AI-agent recordings and their fresh-runtime replay verification
 are a separate dataset/package, documented here:
-https://github.com/Felix561/arc3-synthetic-games/blob/main/TRAJECTORIES.md
+https://github.com/Felix561/arc3-synthetic-games/blob/main/docs/TRAJECTORIES.md
 They are not human playthroughs, blind-agent evaluations or official benchmark
 scores. No raw trajectory data or NVIDIA game source is included in this archive.
 """
@@ -145,7 +147,7 @@ def build(output, preview, packages):
     # Git archive contains tracked source only, including no repository metadata.
     subprocess.run(["git", "-C", str(ROOT), "archive", "--format=zip", "--output",
                     str(output / f"{stem}-source.zip"), "HEAD"], check=True)
-    names = {"catalog.json", "LICENSE", "GAMES.md", "media/overview.png"}
+    names = {"catalog.json", "LICENSE", "docs/GAMES.md", "media/overview.png"}
     for entry in data["games"]:
         names.add(entry["preview"])
         if entry.get("demo"):
@@ -157,7 +159,7 @@ def build(output, preview, packages):
             names.add(name)
     files = {name: (ROOT / name).read_bytes() for name in names}
     files["README.md"] = native_archive_readme(version)
-    files["VALIDATION.md"] = native_archive_validation()
+    files["docs/VALIDATION.md"] = native_archive_validation()
     files["THIRD_PARTY_NOTICES.md"] = native_archive_notices()
     files["CITATION.cff"] = native_archive_citation(version)
     write_zip(output / f"{stem}-environments.zip", files)
@@ -180,6 +182,7 @@ def build(output, preview, packages):
         shutil.copyfile(packages / name, output / name)
     if (ROOT / "trajectories/manifest.json").is_file():
         build_trajectory_archive(output / f"{stem}-agent-trajectories.zip")
+        build_dataset_archive(output / f"{stem}-dataset.zip")
     sums = "".join(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n"
                    for path in sorted(output.iterdir()))
     (output / "SHA256SUMS.txt").write_text(sums, encoding="utf-8")
