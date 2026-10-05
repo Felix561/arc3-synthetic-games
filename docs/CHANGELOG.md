@@ -1,12 +1,16 @@
 # Changelog
 
+## 1.1.2
+
+- Reader-focused dataset documentation and package descriptions.
+
 ## 1.1.1
 
-- Clarify independent synthetic game provenance in the repository description.
-- Speed up the eight AI demo GIFs by 2?, within GIF timing precision.
-- Organize reader guides under `docs/` and preserve licensing at the root.
-- Add a complete 55-environment dataset ZIP and a standard-library streaming loader.
-- Preserve all native game versions and trajectory data without modification.
+- Explicit synthetic environment provenance in the repository description.
+- Shorter playback loops for the eight AI demo GIFs.
+- Reader guides under `docs/`; license notices at the root.
+- Complete 55-environment dataset ZIP with a standard-library streaming loader.
+- No changes to native game versions or trajectory data.
 
 
 ## 1.1.0 — 2026-10-04
@@ -17,7 +21,7 @@
 - Compact palette JSONL/gzip, public provenance, checksums and replay summaries.
 - NVIDIA's exact native packages/support, license notices and upstream attribution.
 - Eight looping AI-agent replay GIFs, action-count graphics and per-game statistics.
-- Broader dataset documentation; unchanged Studio games and player controls.
+- Dataset documentation; unchanged Studio games and player controls.
 
 ## 1.0.3 — 2026-09-30
 
@@ -34,7 +38,7 @@
 
 - Static browser demo for all 30 games, using the original native Python sources.
 - GitHub Pages workflow and one-time hosting instructions.
-- Refreshed README, AI disclosure, third-party notices and release packages.
+- README, AI disclosure, third-party notices and release packages.
 - Unchanged native game IDs, versions, source hashes and mechanics.
 
 ## 1.0.0 — 2026-09-28

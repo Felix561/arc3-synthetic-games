@@ -36,7 +36,7 @@ trajectories for studying environment models, planning and learning.
 </tr>
 </table>
 
-<sub><b>AI-agent gameplay, with source access.</b> Eight complete solved-level excerpts from saved palette observations; these previews reveal solutions. GIFs loop at 2? the previous presentation speed (rounded to GIF timing precision), not recorded wall-clock speed. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
+<sub><b>AI-agent gameplay, with source access.</b> Eight complete solved-level excerpts; these previews reveal solutions. Playback timing is illustrative. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
 
 Play the Studio synthetic games, or use the trajectory dataset spanning Studio and
 25 synthetic environments from
@@ -47,7 +47,7 @@ The two sources stay in separate, attributed partitions.
 
 | Source | Games | Levels | Recorded level attempts | Solved / unsolved | Policy actions |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| [Studio](trajectories/studio) — our SG01–SG30 games | 30 | 210 | 210 | 210 / 0 | 2,344 |
+| [Studio](trajectories/studio) — SG01–SG30 synthetic games | 30 | 210 | 210 | 210 / 0 | 2,344 |
 | [NVIDIA DreamTeam](trajectories/nvidia) — third-party synthetic games | 25 | 200 | 205 | 200 / 5 | 3,667 |
 | **Total** | **55** | **410** | **415** | **410 / 5** | **6,011** |
 
@@ -59,26 +59,26 @@ performance, optimality or human-efficiency scores.
 
 **These trajectories are AI-played, not human-played.** Dedicated Codex agents
 could inspect mechanics and game source before choosing actions. The collection
-requested **GPT-6.1-sol / ultra** with inherited session settings; effective model
+configuration was **GPT-6.1-sol / ultra**; effective model
 identity was not independently captured. Assistance and source-exposure limits
 are documented in [the trajectory card](docs/TRAJECTORIES.md). All demonstrations were
 collected for this project; NVIDIA authored its environments, not these agent runs.
 
 ## Download the dataset
 
-**[Download all 55 synthetic environments and AI trajectories (ZIP)](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-dataset.zip)**
+**[Download all 55 synthetic environments and AI trajectories (ZIP)](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-dataset.zip)**
 
 Extract into an empty folder and run `python tools/load_dataset.py`. No installation
 is needed to read the data. The archive includes exact native game packages,
 compact palette-grid training rows, Recorder-style native replays, checksums and
 separate Studio/NVIDIA licenses. See [download and loading guide](docs/DOWNLOADS.md).
 
-| Download | Choose this when? |
+| Download | Contents |
 | --- | --- |
-| [Complete dataset](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-dataset.zip) | You want all 55 environments and their AI recordings |
-| [Trajectories only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-agent-trajectories.zip) | You already have the exact environments |
-| [Studio environments only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-environments.zip) | You want just our 30 games in native ARC3-compatible layout |
-| [Source and player](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.1/arc3-synthetic-games-v1.1.1-source.zip) | You want the local player, code and documentation |
+| [Complete dataset](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-dataset.zip) | All 55 environments and their AI recordings |
+| [Trajectories only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-agent-trajectories.zip) | AI recordings, manifests and statistics; no game code |
+| [Studio environments only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-environments.zip) | 30 Studio games in native ARC3-compatible layout |
+| [Source and player](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-source.zip) | Local player, code, data and documentation |
 
 These are independent synthetic games, **not official ARC Prize training games**.
 Native replay envelopes follow the Recorder style; segmented training rows use our
@@ -86,8 +86,7 @@ Native replay envelopes follow the Recorder style; segmented training rows use o
 
 ## Use the trajectory data
 
-The two partitions are independent. Load both to use all 415 segments; there is
-no duplicate combined file or prescribed sampling quota.
+The two partitions contain 415 segments in total. Load both for the complete dataset.
 
 ```python
 import gzip
@@ -105,7 +104,7 @@ for source in ("studio", "nvidia"):
             solved = episode["is_solved"]
 ```
 
-Canonical rows contain observations, actions, valid-action information and truthful
+Canonical rows contain observations, actions, valid-action information and
 outcome flags. Native per-game recordings additionally preserve every animation
 frame in the ARC Prize Recorder-style `timestamp` / `data` JSONL envelope.
 Everything is losslessly gzip-compressed; RGB images are not the training format.
@@ -114,7 +113,7 @@ Unknown recording times remain `null`.
 Start with [TRAJECTORIES.md](docs/TRAJECTORIES.md) for loading, resets, coordinate
 conventions, provenance and license scope. [Machine-readable statistics](trajectories/statistics.json)
 and CSVs support independent analysis. The player wheel and environments-only
-release remain lightweight Studio packages; use this repository or the separate
+release contain only Studio content; use this repository or the separate
 trajectory archive for the agent data and NVIDIA dependencies.
 
 ## Explore the statistics
@@ -126,10 +125,7 @@ trajectory archive for the agent data and NVIDIA dependencies.
 <sub><b>Interpretation.</b> One source-informed AI-agent run per game, with retries retained. These are descriptive action lengths, not blind success rates, human-efficiency scores or optimal solution lengths.</sub>
 
 The [statistics page](docs/STATISTICS.md) includes per-game attempts, outcomes, total
-actions and segment-length distributions. Its charts use the dark, restrained
-presentation of ARC Prize's
-[human-dataset analysis](https://arcprize.org/blog/arc-agi-3-human-dataset)
-as a visual reference; the plotted data comes entirely from this collection.
+actions and segment-length distributions.
 
 ## Play locally
 
@@ -152,11 +148,10 @@ arc3-synthetic-games list
 ```
 
 The local and GitHub Pages players currently cover **Studio's 30 games**.
-Mechanics explanations and the existing, separately labelled human GIF excerpts
-are opt-in. They are distinct from the newly released AI trajectories. Gameplay
-stays in memory; neither player records or uploads your actions.
+Mechanics explanations and human gameplay GIFs are opt-in. Gameplay stays in
+memory; neither player records or uploads actions.
 
-The browser demo runs the original Python games through WebAssembly, without an
+The browser demo runs the native Python games through WebAssembly, without an
 account or API key. Its first runtime download needs internet access. GitHub and
 the runtime CDN handle ordinary asset requests under their own privacy policies.
 
@@ -232,7 +227,6 @@ No official ARC3 environments or human trajectory dataset are redistributed.
 ## AI disclosure
 
 AI assisted the design, implementation and documentation of the Studio games,
-informed by human feedback and playtesting. The new trajectory dataset and its
-eight agent replay GIFs are **source-informed AI-agent gameplay**. The older,
-separately labelled human GIF excerpts remain human gameplay; no raw human
-trajectories are included.
+with human feedback and playtesting. The trajectory dataset and eight agent replay
+GIFs show **source-informed AI-agent gameplay**. The six human gameplay GIFs are
+labelled separately; no raw human trajectories are included.

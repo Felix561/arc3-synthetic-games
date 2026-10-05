@@ -8,7 +8,7 @@ does not download NVIDIA game code or trajectory data.
 
 | Artifact | Contents |
 | --- | --- |
-| `environments.zip` | The 30 unchanged Studio native games, catalog, previews, existing human GIF excerpts and scoped native documentation. |
+| `environments.zip` | The 30 Studio native games, catalog, previews, human gameplay GIF excerpts and native documentation. |
 | `source.zip` | Complete tracked public source, including the player, both trajectory partitions, separately licensed NVIDIA environments, analysis and documentation. |
 | `browser-preview.zip` | A static player for the 30 Studio games. It contains no NVIDIA environment code or trajectory recordings. |
 | `.whl` / `.tar.gz` | The installable 30-game Studio player. Large trajectory datasets, NVIDIA code and agent demonstration assets are excluded. |
@@ -16,37 +16,28 @@ does not download NVIDIA game code or trajectory data.
 | `dataset.zip` | All 55 exact synthetic environments, NVIDIA runtime support, both agent-data partitions, licenses, loading guide and dependency-free streaming loader. No player, GIFs or generation setup. |
 | `SHA256SUMS.txt` | SHA-256 checksums for the release artifacts. The trajectory ZIP also contains checksums for its own data, docs and licenses. |
 
-Native Studio IDs, versions and source/metadata hashes remain those of release
-1.0.3. Adding agent data does not change the games or redefine earlier releases.
-Release 1.1.0 adds the separately packaged agent data and refreshed presentation.
-Release 1.1.1 adds the complete dataset download, reorganizes guides under `docs/`
-and doubles demo GIF playback speed without altering game or trajectory data.
-Every later combined source/player release must use a new project/package version
-and Git tag; do not overwrite earlier published artifacts. The trajectory
-dataset has its own immutable version, `arc3-source-informed-agent-20261002-v1`.
+Release artifacts are immutable and identified by a project version and Git tag.
+The trajectory dataset has its own version, `arc3-source-informed-agent-20261002-v1`.
+Native environment IDs and hashes are recorded in the catalog and dataset manifests.
 See [TRAJECTORIES.md](TRAJECTORIES.md) for source-informed agent provenance and
 [STATISTICS.md](STATISTICS.md) for observed outcomes. These are AI recordings,
 not human gameplay or blind benchmark results.
 
 ## Prepare a local trajectory archive
 
-After inspecting the public data and documentation, create a data-only archive:
+Build a data-only archive:
 
 ```bash
 python tools/build_trajectory_release.py --output dist/arc3-source-informed-agent-20261002-v1.zip
 ```
 
-This command reads the reviewed public files, verifies the complete checksum
-inventory and distinct partition licenses, and writes a deterministic ZIP. It
-does not execute game Python or run Git, deploy, commit, push or tag anything.
-Existing artifacts are never overwritten; choose another output filename to
-make another draft. A local draft does not imply that a release was published.
+The builder verifies file checksums and partition licenses, then writes a
+deterministic ZIP without executing game code. The output path must not exist.
 
-The broader `tools/build_release.py` command continues to require a clean,
-committed source tree. It produces the separate source, native, browser, Python
-and trajectory artifacts, using a prebuilt matching browser preview and Python
-packages. It does not upload them. Build inputs must be reviewed before any
-later release publication.
+`tools/build_release.py` requires a clean, committed source tree, a matching browser
+preview and built Python packages. It creates source, native, browser, Python,
+trajectory and complete-dataset artifacts with a release checksum inventory.
+Upload the resulting files to the matching GitHub release.
 
 ## Browser hosting
 
@@ -57,7 +48,7 @@ browser with WebAssembly and module-worker support. Tested browsers are listed
 in [VALIDATION.md](VALIDATION.md). Local Python play remains available offline.
 
 For GitHub Pages, select **GitHub Actions** in **Settings → Pages → Build and
-deployment**, then deliberately run the **Browser demo** workflow. A push to
+deployment**, then run the **Browser demo** workflow. A push to
 `main` also triggers that workflow. The deployment URL for this repository is
 <https://felix561.github.io/arc3-synthetic-games/>. The workflow builds on private
 repositories too, but only deploys when public. No personal deployment token

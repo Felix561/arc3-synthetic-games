@@ -97,8 +97,8 @@ def draw_clips(rows: list[tuple[str, dict]], data_root: Path, output: Path) -> l
             assert recorded["frame"][native_frame_indices[i]] == row["observations"][i + 1]
         step_ms = max(180, min(750, (16000 // max(total, 1)) // 10 * 10))
         durations = [1200] + [step_ms] * max(total - 1, 0) + [2800]
-        # GIF delays have 10 ms precision. Round cumulative time so 2x playback
-        # keeps total duration within 5 ms without steadily accumulating error.
+        # GIF delays have 10 ms precision. Round cumulative half-duration timing
+        # to avoid accumulating per-frame rounding error.
         elapsed = 0
         previous = 0
         accelerated = []
@@ -262,7 +262,7 @@ def main() -> None:
         write_json(args.output / "agent-demos/manifest.json", {
             "schema_version": 1, "actor_type": "online_agent", "source_informed": True,
             "selection": "Eight illustrative solved level excerpts: four Studio and four NVIDIA games; not a random sample or a performance comparison.",
-            "timing": "2x previous presentation speed, rounded to GIF's 10 ms precision. Native response timestamps were not recorded; no wall-clock speed is claimed.",
+            "timing": "Illustrative playback timing; recording timestamps are unavailable.",
             "frame_policy": "Canonical initial plus every settled post-action observation, including the old-level completion frame.",
             "animation_policy": "Intermediate animation frames are preserved in native recordings, but omitted from settled-observation clips.",
             "rendering": "Native 64x64 ARC3 palette pixels scaled 5x by nearest-neighbor into board-only 320x320 looping GIFs; captions and notices are below the README gallery.",

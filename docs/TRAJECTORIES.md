@@ -10,13 +10,12 @@ No human trajectories or official ARC3 training/evaluation games are included.
 One dedicated Codex gameplay agent was assigned to each game. Agents could read
 mechanics, level definitions and game source, then select legal actions in a real,
 isolated native runtime. They could plan short action chunks and inspect actual
-observations between them. Sixteen agents ran concurrently after a session restart.
+observations between them. Up to sixteen agents ran concurrently.
 This is privileged, source-informed experience rather than source-blind discovery.
 
-The requested session configuration was **GPT-6.1-sol / ultra**. Subagents inherited
-the session configuration; effective per-action model identity and effort were
-not independently recorded. These fields are configuration provenance, not
-verified model telemetry.
+The collection configuration was **GPT-6.1-sol / ultra**. Effective per-action
+model identity and effort were not independently recorded; the model label
+describes configuration rather than verified telemetry.
 
 Actors were instructed not to invoke bespoke solvers, search algorithms, bundled
 solutions or test action lists. Their source views removed recognised solution
@@ -156,8 +155,8 @@ The manifest and SHA-256 inventories bind compressed records, native packages,
 runtime support and derived statistics. Public identifiers replace private actor,
 run and request IDs. Private journals, machine paths, credentials, reasoning
 transcripts, collection configuration and human trajectories are excluded.
-The public verification summary describes the saved independent replay evidence;
-it does not claim a newly published collection is a separate blind evaluation.
+The verification summary documents independent replay consistency. It does not
+measure source-blind performance.
 
 The dataset is intended for testing, imitation learning, planning and environment
 model research. Supply observations/actions and appropriate outcome targets to

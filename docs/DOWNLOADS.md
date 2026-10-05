@@ -1,7 +1,7 @@
 # Download and use the dataset
 
-Download **`arc3-synthetic-games-v1.1.1-dataset.zip`** from the
-[release](https://github.com/Felix561/arc3-synthetic-games/releases/tag/v1.1.1)
+Download **`arc3-synthetic-games-v1.1.2-dataset.zip`** from the
+[release](https://github.com/Felix561/arc3-synthetic-games/releases/tag/v1.1.2)
 and extract it into an empty directory. It includes all 55 synthetic environments,
 their exact-version AI recordings, compact training rows and source-specific licenses.
 It contains no official ARC Prize games or human demonstration dataset.
@@ -39,8 +39,8 @@ for episode in iter_trajectories("."):
 
 Native replay files preserve the ARC Prize Recorder-style `timestamp` / `data`
 JSONL envelope and palette frames. Gzip is lossless; these are not RGB images.
-The canonical training rows are our documented level-attempt schema, not a claim
-of byte-for-byte interchangeability with every official human-data loader.
+The canonical training rows use the documented level-attempt schema. Loaders for official human datasets
+may require field mapping.
 Unknown timestamps remain `null`. All actors are source-informed AI agents.
 See [formats and coordinate conventions](TRAJECTORIES.md) before training.
 

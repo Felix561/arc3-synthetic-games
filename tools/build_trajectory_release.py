@@ -1,8 +1,4 @@
-"""Build a deterministic, data-only agent trajectory ZIP from reviewed local files.
-
-This draft builder never commits, pushes, tags, deploys or executes game Python.
-Official source/player releases still require a clean committed tree.
-"""
+"""Build a deterministic, checksum-verified trajectory ZIP without executing games."""
 
 import argparse
 import hashlib
@@ -204,7 +200,7 @@ Studio material uses [MIT](LICENSE). NVIDIA material retains its separate
 [notice](third_party/nvidia/NOTICE) and
 [third-party notices](third_party/nvidia/THIRD_PARTY_NOTICES). There is no claim of
 NVIDIA or ARC Prize endorsement. These datasets are intended for research and
-testing, with no prescribed sampling quota.
+testing.
 """.encode()
 
 

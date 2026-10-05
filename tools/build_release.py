@@ -31,7 +31,7 @@ def native_archive_readme(version):
     """An environments-only archive describes only the assets it actually contains."""
     return f"""# ARC3 Synthetic Games native environments · v{version}
 
-This archive contains the unchanged SG01–SG30 native environments: 30 games and
+This archive contains the SG01–SG30 native environments: 30 games and
 210 levels, with exact game IDs and SHA-256 hashes in `catalog.json`. It also
 contains initial-board previews, six human-played GIF excerpts and reader-facing
 documentation. The GIFs are presentation assets, not human trajectory data.

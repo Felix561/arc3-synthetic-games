@@ -2,13 +2,11 @@
 
 The Studio environment collection contains 30 games, 210 levels and 60 native source/metadata files.
 Catalog IDs and SHA-256 hashes bind each game to its exact native version.
-Release 1.1.1 preserves all native game files from 1.0.0.
 
 ## Native runtime and player
 
 The validated runtime is Python 3.12, arcengine 0.9.3, arc-agi 0.9.8 and
-NumPy 2.5.3. Source and installed-wheel suites passed 73 tests for release 1.0.2;
-the current suite is rerun in CI. Checks cover offline SDK discovery, reset and
+NumPy 2.5.3. Automated checks run in CI and cover offline SDK discovery, reset and
 representative actions for all 30 games, initialization of all 210 levels,
 action validation, independent player sessions, level selection and packaging.
 Native validation runs in isolated development/CI environments. Container
@@ -32,9 +30,8 @@ browser storage. GitHub and the runtime CDN receive ordinary asset requests.
 Release packages are checked for native file hashes, licenses, document links,
 credentials, personal paths and unwanted internal files. The 31 PNGs and six
 human-played GIFs contain only game pixels, without identifying media metadata.
-The Studio player/browser/environments releases remain separate from the agent
-trajectory dataset. Neither includes private human trajectories, the generation
-pipeline or private solution witnesses. The repository additionally contains
+Studio player, browser and environments-only packages exclude agent trajectories,
+private human recordings, generation tools and private solution witnesses. The repository additionally contains
 NVIDIA's unchanged native packages with their original public source, including
 upstream helper definitions, under their retained licenses.
 
@@ -48,18 +45,16 @@ response and animation frame, not just final completion flags.
 
 Independent content checks validated recorded action order, palette pixels,
 click coordinates, the 355 measured old-level completion targets, resets and
-segment accounting. The private collection has 6,011 policy actions, 6,071
+segment accounting. The dataset contains 6,011 policy actions, 6,071
 responses and 6,784 native frames. Its 415 canonical segments include 410 solved
 and five reset-interrupted attempts; all 103 short segments are retained.
 Recorded timestamps remain null. Current-level resets are separate from policy
 actions; native GAME_OVER was not observed in these recordings.
 
-The public preparation preserves native recording bytes and gameplay content
-while replacing private IDs/provenance with a public allowlist. Public inventories
-bind the new compressed canonical files and retained exact native files.
-The verification summary reports the saved replay evidence; preparing the public
-package does not constitute new source-blind evaluation or human approval.
-Public tools can verify checksums and record structure without executing games.
+SHA-256 inventories bind recordings, canonical rows and exact environment files.
+Records exclude private identifiers and machine-specific provenance. Verification
+covers replay consistency, not source-blind performance or human usability.
+Checksums and record structure can be verified without executing games.
 
 ## Reproduce
 
