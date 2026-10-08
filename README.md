@@ -1,15 +1,27 @@
 # ARC3 Synthetic Games & Agent Trajectories
 
-**30 independently created synthetic games · 55 games with agent demonstrations · 410 recorded level solves**
+**50 independently created Studio games · 75 games with AI demonstrations · 550 recorded level solves**
 
 Abstract, turn-based ARC3-compatible games and compact source-informed AI-agent
 trajectories for studying environment models, planning and learning.
 
-**[Play the 30 Studio games](https://felix561.github.io/arc3-synthetic-games/)** ·
+**[Play the Studio games](https://felix561.github.io/arc3-synthetic-games/)** ·
 [Game index](docs/GAMES.md) · [Trajectory format](docs/TRAJECTORIES.md) ·
 [Statistics](docs/STATISTICS.md) · [Player releases](https://github.com/Felix561/arc3-synthetic-games/releases/latest)
 
 <table>
+<tr>
+<td><img src="media/agent-demos/studio-v2/v201-level-07.gif" width="180" alt="Fold and Pierce level 7, source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/studio-v2/v214-level-07.gif" width="180" alt="Body Relay level 7, source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/studio-v2/v217-level-07.gif" width="180" alt="Nested Access level 7, source-informed AI-agent solution"></td>
+<td><img src="media/agent-demos/studio-v2/v219-level-07.gif" width="180" alt="Ongoing Motion level 7, source-informed AI-agent solution"></td>
+</tr>
+<tr>
+<td align="center"><sub>Studio V2 · Fold and Pierce</sub></td>
+<td align="center"><sub>Studio V2 · Body Relay</sub></td>
+<td align="center"><sub>Studio V2 · Nested Access</sub></td>
+<td align="center"><sub>Studio V2 · Ongoing Motion</sub></td>
+</tr>
 <tr>
 <td><img src="media/agent-demos/studio/sg07-level-07.gif" width="180" alt="Studio SG07 level 7, recorded source-informed AI-agent solution"></td>
 <td><img src="media/agent-demos/studio/sg18-level-07.gif" width="180" alt="Studio SG18 level 7, recorded source-informed AI-agent solution"></td>
@@ -36,12 +48,13 @@ trajectories for studying environment models, planning and learning.
 </tr>
 </table>
 
-<sub><b>AI-agent gameplay, with source access.</b> Eight complete solved-level excerpts; these previews reveal solutions. Playback timing is illustrative. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
+<sub><b>AI-agent gameplay, with source access.</b> Twelve solved-level previews; these reveal solutions. V219 includes native animation frames; the other previews show settled observations. Playback timing is illustrative. Source, level, actions and provenance are in the <a href="media/agent-demos/manifest.json">media manifest</a>.</sub>
 
-Play the Studio synthetic games, or use the trajectory dataset spanning Studio and
+Version **2.0.0** adds 20 Studio games, V201–V220, with 140 successful level
+demonstrations. Play the Studio collection or use the trajectory dataset, including
 25 synthetic environments from
 [NVIDIA DreamTeam](https://github.com/NVIDIA/dream-team/tree/main/arc_agi_3).
-The two sources stay in separate, attributed partitions.
+The collections stay in three separate, attributed partitions.
 
 ## What's included
 
@@ -49,24 +62,27 @@ The two sources stay in separate, attributed partitions.
 | --- | ---: | ---: | ---: | ---: | ---: |
 | [Studio](trajectories/studio) — SG01–SG30 synthetic games | 30 | 210 | 210 | 210 / 0 | 2,344 |
 | [NVIDIA DreamTeam](trajectories/nvidia) — third-party synthetic games | 25 | 200 | 205 | 200 / 5 | 3,667 |
-| **Total** | **55** | **410** | **415** | **410 / 5** | **6,011** |
+| [Studio V2](trajectories/studio_v2) — V201–V220 synthetic games | 20 | 140 | 140 | 140 / 0 | 1,740 |
+| **Total** | **75** | **550** | **555** | **550 / 5** | **7,751** |
 
-Each game has one recorded agent run through all its levels. All 55 runs reached
-native WIN and passed fresh replay on the exact package versions and recorded seed.
-The five unsolved attempts were interrupted by current-level resets and are
-retained. These counts describe this collected experience, not blind benchmark
-performance, optimality or human-efficiency scores.
+Each game has a recorded source-informed AI solution across its levels. Original
+Studio and NVIDIA partitions retain their five reset-interrupted attempts; Studio
+V2 contains successful level segments only. Original full runs passed fresh native
+replay on their exact packages and recorded seed before export. These counts
+describe collected experience, not blind benchmark performance, optimality or
+human-efficiency scores.
 
 **These trajectories are AI-played, not human-played.** Dedicated Codex agents
 could inspect mechanics and game source before choosing actions. The collection
-configuration was **GPT-6.1-sol / ultra**; effective model
-identity was not independently captured. Assistance and source-exposure limits
+configuration requested **GPT-6.1-sol**: ultra reasoning for the original
+partitions, and ultra/xhigh requests across V2. Effective model identity was not
+independently measured. Assistance and source-exposure limits
 are documented in [the trajectory card](docs/TRAJECTORIES.md). All demonstrations were
 collected for this project; NVIDIA authored its environments, not these agent runs.
 
 ## Download the dataset
 
-**[Download all 55 synthetic environments and AI trajectories (ZIP)](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-dataset.zip)**
+**[Download all 75 synthetic environments and AI trajectories (ZIP)](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-dataset.zip)**
 
 Extract into an empty folder and run `python tools/load_dataset.py`. No installation
 is needed to read the data. The archive includes exact native game packages,
@@ -75,10 +91,10 @@ separate Studio/NVIDIA licenses. See [download and loading guide](docs/DOWNLOADS
 
 | Download | Contents |
 | --- | --- |
-| [Complete dataset](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-dataset.zip) | All 55 environments and their AI recordings |
-| [Trajectories only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-agent-trajectories.zip) | AI recordings, manifests and statistics; no game code |
-| [Studio environments only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-environments.zip) | 30 Studio games in native ARC3-compatible layout |
-| [Source and player](https://github.com/Felix561/arc3-synthetic-games/releases/download/v1.1.2/arc3-synthetic-games-v1.1.2-source.zip) | Local player, code, data and documentation |
+| [Complete dataset](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-dataset.zip) | All 75 environments and their AI data |
+| [Trajectories only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-agent-trajectories.zip) | AI recordings, manifests and statistics; no game code |
+| [Studio environments only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-environments.zip) | 50 Studio games in native ARC3-compatible layout |
+| [Source and player](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-source.zip) | Local player, code, data and documentation |
 
 These are independent synthetic games, **not official ARC Prize training games**.
 Native replay envelopes follow the Recorder style; segmented training rows use our
@@ -86,14 +102,14 @@ Native replay envelopes follow the Recorder style; segmented training rows use o
 
 ## Use the trajectory data
 
-The two partitions contain 415 segments in total. Load both for the complete dataset.
+The three partitions contain 555 segments in total. Load each once for the complete dataset.
 
 ```python
 import gzip
 import json
 from pathlib import Path
 
-for source in ("studio", "nvidia"):
+for source in ("studio", "studio_v2", "nvidia"):
     path = Path("trajectories") / source / "trajectories.jsonl.gz"
     with gzip.open(path, "rt", encoding="utf-8") as stream:
         for line in stream:
@@ -105,10 +121,11 @@ for source in ("studio", "nvidia"):
 ```
 
 Canonical rows contain observations, actions, valid-action information and
-outcome flags. Native per-game recordings additionally preserve every animation
-frame in the ARC Prize Recorder-style `timestamp` / `data` JSONL envelope.
-Everything is losslessly gzip-compressed; RGB images are not the training format.
-Unknown recording times remain `null`.
+outcome flags. Native JSONL/gzip files preserve response animation frames in the
+ARC Prize Recorder-style `timestamp` / `data` envelope. Original partitions contain
+complete game recordings; V2 contains seven successful per-level response excerpts
+per game, not standalone full-game replay files. Everything is losslessly
+compressed; RGB images are not the training format. Unknown times remain `null`.
 
 Start with [TRAJECTORIES.md](docs/TRAJECTORIES.md) for loading, resets, coordinate
 conventions, provenance and license scope. [Machine-readable statistics](trajectories/statistics.json)
@@ -120,7 +137,7 @@ trajectory archive for the agent data and NVIDIA dependencies.
 
 ![Actions per recorded level attempt, separated by source](media/trajectory-stats/action-distribution.svg)
 
-<sub><b>Figure 1.</b> Policy-action counts in five-action bins, on common scales: Studio has 210 attempts (median 6 actions); NVIDIA has 205 (median 15). All 415 attempts are included: 410 solved and five reset-interrupted. Reset controls are counted separately.</sub>
+<sub><b>Figure 1.</b> Policy-action counts for all 555 recorded attempts, including five reset-interrupted NVIDIA attempts. Reset controls are counted separately; the three partitions retain their distinct collection policies.</sub>
 
 <sub><b>Interpretation.</b> One source-informed AI-agent run per game, with retries retained. These are descriptive action lengths, not blind success rates, human-efficiency scores or optimal solution lengths.</sub>
 
@@ -147,7 +164,7 @@ arc3-synthetic-games verify
 arc3-synthetic-games list
 ```
 
-The local and GitHub Pages players currently cover **Studio's 30 games**.
+The local and GitHub Pages players currently cover **Studio's 50 games**.
 Mechanics explanations and human gameplay GIFs are opt-in. Gameplay stays in
 memory; neither player records or uploads actions.
 
@@ -189,16 +206,21 @@ Native code executes Python; run unfamiliar environments in isolation.
 
 ## Validation and limitations
 
-Recorded trajectories were independently replayed to native WIN for all 55 exact
-game versions and seed 0. Pixel/action alignment, completion boundaries, retries
+Recorded solution paths passed fresh native replay checks on their exact packages
+and seed. Pixel/action alignment, completion boundaries, retries
 and dataset accounting were checked. [Validation](docs/VALIDATION.md) distinguishes
 this evidence from player compatibility and human playtesting.
 
 The dataset is small and source-informed, with one actor per game. It does not
 measure source-blind exploration, human discoverability, optimal solutions,
-all-seed solvability or generalization. Official ARC3 human baselines and scores
-are not supplied. Keep source, mechanics and provenance out of a learner's
+all-seed solvability or generalization. Complete solvability of every possible state and seed is not established.
+Official ARC3 human baselines and scores are not supplied. Keep source, mechanics and provenance out of a learner's
 observation inputs unless deliberately studying privileged information.
+
+Studio V2 uses an independently implemented functional construction scaffold
+inspired by [NVIDIA DreamTeam](https://github.com/NVIDIA/dream-team/tree/main/arc_agi_3).
+Designers consulted public ARC3 games for abstract design references; no official
+ARC3 source or trajectories are redistributed.
 
 ## Development and hosting
 
@@ -227,6 +249,6 @@ No official ARC3 environments or human trajectory dataset are redistributed.
 ## AI disclosure
 
 AI assisted the design, implementation and documentation of the Studio games,
-with human feedback and playtesting. The trajectory dataset and eight agent replay
+with human feedback and playtesting of earlier games. The trajectory dataset and twelve agent replay
 GIFs show **source-informed AI-agent gameplay**. The six human gameplay GIFs are
 labelled separately; no raw human trajectories are included.

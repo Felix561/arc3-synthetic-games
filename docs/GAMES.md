@@ -1,6 +1,10 @@
 # The collection
 
-Each game has seven levels. These short introductions describe a theme, not a solution.
+The Studio collection has 50 games, each with seven levels. These introductions
+outline a theme without giving an action sequence. Exact native IDs, controls and
+hashes are in [catalog.json](../catalog.json).
+
+## Studio — SG01–SG30
 
 | ID | Title | Controls | Introduction |
 | --- | --- | --- | --- |
@@ -34,3 +38,35 @@ Each game has seven levels. These short introductions describe a theme, not a so
 | SG28 | Collision Lane | Space, Click, Undo | Time a pair of runners and spring bumpers along a lane where impacts exchange their motion. |
 | SG29 | Two-Ended Convoy | Arrows, Space, Undo | Guide an ordered chain through branching roads by handing leadership from one end to the other. |
 | SG30 | Torque Mobile | Click, Undo | Move hanging weights along suspended beams and balance the effects of mass and distance from each pivot. |
+
+## Studio V2 — V201–V220
+
+Twenty additional games introduced in version 2.0.0. Their source-informed AI
+solutions are in the separate `studio_v2` trajectory partition.
+
+| ID | Title | Controls | Introduction |
+| --- | --- | --- | --- |
+| V201 | Fold and Pierce | Space, Click, Undo | Fold a sheet into contact layers, pierce the stack, then unfold the pattern. |
+| V202 | Cam Lift | Left/Right, Space, Undo | Turn a shaped support to carry a load through openings at different heights. |
+| V203 | Displacement Ferry | Space, Click, Undo | Raise and lower a floating ferry by placing solid blocks into the water. |
+| V204 | Adhesive Scrape | Arrows, Space, Undo | Gather rigid plates through contact, then peel them apart at fixed scraping jaws. |
+| V205 | Winding Anchor | Arrows, Undo | Guide a cable around solid anchors so a pull reaches a load from another direction. |
+| V206 | Scent Shepherd | Arrows, Space, Undo | Leave a fading local trail that guides a creature one nearby choice at a time. |
+| V207 | Shared Clearance | Left/Right, Click, Undo | Make room for a sliding wall and hinged panels that compete for the same space. |
+| V208 | Holding Ratchet | Left/Right, Click, Undo | Combine a shared push with local holding contacts to retain different amounts of travel. |
+| V209 | Shadow Casting | Arrows, Click, Undo | Arrange solid masks between a point of light and a target shadow. |
+| V210 | Equal Company | Click, Undo | Regroup visible units and pair equal collections across two sides. |
+| V211 | Hidden Continuity | Arrows, Click, Undo | Follow the same solid figure behind overlaps and movable foreground screens. |
+| V212 | Repair Crew | Space, Click, Undo | Prepare useful pieces so a small repair crew can connect the gaps it can reach. |
+| V213 | Selection Boundary | Arrows, Click, Undo | Reshape one filled boundary to include some markers while leaving others outside. |
+| V214 | Body Relay | Arrows, Space, Undo | Pass movement control through bodily contact between differently shaped pieces. |
+| V215 | Room Stitch | Arrows, Click, Undo | Carry small floors between compatible room edges while their walkers stay aboard. |
+| V216 | Consumable Path | Arrows, Space, Undo | Build routes whose links disappear as followers cross them. |
+| V217 | Nested Access | Click, Undo | Nest open containers whose access changes with size, orientation and what they enclose. |
+| V218 | Remembered Destination | Arrows, Undo | Move a destination that followers remember after it disappears behind an obstacle. |
+| V219 | Ongoing Motion | Space, Click, Undo | Change local contacts until a moving system can keep circulating without stopping. |
+| V220 | Contact Cancellation | Arrows, Space, Undo | Bring matching exposed faces together while temporary joins change what can move. |
+
+NVIDIA's 25 separately attributed synthetic environments are outside the Studio
+player catalog. See [their native setup](TRAJECTORIES.md#nvidia-environments)
+and [data inventory](STATISTICS.md).

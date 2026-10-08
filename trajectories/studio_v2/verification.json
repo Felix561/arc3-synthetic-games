@@ -1,0 +1,558 @@
+{
+  "canonical_pixels_actions_boundaries_checked": true,
+  "canonical_sha256": "9c4eeee148d1666b721a7dd3b46e8afcbbf7fa70d39196561e070547126666b1",
+  "dataset_version": "arc3-source-informed-agent-v2.0.0",
+  "games": [
+    {
+      "environment_content_sha256": "3555aab9bfde6ff04f6ad6bd2a77cd7a9c1a3d533401b58699e466e707ef4049",
+      "game": "v201",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "0e214a52baa6db328695e2fd7fda36527c0970c28f0f7ebd209b4b1e5834c862",
+      "native_game_id": "v201-cfc991ce88285249",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 42,
+        "policy_actions": 35,
+        "responses_compared": 36
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 36,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "64723d42112833de2465f6de9edcbea1aabe727ef84992259655d705eed3f4b1",
+      "game": "v202",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "828b3a6355659715151b2b9833ae407013a2143567a25fa2fa932884aa28c048",
+      "native_game_id": "v202-8bd6f7992e9f615f",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 43,
+        "policy_actions": 36,
+        "responses_compared": 37
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 37,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "aa7e1f6a9ff8e2106c320812a01e2f1e47b85b05112c1f34ffab077e6c7245d5",
+      "game": "v203",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "6ef95fea70a816092ef665caff2f016821d78d3eb8bf15384c9a5a98887a6eea",
+      "native_game_id": "v203-a4d822d4642c9bb3",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 42,
+        "policy_actions": 35,
+        "responses_compared": 36
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 36,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "5ec4a204cb36ae7f1612d63f1145c063928b2854bb39dd1bca22dba34820882c",
+      "game": "v204",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "6e47f0bdb1462afee67b3940e6ffbf79507bb26a8210822ac9c814926cd7a937",
+      "native_game_id": "v204-35c950ebf6c450f8",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 169,
+        "policy_actions": 162,
+        "responses_compared": 163
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 163,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "b7a9f449b40e3b7a64e4cc40fbab18f2c3ca515ce66b65fe962eb1a6dde75009",
+      "game": "v205",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "0b1e0e32f197c0462c81eff899ebe08fb720de21e010e39c087051bffccb1043",
+      "native_game_id": "v205-4aa913d479f6ec63",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 161,
+        "policy_actions": 154,
+        "responses_compared": 155
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 155,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "7ce8bef5bba2e508df63ad811903b52d25cc0c53d5d6e5e336885b06cc1bac56",
+      "game": "v206",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "4d9d4cb0a35dc6c34753042c38d113c798cf507bb86737deccf11ee28f00fc0a",
+      "native_game_id": "v206-18dc82ebc9e7b826",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 52,
+        "policy_actions": 45,
+        "responses_compared": 46
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 46,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "d8f078dc875c86a27e214b47c5f07cf9025a9162789d68f5d0da85fdeffc0796",
+      "game": "v207",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "49855f0d737ee4bfd1431d0110a6589b7244d7813b72535cca173c2b403b2ed1",
+      "native_game_id": "v207-a8b53bd94a9471c7",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 36,
+        "policy_actions": 29,
+        "responses_compared": 30
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 30,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "9b84a8677e587080777633918386440bef0b93a1fad8e308811e5c53745acdc2",
+      "game": "v208",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "58d0599f710bef66977242b3c62f5d0a6a0930856366561864402053e1d83d59",
+      "native_game_id": "v208-92ef1a3ddcf74643",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 65,
+        "policy_actions": 58,
+        "responses_compared": 59
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 59,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "1a6ece725b1217e92d5062199334000aec062e67c5ea13cc56def82c357fdb06",
+      "game": "v209",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "dc640c6ad4c5065a58cae95e26a85444661f4d3902c59f9e24f8ac20523625e8",
+      "native_game_id": "v209-e5d0d0141696c8b8",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 36,
+        "policy_actions": 29,
+        "responses_compared": 30
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 30,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "a4e0b4071e1885cb744678924c37ac85ed1990951a40064c900a4d7d5e4bd7ed",
+      "game": "v210",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "34565732fdb9a1a7490c6f0cfe5000052a649f6c0ee07d8d5d0fa2b308361269",
+      "native_game_id": "v210-9b64f56f893bc6d5",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 42,
+        "policy_actions": 35,
+        "responses_compared": 36
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 36,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "c45c88ec5ca0abcd792ac2cc14a8cab61f38832e6b4928a3d269e25e18e70619",
+      "game": "v211",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "a9b5b4ffbac693a6371e17a792df1cb46e401ee69f4a91dec89b205b6747b11b",
+      "native_game_id": "v211-81d4dbeea8d1234c",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 23,
+        "policy_actions": 16,
+        "responses_compared": 17
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 17,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "e739e116b64164d00bcea5011d6579952995ee3d1e9bd84b154f5bd11eee5b46",
+      "game": "v212",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "2dab25074411b706d4f45965478001b07f9d01cafdeb048d293cd50e7b2c6a09",
+      "native_game_id": "v212-1dca7a35e8744295",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 40,
+        "policy_actions": 33,
+        "responses_compared": 34
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 34,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "f12994bf45f0fbd04e92980d3f1e7d1e752f0933b003e20c2c8cf67f1ac12de2",
+      "game": "v213",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "01b9afdc3d8fe5af1ebbdadd97b6ee325794e67199f8d6c90f4be529e80fbc2b",
+      "native_game_id": "v213-d61ceee87815a21b",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 41,
+        "policy_actions": 34,
+        "responses_compared": 35
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 35,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "cf71f3ad57bae2663fd029a85aa0b832baca78238682675379516cb54867903b",
+      "game": "v214",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "e4c0f30aa0ca3ddfaa15fc3714dc76c7d08b91bfb431bc78edcdfa8f6af3a44d",
+      "native_game_id": "v214-40ec64554cdecd22",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 96,
+        "policy_actions": 89,
+        "responses_compared": 90
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 90,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "744a341bd792231df2db39825a09b6e4af31b18cc5a796563f866ef64b1804cd",
+      "game": "v215",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "d4f9956f5851e33090b0d5ace3861557119723f4cd74ae0fe1cf2f27c60ad236",
+      "native_game_id": "v215-b78be6f260e52882",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 112,
+        "policy_actions": 105,
+        "responses_compared": 106
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 106,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "83dfb24ae34c212ddeb651602532943f1bdc7c0a482d975947e83e8fbe7fe578",
+      "game": "v216",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "3e7500c53c0780104377a56d945f3ac115ff2682556fb184618fb838251a9976",
+      "native_game_id": "v216-e4a6cfdb4f260e3c",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 116,
+        "policy_actions": 109,
+        "responses_compared": 110
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 110,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "c02d5f533206fc8e512449cd9d996e268dd941788561a88c59c3ef3b324db5b0",
+      "game": "v217",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "8d1f8db7dd2b696479311d2f24bc6be75628f719d89a797932af2bcc36e43856",
+      "native_game_id": "v217-4ff1a625cf806e7e",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 140,
+        "policy_actions": 133,
+        "responses_compared": 134
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 134,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "a456574595ec024142a268f569e0db623e35395cc8ebe561022303a368009b13",
+      "game": "v218",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "e2bc3a36b4a4adb6b0924456655c00318580acdd93de44f2fc2b41170bdf8e78",
+      "native_game_id": "v218-917a3aaf08b0e772",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 188,
+        "policy_actions": 181,
+        "responses_compared": 182
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 182,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "ec0f1c10f3c1e47c9ea704c159951016cf2dd00fa80b4208932495003197aa19",
+      "game": "v219",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "3d3acf558009360900ff18676f2e19cc86074265f6eb98068df94b4a75ed885e",
+      "native_game_id": "v219-f70869827a8dd010",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 730,
+        "policy_actions": 152,
+        "responses_compared": 153
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 153,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    },
+    {
+      "environment_content_sha256": "afe96de5dbaea2777d4ffc03360e995aeb2961b2baa55205c8132484f576d39d",
+      "game": "v220",
+      "human_playtest_or_approval": false,
+      "native_entry_source_sha256": "fad2b83fb84d9877f67740bc06611bf1d8318b612109477fa66cd6ee8ea28eb7",
+      "native_game_id": "v220-357dafa509cf0402",
+      "public_projection": "Game entry source unchanged; metadata normalized without changing mechanics.",
+      "publication_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_native_fields_compared": true,
+        "fresh_seed": 0,
+        "full_native_win": true,
+        "palette_frames_compared": 277,
+        "policy_actions": 270,
+        "responses_compared": 271
+      },
+      "reported_fresh_native_replay": {
+        "all_animation_frames_compared": true,
+        "all_levels_completed": true,
+        "complete_run": true,
+        "native_win": true,
+        "prefix_only": false,
+        "responses_compared": 271,
+        "verified": true
+      },
+      "scope": "The normalized public package was freshly replayed to WIN7 at seed0, matching every original native response field and animation frame. Distributed recording files remain level excerpts."
+    }
+  ],
+  "native_recording_scope": "successful_level_excerpts",
+  "native_recordings_byte_preserved": true,
+  "publication_preparation_performed_native_replays": true,
+  "publication_replay_runtime": {
+    "arc-agi": "0.9.8",
+    "arcengine": "0.9.3",
+    "numpy": "2.5.3",
+    "python": "3.12.10"
+  },
+  "schema_version": "arc3-public-replay-verification/1",
+  "source_collection": "studio_v2"
+}

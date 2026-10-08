@@ -3,24 +3,24 @@
   "charts": [
     {
       "png": "trajectory-stats/action-distribution.png",
-      "png_sha256": "c694f8fa7e5f1f5fa92cee1842f21999e1f110e8d1b655fcb98a21553f374304",
+      "png_sha256": "4a889578099983379fd45e42c7b4ca8e6aafef40b20bb0f59b589c00acfd1200",
       "svg": "trajectory-stats/action-distribution.svg",
-      "svg_sha256": "78499d974d9c387bf1db668951c1ae706bdebc76d2664de04156956cf267b424"
+      "svg_sha256": "0a0090c21533eea401dcab7541b786bdf61ffa9d3dbf62ebd2024d3ea5ba71cf"
     },
     {
       "png": "trajectory-stats/actions-by-game.png",
-      "png_sha256": "435b2f68f4dc3154d93c074ee861c20a0aa9be307fe94aea738d44386a8c2502",
+      "png_sha256": "161a0f2192987226af9e412d944daaf75524d3716ca39bc0ba8a97203067ca98",
       "svg": "trajectory-stats/actions-by-game.svg",
-      "svg_sha256": "b40d4b87a1931298ac986d3c24b0b4889b7aa5d04a0f9236f467d81f49b377f8"
+      "svg_sha256": "adc38d59d0af7a72df19da97a2a2d6683f0340f51d6ef8a18be2bfda900f762f"
     }
   ],
   "definitions": "docs/STATISTICS.md",
-  "grain": "One recorded level attempt per canonical segment; all 415 attempts included.",
+  "grain": "One recorded level attempt per canonical segment; all 555 attempts included.",
   "limitations": "One source-informed AI-agent playthrough per game. No human or optimal-policy comparison.",
   "policy_actions": "Current-level reset controls are excluded; unsuccessful reset-truncated attempts remain included.",
   "presentation": "ARC Prize-inspired dark figures; interpretation captions are below charts in README.md and STATISTICS.md.",
   "schema_version": 1,
   "statistics_path": "trajectories/statistics.json",
-  "statistics_sha256": "63c70d3f26dd7975933ed4cb83fb6fb5c5e6206687e68a46d62dc5c292ec7bed",
+  "statistics_sha256": "63934646f5042562d88e7654f5c42a8686470496c901f5e12adfabca4f26eee5",
   "style_reference": "https://arcprize.org/blog/arc-agi-3-human-dataset"
 }

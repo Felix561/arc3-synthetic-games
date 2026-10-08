@@ -2,14 +2,14 @@ cff-version: 1.2.0
 message: "Please cite this collection and NVIDIA DreamTeam when using their respective environments or agent trajectories."
 type: dataset
 title: "ARC3 Synthetic Games and Source-Informed Agent Trajectories"
-version: "1.1.2"
-date-released: "2026-10-05"
+version: "2.0.0"
+date-released: "2026-10-08"
 license:
   - MIT
   - Apache-2.0
 authors:
   - name: "ARC3 Synthetic Games contributors"
-abstract: "Thirty independently created synthetic ARC3-compatible games and separately attributed source-informed AI-agent trajectories for 30 Studio and 25 NVIDIA DreamTeam synthetic games. Exact dataset and environment versions are recorded in their manifests."
+abstract: "Fifty independently created synthetic ARC3-compatible Studio games and source-informed AI-agent trajectories across those environments and 25 separately attributed NVIDIA DreamTeam synthetic games, covering 550 solved levels. Exact dataset and environment versions are recorded in their manifests."
 repository-code: "https://github.com/Felix561/arc3-synthetic-games"
 keywords:
   - interactive reasoning

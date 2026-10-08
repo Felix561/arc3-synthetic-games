@@ -7,20 +7,23 @@ from arc3_synthetic_games.dataset import catalog, dataset_root, find_game, verif
 def test_exact_native_inventory_and_assets():
     assert verify_dataset() == {
         "verified": True,
-        "version": "1.1.2",
-        "games": 30,
-        "levels": 210,
-        "native_files": 60,
+        "version": "2.0.0",
+        "games": 50,
+        "levels": 350,
+        "native_files": 100,
     }
     data = catalog()
-    assert len({g["game_id"] for g in data["games"]}) == 30
+    assert len({g["game_id"] for g in data["games"]}) == 50
     root = dataset_root()
     for game in data["games"]:
         assert game["preview"].startswith("media/previews/")
         assert (root / game["preview"]).read_bytes().startswith(b"\x89PNG")
         assert find_game(game["id"]) == find_game(game["game_id"])
     demos = [g for g in data["games"] if g.get("demo")]
-    assert {g["id"] for g in demos} == {"sg01", "sg06", "sg08", "sg24", "sg26", "sg28"}
+    baseline_demos = {"sg01", "sg06", "sg08", "sg24", "sg26", "sg28"}
+    demo_ids = {g["id"] for g in demos}
+    assert baseline_demos.issubset(demo_ids)
+    assert demo_ids - baseline_demos <= {f"v2{i:02}" for i in range(1, 21)}
     for game in demos:
         assert (root / game["demo"]).read_bytes().startswith(b"GIF89a")
 

@@ -25,7 +25,7 @@ def test_preview_contains_exact_native_bytes_and_only_public_assets(tmp_path, mo
     catalog = json.loads((first / "catalog.json").read_text(encoding="utf-8"))
     with zipfile.ZipFile(first / "browser/runtime.zip") as archive:
         native = [name for name in archive.namelist() if "/environment_files/" in name]
-        assert len(native) == 60
+        assert len(native) == 100
         for entry in catalog["games"]:
             for relative, digest in entry["files_sha256"].items():
                 name = f"arc3_synthetic_games/data/{entry['environment_path']}/{relative}"

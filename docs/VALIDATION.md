@@ -1,73 +1,102 @@
 # Validation
 
-The Studio environment collection contains 30 games, 210 levels and 60 native source/metadata files.
-Catalog IDs and SHA-256 hashes bind each game to its exact native version.
+The Studio catalog covers **50 games and 350 levels**, with one native
+Python/metadata pair per exact version. Catalog and trajectory hashes bind
+source bytes and normalized package metadata.
 
 ## Native runtime and player
 
-The validated runtime is Python 3.12, arcengine 0.9.3, arc-agi 0.9.8 and
-NumPy 2.5.3. Automated checks run in CI and cover offline SDK discovery, reset and
-representative actions for all 30 games, initialization of all 210 levels,
-action validation, independent player sessions, level selection and packaging.
-Native validation runs in isolated development/CI environments. Container
-checks use no network, read-only mounts, an unprivileged user and resource limits.
+The native compatibility pins are Python 3.12, arcengine 0.9.3, arc-agi 0.9.8 and
+NumPy 2.5.3. Automatic checks cover offline SDK discovery, level initialization,
+reset, representative actions, available controls, sessions and packaging.
+Native execution belongs in isolation; secured checks use no network, read-only
+mounts, an unprivileged user and resource limits.
+
+Version 2.0.0 passed **105 isolated native/SDK/dataset tests** covering the
+50 Studio games, plus **four server tests**. Technical validation is separate
+from gameplay recording and visual/mechanical review. Reviews are
+AI/source-informed inspection, not human approval.
 
 ## Browser preview
 
-The preview runs the same game files through Pyodide 314.0.7, Python 3.14,
-NumPy 2.4.6 and Pydantic 2.12.5. Edge and CI Chromium checks matched 1,381
-observations against the native runtime, including every pixel, state, level,
-available action and reset flag. They cover all 210 initial boards and
-representative actions, Undo, reset and restart.
+The browser runs the same native Studio files through Pyodide 314.0.7, Python 3.14,
+NumPy 2.4.6 and Pydantic 2.12.5. Browser checks compare palette pixels, game state,
+level counts, available actions and reset flags against native reference data.
 
-UI checks include keyboard controls, scaled clicks, level selection, opt-in
-explanations/GIFs and a 390-pixel layout. Corrupt runtime downloads are rejected
-and can be retried. Gameplay sends no HTTP requests and uses no persistent
-browser storage. GitHub and the runtime CDN receive ordinary asset requests.
+The earlier 30-game collection's Edge/Chromium comparison covered 1,381
+observations, including all 210 initial boards and representative actions, Undo,
+reset and restart. This historical number describes that collection, not a
+count for the expanded V2 browser.
+
+Version 2.0.0 passed browser/native comparison for **all 50 games, 350 levels
+and 2,325 exact native observations**, including every initial board and
+representative transitions. The optional mechanics routes were checked for all
+50 games. Checksum rejection and retry, keyboard controls, scaled clicks,
+reset/restart, mobile layout and absence of gameplay uploads or persistent
+browser storage also passed.
+
+UI checks cover keyboard controls, scaled clicks, level selection, optional
+explanations/GIFs and compact layouts. Runtime download hashes are checked.
+Gameplay creates no recordings or persistent browser history. GitHub and the
+runtime CDN receive ordinary asset requests.
 
 ## Release integrity
 
-Release packages are checked for native file hashes, licenses, document links,
-credentials, personal paths and unwanted internal files. The 31 PNGs and six
-human-played GIFs contain only game pixels, without identifying media metadata.
-Studio player, browser and environments-only packages exclude agent trajectories,
-private human recordings, generation tools and private solution witnesses. The repository additionally contains
-NVIDIA's unchanged native packages with their original public source, including
-upstream helper definitions, under their retained licenses.
+Release checks cover native identities, metadata structure, license notices,
+documentation links, archive contents, credential patterns, personal paths and
+unwanted internal files. The release passed **40 data-only tests**, **two nested
+provenance/privacy-guard regressions** and **three publication-documentation tests**.
+Media contain native game pixels without personal labels or identifying metadata.
 
-## Source-informed agent recordings
+Studio player/browser/environments-only packages exclude AI trajectory files,
+private human recordings, generation tools and private solution witnesses.
+NVIDIA source and support are separately packaged with retained upstream
+licenses and notices. Public data use neutral identifiers and portable relative
+paths; no private collection receipts or reasoning transcripts are distributed.
 
-The October 2 frozen collection contains 55 completed game runs: 30 Studio games
-(210 levels) and 25 NVIDIA games (200 levels). All 55 saved runs passed independent
-fresh replay to native WIN using Python 3.12.10, arcengine 0.9.3, arc-agi 0.9.8,
-NumPy 2.5.3 and the pinned native packages/support. Replays compared every native
-response and animation frame, not just final completion flags.
+## Agent data
 
-Independent content checks validated recorded action order, palette pixels,
-click coordinates, the 355 measured old-level completion targets, resets and
-segment accounting. The dataset contains 6,011 policy actions, 6,071
-responses and 6,784 native frames. Its 415 canonical segments include 410 solved
-and five reset-interrupted attempts; all 103 short segments are retained.
-Recorded timestamps remain null. Current-level resets are separate from policy
-actions; native GAME_OVER was not observed in these recordings.
+The original 55-game collection has 410 solved levels and five reset-interrupted
+attempts. Fresh native replay compared every response and animation frame on the
+exact packages and seed 0. It contains 6,011 policy actions, 6,071 responses and
+6,784 frames. All original short/retry segments remain unchanged.
 
-SHA-256 inventories bind recordings, canonical rows and exact environment files.
-Records exclude private identifiers and machine-specific provenance. Verification
-covers replay consistency, not source-blind performance or human usability.
-Checksums and record structure can be verified without executing games.
+V2 adds 20 games, 140 successful level segments and 1,740 policy actions.
+Fresh replay against the **cleaned public packages passed for all 20 V2 games**,
+each reaching native WIN after seven levels. Across those runs, **1,760 responses
+and 2,451 native frames** matched every recorded native field and all animation
+frames, including action inputs, palette pixels, state, level progression and
+available actions.
+
+Public native files are
+per-level successful response excerpts, including actual preceding observations;
+they may share boundary responses and are not standalone full-game replays.
+Its 140 excerpt files store 1,880 response lines and 3,189 frames, including
+repeated boundaries. Canonical training rows count each successful segment once.
+
+Content checks distinguish settled training observations, animation frames,
+completed-level targets and next-level frames. They validate action order, legal
+controls, click coordinates, completion boundaries and accounting.
+Recording timestamps remain null. Reset controls are separate from policy
+actions; Undo is included.
+
+SHA-256 inventories permit data integrity checks without executing games.
+The combined public collection has **555 attempts, 550 solved segments and 7,751
+policy actions**. Collection labels are source-informed AI, never human.
 
 ## Reproduce
 
 ```bash
 arc3-synthetic-games verify
+python tools/load_dataset.py
 python -m pytest -q
 ```
 
-The first command reads data only. The second executes native game code; use an
-isolated development/CI environment. Browser checks are in `tools/check_browser.py`
-and `.github/workflows/checks.yml`. Native reference generation also executes
-game code and belongs in an isolated environment.
+The first two commands read data. Tests execute game Python; use an isolated
+development/CI environment. Browser checks are in `tools/check_browser.py`
+and `.github/workflows/checks.yml`; native reference generation also requires
+isolation.
 
-Recorded paths establish solvability for these exact packages and seed, while
-human discoverability, source-blind performance, optimality, all-seed solvability
-and calibrated human-efficiency baselines remain unverified.
+These checks establish recorded paths and consistency. Complete solvability of
+every possible state or seed, human discoverability, source-blind performance,
+optimality, calibrated human efficiency and learner improvement are not verified.

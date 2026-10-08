@@ -1,7 +1,9 @@
 """Build a deterministic, checksum-verified trajectory ZIP without executing games."""
 
 import argparse
+import gzip
 import hashlib
+import io
 import json
 import posixpath
 import re
@@ -11,18 +13,20 @@ from pathlib import Path, PurePosixPath
 from build_preview import ROOT, write_zip
 
 SCHEMA = "arc3-public-agent-trajectories/1"
-SOURCES = {"studio", "nvidia"}
+SOURCES = {"studio", "studio_v2", "nvidia"}
 DOCS = {"docs/TRAJECTORIES.md", "docs/STATISTICS.md"}
 LICENSES = {"LICENSE", "third_party/nvidia/LICENSE", "third_party/nvidia/NOTICE",
             "third_party/nvidia/THIRD_PARTY_NOTICES"}
 ROOT_DATA = {"manifest.json", "statistics.json", "per-game.csv", "per-segment.csv", "SHA256SUMS.txt"}
 PARTITION_DATA = {"manifest.json", "trajectories.jsonl.gz", "verification.json", "SHA256SUMS.txt"}
 RECORDING = re.compile(r"[a-z][a-z0-9]*\.(?:recording\.jsonl\.gz|metadata\.json)")
+LEVEL_RECORDING = re.compile(r"v2[0-9]{2}-level-0[1-7]\.(?:recording\.jsonl\.gz|metadata\.json)")
 DIGEST = re.compile(r"[0-9a-f]{64}")
 MARKDOWN_LINK = re.compile(r"(!?\[[^\]]*\]\()([^\s)]+)(\))")
 STATISTICS_MEDIA = {"media/trajectory-stats/action-distribution.svg", "media/trajectory-stats/action-distribution.png",
                    "media/trajectory-stats/actions-by-game.svg", "media/trajectory-stats/actions-by-game.png",
                    "media/trajectory-stats/manifest.json"}
+AGENT_FIELDS = {"requested_model", "requested_effort", "effective_model_metadata"}
 
 
 def sha256(content):
@@ -48,8 +52,10 @@ def is_data_path(name):
         return parts[1] in ROOT_DATA
     if len(parts) == 3 and parts[0] == "trajectories" and parts[1] in SOURCES:
         return parts[2] in PARTITION_DATA
-    return (len(parts) == 4 and parts[0] == "trajectories" and parts[1] in SOURCES
-            and parts[2] == "recordings" and bool(RECORDING.fullmatch(parts[3])))
+    if len(parts) == 4 and parts[0] == "trajectories" and parts[1] in SOURCES and parts[2] == "recordings":
+        pattern = LEVEL_RECORDING if parts[1] == "studio_v2" else RECORDING
+        return bool(pattern.fullmatch(parts[3]))
+    return False
 
 
 def read_public(root, name):
@@ -78,15 +84,43 @@ def parse_sums(content):
     return result
 
 
+def checked_agent_metadata(value):
+    """Reject private worker objects anywhere inside public provenance metadata."""
+    if isinstance(value, dict):
+        for key, child in value.items():
+            if key == "agent":
+                if (not isinstance(child, dict) or set(child) != AGENT_FIELDS
+                        or any(type(field) is not str for field in child.values())):
+                    raise ValueError("Public agent metadata requires exactly three scalar string fields")
+            else:
+                checked_agent_metadata(child)
+    elif isinstance(value, list):
+        for child in value:
+            checked_agent_metadata(child)
+
+
+def checked_canonical_agents(content):
+    """Inspect compact row provenance without executing games or walking palette pixels."""
+    with gzip.GzipFile(fileobj=io.BytesIO(content), mode="rb") as stream:
+        for line in stream:
+            row = json.loads(line)
+            metadata = row.get("source_metadata")
+            if not isinstance(metadata, dict) or "agent" not in metadata:
+                raise ValueError("Canonical trajectories require explicit public agent metadata")
+            checked_agent_metadata(metadata)
+
+
 def checked_data(root):
-    """Validate the complete data allowlist and both independently licensed partitions."""
+    """Validate the exact data allowlist and independently attributed source partitions."""
     manifest_name = "trajectories/manifest.json"
     sums_name = "trajectories/SHA256SUMS.txt"
     manifest = json.loads(read_public(root, manifest_name))
+    checked_agent_metadata(manifest)
     if manifest.get("schema_version") != SCHEMA:
         raise ValueError("Unsupported public trajectory manifest schema")
-    if set(manifest.get("sources", {})) != SOURCES:
-        raise ValueError("Expected distinct Studio and NVIDIA partitions")
+    sources = set(manifest.get("sources", {}))
+    if sources not in ({"studio", "nvidia"}, SOURCES):
+        raise ValueError("Expected distinct Studio and NVIDIA partitions, with optional Studio V2")
     if (manifest.get("actor_type") != "online_agent" or manifest.get("source_informed") is not True
             or manifest.get("human_trajectories_included") is not False):
         raise ValueError("Publication must explicitly label source-informed AI-agent data")
@@ -110,18 +144,19 @@ def checked_data(root):
         raise ValueError("Incomplete trajectory checksum inventory")
     if any(sha256(files[name]) != digest for name, digest in sums.items()):
         raise ValueError("Trajectory checksum inventory mismatch")
-    for source in sorted(SOURCES):
+    for source in sorted(sources):
         entry = manifest["sources"][source]
         prefix = f"trajectories/{source}/"
         partition_name = prefix + "manifest.json"
         canonical_name = prefix + "trajectories.jsonl.gz"
-        expected_license = "LICENSE" if source == "studio" else "third_party/nvidia/LICENSE"
-        license_name = "MIT" if source == "studio" else "Apache-2.0"
+        expected_license = "third_party/nvidia/LICENSE" if source == "nvidia" else "LICENSE"
+        license_name = "Apache-2.0" if source == "nvidia" else "MIT"
         if entry.get("manifest_path") != partition_name or entry.get("canonical_path") != canonical_name:
             raise ValueError("Partition files must stay within their source collection")
         if entry.get("license_path") != expected_license or entry.get("license") != license_name:
             raise ValueError("Missing source-specific license coverage")
         partition = json.loads(files[partition_name])
+        checked_agent_metadata(partition)
         if partition.get("schema_version") != SCHEMA or partition.get("source_collection") != source:
             raise ValueError("Partition provenance mismatch")
         if partition.get("license_path") != expected_license or partition.get("license") != license_name:
@@ -133,13 +168,14 @@ def checked_data(root):
             raise ValueError("Partition canonical path mismatch")
         if partition.get("canonical_sha256") != sha256(files[canonical_name]):
             raise ValueError("Partition canonical checksum mismatch")
+        checked_canonical_agents(files[canonical_name])
         if not partition.get("games"):
             raise ValueError("Empty public trajectory partition")
         games = partition["games"]
         if len(games) != entry.get("game_count"):
             raise ValueError("Partition game inventory mismatch")
         declared_recordings = set()
-        environment_prefix = "environment_files/" if source == "studio" else "third_party/nvidia/environment_files/"
+        environment_prefix = "third_party/nvidia/environment_files/" if source == "nvidia" else "environment_files/"
         game_names = set()
         for game in games:
             short_id = game["game"]
@@ -150,17 +186,37 @@ def checked_data(root):
             checked_name(game["environment_path"])
             if not game["environment_path"].startswith(environment_prefix + short_id + "/"):
                 raise ValueError("Native source binding leaves its collection")
-            recording_name = prefix + "recordings/" + short_id + ".recording.jsonl.gz"
-            sidecar_name = prefix + "recordings/" + short_id + ".metadata.json"
-            if game.get("recording_path") != recording_name:
-                raise ValueError("Recording binding leaves its collection")
-            if game.get("recording_sha256") != sha256(files[recording_name]):
-                raise ValueError("Native recording binding checksum mismatch")
-            sidecar = json.loads(files[sidecar_name])
-            if (sidecar.get("source_collection") != source or sidecar.get("actor_type") != "online_agent"
-                    or sidecar.get("source_informed") is not True):
-                raise ValueError("Recording provenance mismatch")
-            declared_recordings.update({recording_name, sidecar_name})
+            if source == "studio_v2":
+                recordings = game.get("recordings")
+                if (game.get("recording_scope") != "successful_level_excerpt" or game.get("levels") != 7
+                        or not isinstance(recordings, list) or len(recordings) != 7
+                        or [record.get("level_id") for record in recordings] != [str(i) for i in range(1, 8)]):
+                    raise ValueError("Studio V2 must declare seven ordered successful level excerpts")
+            else:
+                recordings = [{"recording_path": game.get("recording_path"),
+                               "recording_sha256": game.get("recording_sha256")}]
+            for recording in recordings:
+                level_suffix = "-level-" + recording["level_id"].zfill(2) if source == "studio_v2" else ""
+                stem = prefix + "recordings/" + short_id + level_suffix
+                recording_name, sidecar_name = stem + ".recording.jsonl.gz", stem + ".metadata.json"
+                if recording.get("recording_path") != recording_name:
+                    raise ValueError("Recording binding leaves its collection")
+                if recording.get("recording_sha256") != sha256(files[recording_name]):
+                    raise ValueError("Native recording binding checksum mismatch")
+                sidecar = json.loads(files[sidecar_name])
+                checked_agent_metadata(sidecar)
+                if (sidecar.get("source_collection") != source or sidecar.get("actor_type") != "online_agent"
+                        or sidecar.get("source_informed") is not True):
+                    raise ValueError("Recording provenance mismatch")
+                if source == "studio_v2" and (
+                        recording.get("metadata_path") != sidecar_name
+                        or recording.get("metadata_sha256") != sha256(files[sidecar_name])
+                        or sidecar.get("recording_scope") != "successful_level_excerpt"
+                        or sidecar.get("level_id") != recording["level_id"]
+                        or sidecar.get("human_approval") is not False
+                        or sidecar.get("standalone_full_run") is not False):
+                    raise ValueError("Studio V2 excerpt provenance or checksum mismatch")
+                declared_recordings.update({recording_name, sidecar_name})
         actual_recordings = {name for name in files if name.startswith(prefix + "recordings/")}
         if declared_recordings != actual_recordings:
             raise ValueError("Recording inventory differs from the declared games")
@@ -178,10 +234,13 @@ def checked_data(root):
 def archive_readme(manifest):
     counts = manifest.get("totals", {})
     games = counts.get("games", counts.get("game_count", 55))
+    excerpt_note = ("Studio V2 recordings are successful level excerpts with their real preceding\n"
+                    "native response. They are not independent reset-to-WIN game recordings.\n\n"
+                    if "studio_v2" in manifest["sources"] else "")
     return f"""# Source-informed AI-agent trajectories
 
-This data-only archive contains two separate collections covering {games} native
-games: Studio synthetic games and NVIDIA Dream Team synthetic games. The records
+This data-only archive contains separately attributed partitions covering {games}
+native games: Studio synthetic games and NVIDIA Dream Team synthetic games. The records
 were produced by source-informed AI agents, not human players. Source access and
 mechanics information were available; this is not a blind benchmark result.
 
@@ -190,7 +249,7 @@ See [trajectory documentation](docs/TRAJECTORIES.md) for formats, provenance and
 `trajectories/` manifests bind every data file to its SHA-256 hash. `SHA256SUMS.txt`
 at this archive's root additionally covers the documentation and license files.
 
-No original game source, player application or raw human trajectories are in this
+{excerpt_note}No native game source, player application or raw human trajectories are in this
 archive. Obtain the exact native environments from the source repository and
 follow the manifests when replaying records:
 https://github.com/Felix561/arc3-synthetic-games

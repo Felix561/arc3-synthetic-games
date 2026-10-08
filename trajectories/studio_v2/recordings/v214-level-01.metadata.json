@@ -1,0 +1,28 @@
+{
+  "actor_type": "online_agent",
+  "agent": {
+    "effective_model_metadata": "not independently measured",
+    "requested_effort": "xhigh",
+    "requested_model": "gpt-6.1-sol"
+  },
+  "all_animation_frames_preserved": true,
+  "dataset_version": "arc3-source-informed-agent-v2.0.0",
+  "excerpt_only": true,
+  "format": "ARC Prize Recorder timestamp/data/native FrameData envelope",
+  "game": "v214",
+  "human_approval": false,
+  "level_id": "1",
+  "native_game_id": "v214-40ec64554cdecd22",
+  "preceding_observation_action_is_original_not_fabricated_reset": true,
+  "recording_scope": "successful_level_excerpt",
+  "recording_sha256": "7c9ec213bf233f52ff56ea9624cac3cbe988cb49fe5d3bee487a05e94dd654de",
+  "schema_version": "arc3-public-agent-trajectories/1",
+  "source_collection": "studio_v2",
+  "source_informed": true,
+  "standalone_full_run": false,
+  "standalone_native_game_replay": false,
+  "stored_palette_frames": 4,
+  "stored_responses": 3,
+  "timestamp_policy": "Original recorded response timestamp, or null when unavailable.",
+  "trajectory_id": "studio_v2/v214/level-01/attempt-01"
+}

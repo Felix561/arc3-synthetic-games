@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.0 — 2026-10-08
+
+- Twenty additional Studio environments, V201–V220, with seven levels each.
+- Expanded 50-game Studio catalog, local player and browser preview.
+- Separate Studio V2 partition with 140 successful source-informed AI level segments.
+- Combined coverage of 75 synthetic games, 550 solved levels and 555 recorded attempts.
+- Four new V2 replay GIFs and expanded action-length statistics.
+- Portable native packages, three-partition loading guide and versioned dataset archives.
+- Existing Studio and NVIDIA native versions, recordings and license scopes retained.
+
 ## 1.1.2
 
 - Reader-focused dataset documentation and package descriptions.

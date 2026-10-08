@@ -1,5 +1,6 @@
 """Data-only publication boundaries; native game code is never imported."""
 
+import gzip
 import hashlib
 import importlib.util
 import json
@@ -28,42 +29,66 @@ def digest(content):
     return hashlib.sha256(content).hexdigest()
 
 
-def fixture(root):
+def canonical_bytes(agent):
+    line = json.dumps({"source_metadata": {"agent": agent}}, sort_keys=True, separators=(",", ":")) + "\n"
+    return gzip.compress(line.encode(), mtime=0)
+
+
+def fixture(root, *, include_v2=False, v2_change=None):
     files = {}
     sources = {}
-    for source in ("studio", "nvidia"):
+    for source in (("studio", "studio_v2", "nvidia") if include_v2 else ("studio", "nvidia")):
         prefix = f"trajectories/{source}/"
         canonical = prefix + "trajectories.jsonl.gz"
-        files[canonical] = b"test compressed data bytes; not imported or executed"
+        files[canonical] = canonical_bytes({
+            "requested_model": "gpt-6.1-sol", "requested_effort": "xhigh",
+            "effective_model_metadata": "unmeasured"})
         files[prefix + "verification.json"] = json_bytes({"source_collection": source})
-        game = "sg01" if source == "studio" else "nv01"
-        recording = prefix + "recordings/" + game + ".recording.jsonl.gz"
-        files[recording] = b"native recording test bytes"
-        files[prefix + "recordings/" + game + ".metadata.json"] = json_bytes(
-            {"source_collection": source, "actor_type": "online_agent", "source_informed": True})
-        environment_prefix = "environment_files/" if source == "studio" else "third_party/nvidia/environment_files/"
+        game = {"studio": "sg01", "studio_v2": "v201", "nvidia": "nv01"}[source]
+        recordings = []
+        for level in (range(1, 8) if source == "studio_v2" else (None,)):
+            stem = prefix + "recordings/" + game + (f"-level-{level:02}" if level else "")
+            recording, metadata = stem + ".recording.jsonl.gz", stem + ".metadata.json"
+            files[recording] = b"native recording test bytes"
+            sidecar = {"source_collection": source, "actor_type": "online_agent", "source_informed": True}
+            if source == "studio_v2":
+                sidecar.update({"level_id": str(level), "recording_scope": "successful_level_excerpt",
+                                "human_approval": False, "standalone_full_run": False})
+                if v2_change and level == 1:
+                    sidecar.update(v2_change)
+            files[metadata] = json_bytes(sidecar)
+            record = {"recording_path": recording, "recording_sha256": digest(files[recording])}
+            if level:
+                record.update({"level_id": str(level), "metadata_path": metadata,
+                               "metadata_sha256": digest(files[metadata])})
+            recordings.append(record)
+        environment_prefix = "third_party/nvidia/environment_files/" if source == "nvidia" else "environment_files/"
+        game_info = {"game": game, "source_collection": source,
+                     "environment_path": environment_prefix + game + "/fixture"}
+        if source == "studio_v2":
+            game_info.update({"levels": 7, "recording_scope": "successful_level_excerpt", "recordings": recordings})
+        else:
+            game_info.update(recordings[0])
         partition = {"schema_version": builder.SCHEMA, "source_collection": source,
                      "canonical_path": canonical, "canonical_sha256": digest(files[canonical]),
-                     "license_path": "LICENSE" if source == "studio" else "third_party/nvidia/LICENSE",
-                     "license": "MIT" if source == "studio" else "Apache-2.0",
+                     "license_path": "third_party/nvidia/LICENSE" if source == "nvidia" else "LICENSE",
+                     "license": "Apache-2.0" if source == "nvidia" else "MIT",
                      "actor_type": "online_agent", "source_informed": True, "human_trajectories_included": False,
-                     "games": [{"game": game, "source_collection": source,
-                                "environment_path": environment_prefix + game + "/fixture",
-                                "recording_path": recording, "recording_sha256": digest(files[recording])}]}
+                     "games": [game_info]}
         files[prefix + "manifest.json"] = json_bytes(partition)
         files[prefix + "SHA256SUMS.txt"] = "".join(
             f"{digest(content)}  {name.removeprefix(prefix)}\n" for name, content in sorted(files.items())
             if name.startswith(prefix)).encode()
         sources[source] = {"manifest_path": prefix + "manifest.json", "canonical_path": canonical,
-                           "license": "MIT" if source == "studio" else "Apache-2.0",
+                           "license": "Apache-2.0" if source == "nvidia" else "MIT",
                            "game_count": 1,
-                           "license_path": "LICENSE" if source == "studio" else "third_party/nvidia/LICENSE"}
-    files["trajectories/statistics.json"] = json_bytes({"game_count": 2})
+                           "license_path": "third_party/nvidia/LICENSE" if source == "nvidia" else "LICENSE"}
+    files["trajectories/statistics.json"] = json_bytes({"game_count": len(sources)})
     files["trajectories/per-game.csv"] = b"source,game\nstudio,studio01\nnvidia,nvidia01\n"
     files["trajectories/per-segment.csv"] = b"source,game,level,attempt\n"
     manifest = {"schema_version": builder.SCHEMA, "dataset_version": "fixture-v1", "sources": sources,
                 "actor_type": "online_agent", "source_informed": True, "human_trajectories_included": False,
-                "totals": {"game_count": 2},
+                "totals": {"game_count": len(sources)},
                 "files_sha256": {name: digest(content) for name, content in files.items()}}
     files["trajectories/manifest.json"] = json_bytes(manifest)
     files["trajectories/SHA256SUMS.txt"] = "".join(
@@ -113,6 +138,67 @@ def test_trajectory_zip_rejects_corruption_and_private_extras(tmp_path):
     (root / "trajectories/server.json").write_text('{"token": "private"}')
     with pytest.raises(ValueError, match="Unexpected or unlisted"):
         builder.build(tmp_path / "private.zip", root)
+
+
+def test_v2_excerpts_remain_separate_and_do_not_claim_full_runs(tmp_path):
+    root = tmp_path / "source"
+    fixture(root, include_v2=True)
+    result = tmp_path / "v2.zip"
+    builder.build(result, root)
+    with zipfile.ZipFile(result) as archive:
+        assert "trajectories/studio_v2/trajectories.jsonl.gz" in archive.namelist()
+        names = [name for name in archive.namelist() if name.startswith("trajectories/studio_v2/recordings/")]
+        assert len(names) == 14
+        assert "trajectories/studio_v2/recordings/v201.recording.jsonl.gz" not in archive.namelist()
+        assert b"not independent reset-to-WIN" in archive.read("README.md")
+
+
+@pytest.mark.parametrize("change", [{"standalone_full_run": True}, {"human_approval": True},
+                                    {"level_id": "2"}, {"recording_scope": "complete_game_run"}])
+def test_v2_excerpts_reject_false_scope_and_level_provenance(tmp_path, change):
+    root = tmp_path / "source"
+    fixture(root, include_v2=True, v2_change=change)
+    with pytest.raises(ValueError, match="excerpt provenance"):
+        builder.build(tmp_path / "false-scope.zip", root)
+
+
+@pytest.mark.parametrize("location", ["canonical", "sidecar"])
+def test_public_agent_metadata_rejects_nested_worker_even_with_rebound_checksums(tmp_path, location):
+    root = tmp_path / "source"
+    files = fixture(root, include_v2=True)
+    prefix = "trajectories/studio_v2/"
+    partition_name = prefix + "manifest.json"
+    partition = json.loads(files[partition_name])
+    private_agent = {"requested_model": "gpt-6.1-sol", "requested_effort": "xhigh",
+                     "effective_model_metadata": {"actual_worker_id": "private-worker"}}
+    if location == "canonical":
+        name = prefix + "trajectories.jsonl.gz"
+        files[name] = canonical_bytes(private_agent)
+        partition["canonical_sha256"] = digest(files[name])
+    else:
+        name = prefix + "recordings/v201-level-01.metadata.json"
+        sidecar = json.loads(files[name])
+        sidecar["agent"] = private_agent
+        files[name] = json_bytes(sidecar)
+        partition["games"][0]["recordings"][0]["metadata_sha256"] = digest(files[name])
+    files[partition_name] = json_bytes(partition)
+    source_sums = prefix + "SHA256SUMS.txt"
+    files[source_sums] = "".join(
+        f"{digest(content)}  {name.removeprefix(prefix)}\n" for name, content in sorted(files.items())
+        if name.startswith(prefix) and name != source_sums).encode()
+    manifest_name = "trajectories/manifest.json"
+    manifest = json.loads(files[manifest_name])
+    manifest["files_sha256"] = {
+        name: digest(content) for name, content in files.items()
+        if name.startswith("trajectories/") and name not in {manifest_name, "trajectories/SHA256SUMS.txt"}}
+    files[manifest_name] = json_bytes(manifest)
+    files["trajectories/SHA256SUMS.txt"] = "".join(
+        f"{digest(content)}  {name.removeprefix('trajectories/')}\n" for name, content in sorted(files.items())
+        if name.startswith("trajectories/") and name != "trajectories/SHA256SUMS.txt").encode()
+    for name, content in files.items():
+        (root / name).write_bytes(content)
+    with pytest.raises(ValueError, match="exactly three scalar string fields"):
+        builder.checked_data(root)
 
 
 @pytest.mark.parametrize("change,message", [

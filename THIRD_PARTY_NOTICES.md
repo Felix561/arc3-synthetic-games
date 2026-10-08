@@ -1,5 +1,15 @@
 # Third-party acknowledgments
 
+## Studio V2 design references
+
+The V201–V220 games are independently implemented Studio environments. Their
+separation of state, rendering and transition functions was informed by
+[NVIDIA DreamTeam's game-creation structure](https://github.com/NVIDIA/dream-team/tree/bffef22f3e50fb7dcd6b2dc20005e6986e1479e9/arc_agi_3).
+Public ARC3 games also informed abstract design choices. These references are
+acknowledgments of inspiration; no official ARC Prize game files are included.
+Studio V2 source, agent data and its presentation assets use the project's MIT
+license. The separate NVIDIA subtree retains its own licenses and notices.
+
 ## NVIDIA DreamTeam synthetic environments and derived agent data
 
 Source: [NVIDIA/dream-team](https://github.com/NVIDIA/dream-team), pinned to

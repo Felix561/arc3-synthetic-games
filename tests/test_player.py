@@ -13,7 +13,7 @@ def client():
 
 def test_player_session_flow_and_optional_reveals(client):
     games = client.get("/api/games").json()
-    assert len(games) == 30 and all("mechanics" not in g for g in games)
+    assert len(games) == 50 and all("mechanics" not in g for g in games)
     assert "text" in client.get("/api/games/sg01/mechanics").json()
     start = client.post("/api/sessions", json={"game_id": "sg01", "level": 0}).json()
     token = start["session_id"]

@@ -53,8 +53,9 @@
         return { csrf_token: "browser-only", version: data.version };
       if (method === "GET" && path === "/api/games")
         return data.games.map(({ mechanics, ...game }) => game);
-      if (method === "GET" && /^\/api\/games\/sg\d\d\/mechanics$/.test(path)) {
-        const game = data.games.find((g) => g.id === path.split("/")[3]);
+      if (method === "GET" && /^\/api\/games\/[a-z][a-z0-9-]*\/mechanics$/.test(path)) {
+        const identity = path.split("/")[3];
+        const game = data.games.find((g) => g.id === identity || g.game_id === identity);
         if (!game) throw new Error("Unknown game.");
         return { text: game.mechanics };
       }

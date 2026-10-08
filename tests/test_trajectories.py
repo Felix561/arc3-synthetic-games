@@ -178,7 +178,7 @@ def test_prepared_partitions_have_no_duplicate_union_or_missing_file_hashes():
     if not (root / "manifest.json").exists():
         pytest.skip("Public data has not been prepared")
     manifest = json.loads((root / "manifest.json").read_text())
-    assert set(manifest["sources"]) == {"studio", "nvidia"}
+    assert set(manifest["sources"]) == {"studio", "studio_v2", "nvidia"}
     assert not (root / "all.jsonl").exists()
     actual = {
         "trajectories/" + path.relative_to(root).as_posix()
@@ -187,6 +187,9 @@ def test_prepared_partitions_have_no_duplicate_union_or_missing_file_hashes():
     assert actual == set(manifest["files_sha256"])
     assert all(tool.sha256(ROOT / path) == digest for path, digest in manifest["files_sha256"].items())
     stats = json.loads((root / "statistics.json").read_text())
-    assert all(stats["totals"][key] == value for key, value in tool.EXPECTED_TOTALS.items())
+    expected = {"games": 75, "levels": 550, "segments": 555, "solved_segments": 550,
+                "unsolved_segments": 5, "policy_actions": 7751}
+    assert all(stats["totals"][key] == value for key, value in expected.items())
     assert stats["by_source"]["studio"]["unsolved_segments"] == 0
+    assert stats["by_source"]["studio_v2"]["unsolved_segments"] == 0
     assert stats["by_source"]["nvidia"]["unsolved_segments"] == 5

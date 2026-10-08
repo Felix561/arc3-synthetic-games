@@ -49,7 +49,7 @@ def build(output, root=ROOT):
             raise ValueError(f"NVIDIA checksum mismatch: {name}")
         files[name] = content
     # Bind the native packages in the replay manifests to the bytes just collected.
-    for source in ("studio", "nvidia"):
+    for source in manifest["sources"]:
         partition = json.loads(files[f"trajectories/{source}/manifest.json"])
         for game in partition["games"]:
             for relative, expected in game["environment_files_sha256"].items():
@@ -60,24 +60,30 @@ def build(output, root=ROOT):
                  "docs/DOWNLOADS.md", "docs/TRAJECTORIES.md", "docs/GAMES.md", "docs/STATISTICS.md",
                  "docs/VALIDATION.md", "docs/DATASET_CARD.md", *sorted(STATISTICS_MEDIA)):
         files[name] = read_public(root, name)
-    files["README.md"] = b"""# Synthetic ARC3 environments and AI-agent trajectories
+    counts = manifest["totals"]
+    studio_games = len(catalog["games"])
+    nvidia_games = len(nvidia["games"])
+    excerpt_note = ("Studio V2 provides successful level excerpts with real preceding responses;\n"
+                    "these excerpts do not pretend to be independent reset-to-WIN recordings.\n"
+                    if "studio_v2" in manifest["sources"] else "")
+    files["README.md"] = f"""# Synthetic ARC3 environments and AI-agent trajectories
 
-30 independently created Studio games + 25 NVIDIA synthetic environments.
+{studio_games} independently created Studio games + {nvidia_games} NVIDIA synthetic environments.
 No official ARC Prize games or official human demonstrations are included.
 
 Read docs/DOWNLOADS.md for layout and native environment setup; read
 docs/TRAJECTORIES.md for schemas, source-informed AI provenance and limitations.
-Load all 415 palette-grid level attempts without any dependencies:
+Load all {counts['segments']} palette-grid level attempts without any dependencies:
 
     python tools/load_dataset.py
 
 Native recordings retain Recorder-style timestamp/data JSONL, compressed with
-gzip. They are AI gameplay, not human recordings; unknown timestamps stay null.
+gzip.\n{excerpt_note}They are AI gameplay, not human recordings; unknown timestamps stay null.
 Studio content uses MIT. NVIDIA content retains its Apache-2.0 license and notices
 under third_party/nvidia/. Game sources execute Python: isolate native execution.
 SHA256SUMS.txt covers every file in this ZIP. No player, GIFs or generation setup
 is included; obtain the player separately from the repository releases.
-"""
+""".encode()
     for name in list(files):
         if name.startswith("docs/") and name.endswith(".md"):
             files[name] = scope_document_links(files[name], set(files), name)

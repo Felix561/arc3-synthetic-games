@@ -27,19 +27,22 @@ def check_public_docs(paths):
         raise ValueError(f"Unexpected Markdown in publication source: {unexpected}")
 
 
-def native_archive_readme(version):
+def native_archive_readme(version, catalog=None):
     """An environments-only archive describes only the assets it actually contains."""
+    data = catalog or json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+    games = len(data["games"])
+    levels = sum(game["levels"] for game in data["games"])
     return f"""# ARC3 Synthetic Games native environments · v{version}
 
-This archive contains the SG01–SG30 native environments: 30 games and
-210 levels, with exact game IDs and SHA-256 hashes in `catalog.json`. It also
-contains initial-board previews, six human-played GIF excerpts and reader-facing
+This archive contains {games} independently created Studio native games and
+{levels} levels, with exact game IDs and SHA-256 hashes in `catalog.json`. It also
+contains initial-board previews, selected gameplay GIF excerpts and reader-facing
 documentation. The GIFs are presentation assets, not human trajectory data.
 
 There is no player application or AI-agent trajectory dataset in this archive.
 The separate source, browser-preview and agent-trajectory packages are available
 from https://github.com/Felix561/arc3-synthetic-games/releases . NVIDIA environments
-are separate from these 30 games and are not included here.
+are separate from these {games} games and are not included here.
 
 ## Use the native environments
 
@@ -67,16 +70,19 @@ observation = game.reset()
 
 These game sources execute Python; use an isolated environment for untrusted
 experiments. No official human-efficiency baseline or comparable ARC Prize score
-is provided. Original Studio content is MIT-licensed; see `LICENSE` and
+is provided. Independently created Studio content is MIT-licensed; see `LICENSE` and
 `THIRD_PARTY_NOTICES.md`. `docs/GAMES.md` describes the included game collection.
 """.encode()
 
 
-def native_archive_validation():
-    return b"""# Native environment validation
+def native_archive_validation(catalog=None):
+    data = catalog or json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+    games = len(data["games"])
+    files = sum(len(game["files_sha256"]) for game in data["games"])
+    return f"""# Native environment validation
 
-This archive contains only the 30 Studio native environments and their public
-presentation assets. At packaging time, all 60 native source/metadata files are
+This archive contains only the {games} Studio native environments and their public
+presentation assets. At packaging time, all {files} native source/metadata files are
 checked against `catalog.json`. Native initialization, controls and player tests
 are documented in the source repository:
 https://github.com/Felix561/arc3-synthetic-games/blob/main/docs/VALIDATION.md
@@ -91,7 +97,7 @@ are a separate dataset/package, documented here:
 https://github.com/Felix561/arc3-synthetic-games/blob/main/docs/TRAJECTORIES.md
 They are not human playthroughs, blind-agent evaluations or official benchmark
 scores. No raw trajectory data or NVIDIA game source is included in this archive.
-"""
+""".encode()
 
 
 def native_archive_notices():
@@ -101,7 +107,7 @@ def native_archive_notices():
         raise ValueError("Missing complete Studio dependency notices")
     return ("""# Third-party notices for the native environment archive
 
-The original Studio games and presentation assets in this archive use the MIT
+The independently created Studio games and presentation assets in this archive use the MIT
 license supplied in `LICENSE`. The dependency acknowledgments and full MIT notices
 below are preserved from the source repository.
 
@@ -114,7 +120,9 @@ This independent collection does not claim ARC Prize or NVIDIA endorsement.
 """ + notices[notices.index(marker):]).encode()
 
 
-def native_archive_citation(version):
+def native_archive_citation(version, catalog=None):
+    data = catalog or json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+    games = len(data["games"])
     return f"""cff-version: 1.2.0
 message: "Please cite this collection when using its native environments."
 type: dataset
@@ -123,7 +131,7 @@ version: "{version}"
 license: MIT
 authors:
   - name: "ARC3 Synthetic Games contributors"
-abstract: "Thirty independent ARC3-compatible native games with seven fixed levels each."
+abstract: "{games} independently created ARC3-compatible native games with seven fixed levels each."
 repository-code: "https://github.com/Felix561/arc3-synthetic-games"
 keywords:
   - interactive reasoning
@@ -158,10 +166,10 @@ def build(output, preview, packages):
                 raise ValueError("Native release checksum mismatch")
             names.add(name)
     files = {name: (ROOT / name).read_bytes() for name in names}
-    files["README.md"] = native_archive_readme(version)
-    files["docs/VALIDATION.md"] = native_archive_validation()
+    files["README.md"] = native_archive_readme(version, data)
+    files["docs/VALIDATION.md"] = native_archive_validation(data)
     files["THIRD_PARTY_NOTICES.md"] = native_archive_notices()
-    files["CITATION.cff"] = native_archive_citation(version)
+    files["CITATION.cff"] = native_archive_citation(version, data)
     write_zip(output / f"{stem}-environments.zip", files)
     manifest = json.loads((preview / "browser/runtime.json").read_text())
     if manifest["version"] != version:

@@ -24,8 +24,9 @@ def find_game(identity):
 def verify_dataset():
     data = catalog()
     games = data["games"]
-    if len(games) != 30 or {g["id"] for g in games} != {f"sg{i:02}" for i in range(1, 31)}:
-        raise ValueError("Expected exactly SG01–SG30")
+    expected_ids = {f"sg{i:02}" for i in range(1, 31)} | {f"v2{i:02}" for i in range(1, 21)}
+    if len(games) != len(expected_ids) or {g["id"] for g in games} != expected_ids:
+        raise ValueError("Expected exactly SG01–SG30 and V201–V220")
     root = dataset_root().resolve()
     expected = set()
     for game in games:
@@ -51,6 +52,6 @@ def verify_dataset():
         "verified": True,
         "version": data["version"],
         "games": len(games),
-        "levels": 210,
+        "levels": sum(game["levels"] for game in games),
         "native_files": len(expected),
     }

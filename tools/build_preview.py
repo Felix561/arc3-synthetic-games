@@ -51,8 +51,10 @@ def build(output, engine_wheel=None):
             if hashlib.sha256(content).hexdigest() != digest:
                 raise ValueError(f"Native checksum mismatch: {game['id']}")
             native["arc3_synthetic_games/data/" + name] = content
-    if len(data["games"]) != 30 or len(native) != 60:
-        raise ValueError("Expected the complete 30-game collection")
+    expected_ids = {f"sg{i:02}" for i in range(1, 31)} | {f"v2{i:02}" for i in range(1, 21)}
+    if (len(data["games"]) != 50 or {game["id"] for game in data["games"]} != expected_ids
+            or len(native) != 100):
+        raise ValueError("Expected the complete 50-game collection")
     for name in sorted(media | {"LICENSE", "THIRD_PARTY_NOTICES.md", "catalog.json"}):
         source = ROOT / name
         if not source.resolve().is_relative_to(ROOT) or source.is_symlink():

@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "arc3-synthetic-games"
-version = "1.1.2"
-description = "Thirty independently created synthetic ARC3-compatible games and separately packaged source-informed AI trajectories"
+version = "2.0.0"
+description = "Fifty independently created synthetic ARC3-compatible Studio games and separately packaged source-informed AI trajectories"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 license = "MIT"

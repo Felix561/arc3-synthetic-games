@@ -43,6 +43,7 @@ def write_golden(output):
 
 
 def check(url, golden, screenshot_dir=None, executable=None):
+    from playwright.sync_api import TimeoutError as BrowserTimeoutError
     from playwright.sync_api import sync_playwright
 
     with sync_playwright() as playwright:
@@ -53,12 +54,24 @@ def check(url, golden, screenshot_dir=None, executable=None):
         context = browser.new_context(viewport={"width": 1440, "height": 1000})
         page = context.new_page()
         page.set_default_timeout(180000)
-        errors, requests = [], []
+        errors, requests, failures = [], [], []
         page.on("pageerror", lambda error: errors.append(str(error)))
         page.on("request", lambda request: requests.append((request.url, request.method)))
+        page.on("requestfailed", lambda request: failures.append({"url": request.url, "error": request.failure}))
+
+        def wait_for_player():
+            try:
+                page.locator("#player").wait_for(state="visible")
+            except BrowserTimeoutError as error:
+                detail = {"notice": page.locator("#notice").text_content(),
+                          "page_errors": errors, "request_failures": failures}
+                raise RuntimeError("The browser player did not open: " + json.dumps(detail)) from error
+
         page.goto(url)
         page.locator(".game-card").last.wait_for()
-        assert page.locator(".game-card").count() == 30
+        reference = json.loads(golden.read_text(encoding="utf-8"))
+        assert len(reference) == 50
+        assert page.locator(".game-card").count() == len(reference)
         # Lazy-loaded gallery images need to enter the viewport.
         for image in page.locator(".preview img").all():
             image.scroll_into_view_if_needed()
@@ -80,7 +93,7 @@ def check(url, golden, screenshot_dir=None, executable=None):
         assert page.locator("#library").is_visible()
         page.unroute("**/browser/arcengine-*.whl")
         page.locator("button[aria-label^='Play']").first.click()
-        page.locator("#player").wait_for(state="visible")
+        wait_for_player()
         page.wait_for_function("!document.querySelector('#reset').disabled")
         page.locator("#board").focus()
         for key in ("ArrowRight", "Space", "KeyZ"):
@@ -110,6 +123,9 @@ def check(url, golden, screenshot_dir=None, executable=None):
           const api = window.arc3Transport.request;
           let count = 0;
           for (const game of cases) {
+            const mechanics = await api(`/api/games/${game.id}/mechanics`);
+            if (typeof mechanics.text !== 'string' || !mechanics.text.trim())
+              throw new Error(`${game.id}: missing mechanics description`);
             const {session_id} = await api('/api/sessions', 'POST', {game_id: game.id});
             for (const event of game.events) {
               const obs = await api(`/api/sessions/${session_id}/${event.operation}`, 'POST', event.body);
@@ -122,11 +138,11 @@ def check(url, golden, screenshot_dir=None, executable=None):
             await api(`/api/sessions/${session_id}`, 'DELETE');
           }
           return count;
-        }""", json.loads(golden.read_text(encoding="utf-8")))
+        }""", reference)
         # Exercise scaled click input through the actual shared UI.
         page.locator("#search").fill("sg18")
         page.locator(".game-card button").click()
-        page.locator("#player").wait_for(state="visible")
+        wait_for_player()
         page.wait_for_function("!document.querySelector('#reset').disabled")
         page.evaluate("""() => {
           const original = window.arc3Transport.request;
@@ -149,7 +165,8 @@ def check(url, golden, screenshot_dir=None, executable=None):
         assert context.cookies() == []
         assert all(method == "GET" for _, method in requests), "Gameplay should not send HTTP requests"
         assert not errors, errors
-        print(f"Browser passed: 30 games, 210 levels, {count} exact native observations, UI and mobile checks")
+        print(f"Browser passed: {len(reference)} games, {len(reference) * 7} levels, "
+              f"{count} exact native observations, UI and mobile checks")
         browser.close()
 
 
