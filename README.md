@@ -95,6 +95,7 @@ separate Studio/NVIDIA licenses. See [download and loading guide](docs/DOWNLOADS
 | [Trajectories only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-agent-trajectories.zip) | AI recordings, manifests and statistics; no game code |
 | [Studio environments only](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-environments.zip) | 50 Studio games in native ARC3-compatible layout |
 | [Source and player](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-synthetic-games-v2.0.0-source.zip) | Local player, code, data and documentation |
+| [Analysis report](https://github.com/Felix561/arc3-synthetic-games/releases/download/v2.0.0/arc3-analysis-20261010.zip) | Offline report, summary tables and statistical figures |
 
 These are independent synthetic games, **not official ARC Prize training games**.
 Native replay envelopes follow the Recorder style; segmented training rows use our
@@ -143,6 +144,15 @@ trajectory archive for the agent data and NVIDIA dependencies.
 
 The [statistics page](docs/STATISTICS.md) includes per-game attempts, outcomes, total
 actions and segment-length distributions.
+
+The **[interactive analysis report](https://felix561.github.io/arc3-synthetic-games/analysis/)**
+examines execution length, control coverage, mechanical families and visual
+structure across the 75 synthetic games, with aggregate official-human
+comparisons. Charts have filters and downloadable source tables. The
+[offline report and analysis data](docs/analysis/) are included; no account or
+installation is needed. Synthetic agents had source access; human players
+learned the rules. These differences prevent a calibrated human difficulty
+comparison.
 
 ## Play locally
 

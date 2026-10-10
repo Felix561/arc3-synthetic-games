@@ -49,8 +49,16 @@ The workflow builds private repositories too, but deploys only when public.
 It uses GitHub's scoped workflow token; no personal deployment token belongs
 in the repository.
 
+The static build also includes the independently authored statistical report at
+`analysis/`. It copies only the hash-verified inventory in
+`docs/analysis/manifest.json`; unlisted files or changed assets fail the build.
+The report also opens directly as an offline HTML file. Its sources, aggregate
+data and license are documented in [the analysis guide](analysis/README.md).
+The report does not change the frozen environment or trajectory release.
+
 For another static host, run `python tools/build_preview.py` and serve `_site/`
-over HTTPS. Do not open the page through `file://`. No backend is needed.
+over HTTPS. The playable demo requires HTTP(S); the analysis report also works
+from `file://`. No backend is needed.
 Engine and game downloads are SHA-256 checked before loading; checksums establish
 artifact consistency, not hosting-provider trust.
 

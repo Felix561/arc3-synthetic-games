@@ -9,6 +9,8 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
+from build_analysis_report import report_files
+
 ROOT = Path(__file__).resolve().parents[1]
 ENGINE_NAME = "arcengine-0.9.3-py3-none-any.whl"
 ENGINE_SHA256 = "5f9739d6d0055780a4581fd6fe09066bb08775c4c8212c9adcca2eb008aef59c"
@@ -77,8 +79,16 @@ def build(output, engine_wheel=None):
                         "The first game downloads a browser runtime; an internet connection is needed.")
     html = html.replace("Local play · No accounts · No telemetry", "In-browser play · No accounts · No telemetry")
     html = html.replace("In-browser play · No accounts · No telemetry",
-                        'In-browser play · No accounts · No telemetry · <a href="THIRD_PARTY_NOTICES.md">Licenses</a>')
+                        'In-browser play · No accounts · No telemetry · '
+                        '<a href="THIRD_PARTY_NOTICES.md">Licenses</a> · '
+                        '<a href="analysis/">Dataset analysis</a>')
     (output / "index.html").write_text(html, encoding="utf-8")
+    # The statistical report is an independent static artifact. Never copy
+    # arbitrary development folders into the Pages output.
+    for name, content in report_files(ROOT / "docs/analysis").items():
+        target = output / "analysis" / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(content)
     (output / ".nojekyll").write_bytes(b"")
     (output / "browser").mkdir()
     for name in ("client.js", "worker.mjs"):

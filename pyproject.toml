@@ -22,7 +22,7 @@ packages = ["src/arc3_synthetic_games"]
 
 [tool.hatch.build.targets.sdist]
 exclude = ["AGENTS.md", "PUBLICATION_AUDIT.md", "**/AGENTS.md", "**/TODO*.md", "**/*feedback*.md",
-           "/trajectories", "/third_party", "/media/agent-demos"]
+           "/trajectories", "/third_party", "/media/agent-demos", "/docs/analysis"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "environment_files" = "arc3_synthetic_games/data/environment_files"

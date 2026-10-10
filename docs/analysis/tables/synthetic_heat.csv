@@ -1,0 +1,551 @@
+collection,game,level,actions
+Studio V1,sg01,1,6
+Studio V1,sg01,2,38
+Studio V1,sg01,3,51
+Studio V1,sg01,4,53
+Studio V1,sg01,5,40
+Studio V1,sg01,6,81
+Studio V1,sg01,7,86
+Studio V1,sg02,1,2
+Studio V1,sg02,2,4
+Studio V1,sg02,3,24
+Studio V1,sg02,4,8
+Studio V1,sg02,5,3
+Studio V1,sg02,6,16
+Studio V1,sg02,7,26
+Studio V1,sg03,1,1
+Studio V1,sg03,2,2
+Studio V1,sg03,3,2
+Studio V1,sg03,4,2
+Studio V1,sg03,5,3
+Studio V1,sg03,6,4
+Studio V1,sg03,7,5
+Studio V1,sg04,1,2
+Studio V1,sg04,2,4
+Studio V1,sg04,3,2
+Studio V1,sg04,4,2
+Studio V1,sg04,5,7
+Studio V1,sg04,6,9
+Studio V1,sg04,7,14
+Studio V1,sg05,1,2
+Studio V1,sg05,2,3
+Studio V1,sg05,3,2
+Studio V1,sg05,4,4
+Studio V1,sg05,5,3
+Studio V1,sg05,6,4
+Studio V1,sg05,7,5
+Studio V1,sg06,1,4
+Studio V1,sg06,2,4
+Studio V1,sg06,3,4
+Studio V1,sg06,4,4
+Studio V1,sg06,5,8
+Studio V1,sg06,6,8
+Studio V1,sg06,7,7
+Studio V1,sg07,1,1
+Studio V1,sg07,2,9
+Studio V1,sg07,3,5
+Studio V1,sg07,4,8
+Studio V1,sg07,5,8
+Studio V1,sg07,6,17
+Studio V1,sg07,7,20
+Studio V1,sg08,1,1
+Studio V1,sg08,2,4
+Studio V1,sg08,3,9
+Studio V1,sg08,4,10
+Studio V1,sg08,5,12
+Studio V1,sg08,6,12
+Studio V1,sg08,7,15
+Studio V1,sg09,1,6
+Studio V1,sg09,2,22
+Studio V1,sg09,3,31
+Studio V1,sg09,4,37
+Studio V1,sg09,5,36
+Studio V1,sg09,6,38
+Studio V1,sg09,7,19
+Studio V1,sg10,1,2
+Studio V1,sg10,2,4
+Studio V1,sg10,3,4
+Studio V1,sg10,4,11
+Studio V1,sg10,5,10
+Studio V1,sg10,6,14
+Studio V1,sg10,7,15
+Studio V1,sg11,1,2
+Studio V1,sg11,2,4
+Studio V1,sg11,3,6
+Studio V1,sg11,4,9
+Studio V1,sg11,5,11
+Studio V1,sg11,6,17
+Studio V1,sg11,7,18
+Studio V1,sg12,1,6
+Studio V1,sg12,2,6
+Studio V1,sg12,3,8
+Studio V1,sg12,4,10
+Studio V1,sg12,5,17
+Studio V1,sg12,6,15
+Studio V1,sg12,7,19
+Studio V1,sg13,1,2
+Studio V1,sg13,2,2
+Studio V1,sg13,3,8
+Studio V1,sg13,4,16
+Studio V1,sg13,5,22
+Studio V1,sg13,6,38
+Studio V1,sg13,7,32
+Studio V1,sg14,1,2
+Studio V1,sg14,2,7
+Studio V1,sg14,3,28
+Studio V1,sg14,4,13
+Studio V1,sg14,5,17
+Studio V1,sg14,6,38
+Studio V1,sg14,7,49
+Studio V1,sg15,1,1
+Studio V1,sg15,2,2
+Studio V1,sg15,3,3
+Studio V1,sg15,4,4
+Studio V1,sg15,5,5
+Studio V1,sg15,6,6
+Studio V1,sg15,7,8
+Studio V1,sg16,1,1
+Studio V1,sg16,2,2
+Studio V1,sg16,3,2
+Studio V1,sg16,4,3
+Studio V1,sg16,5,4
+Studio V1,sg16,6,5
+Studio V1,sg16,7,6
+Studio V1,sg17,1,2
+Studio V1,sg17,2,5
+Studio V1,sg17,3,5
+Studio V1,sg17,4,12
+Studio V1,sg17,5,20
+Studio V1,sg17,6,22
+Studio V1,sg17,7,34
+Studio V1,sg18,1,1
+Studio V1,sg18,2,2
+Studio V1,sg18,3,4
+Studio V1,sg18,4,7
+Studio V1,sg18,5,29
+Studio V1,sg18,6,30
+Studio V1,sg18,7,33
+Studio V1,sg19,1,1
+Studio V1,sg19,2,2
+Studio V1,sg19,3,5
+Studio V1,sg19,4,4
+Studio V1,sg19,5,14
+Studio V1,sg19,6,10
+Studio V1,sg19,7,8
+Studio V1,sg20,1,1
+Studio V1,sg20,2,1
+Studio V1,sg20,3,5
+Studio V1,sg20,4,7
+Studio V1,sg20,5,8
+Studio V1,sg20,6,14
+Studio V1,sg20,7,16
+Studio V1,sg21,1,1
+Studio V1,sg21,2,2
+Studio V1,sg21,3,3
+Studio V1,sg21,4,6
+Studio V1,sg21,5,7
+Studio V1,sg21,6,8
+Studio V1,sg21,7,8
+Studio V1,sg22,1,1
+Studio V1,sg22,2,4
+Studio V1,sg22,3,7
+Studio V1,sg22,4,6
+Studio V1,sg22,5,9
+Studio V1,sg22,6,10
+Studio V1,sg22,7,16
+Studio V1,sg23,1,1
+Studio V1,sg23,2,2
+Studio V1,sg23,3,3
+Studio V1,sg23,4,4
+Studio V1,sg23,5,5
+Studio V1,sg23,6,8
+Studio V1,sg23,7,8
+Studio V1,sg24,1,12
+Studio V1,sg24,2,13
+Studio V1,sg24,3,33
+Studio V1,sg24,4,31
+Studio V1,sg24,5,44
+Studio V1,sg24,6,28
+Studio V1,sg24,7,38
+Studio V1,sg25,1,1
+Studio V1,sg25,2,2
+Studio V1,sg25,3,2
+Studio V1,sg25,4,4
+Studio V1,sg25,5,7
+Studio V1,sg25,6,21
+Studio V1,sg25,7,16
+Studio V1,sg26,1,1
+Studio V1,sg26,2,2
+Studio V1,sg26,3,3
+Studio V1,sg26,4,4
+Studio V1,sg26,5,5
+Studio V1,sg26,6,6
+Studio V1,sg26,7,8
+Studio V1,sg27,1,2
+Studio V1,sg27,2,2
+Studio V1,sg27,3,4
+Studio V1,sg27,4,8
+Studio V1,sg27,5,18
+Studio V1,sg27,6,25
+Studio V1,sg27,7,25
+Studio V1,sg28,1,2
+Studio V1,sg28,2,2
+Studio V1,sg28,3,3
+Studio V1,sg28,4,5
+Studio V1,sg28,5,7
+Studio V1,sg28,6,10
+Studio V1,sg28,7,26
+Studio V1,sg29,1,3
+Studio V1,sg29,2,4
+Studio V1,sg29,3,7
+Studio V1,sg29,4,6
+Studio V1,sg29,5,13
+Studio V1,sg29,6,19
+Studio V1,sg29,7,14
+Studio V1,sg30,1,1
+Studio V1,sg30,2,1
+Studio V1,sg30,3,3
+Studio V1,sg30,4,4
+Studio V1,sg30,5,3
+Studio V1,sg30,6,5
+Studio V1,sg30,7,7
+Studio V2,v201,1,3
+Studio V2,v201,2,4
+Studio V2,v201,3,4
+Studio V2,v201,4,5
+Studio V2,v201,5,4
+Studio V2,v201,6,6
+Studio V2,v201,7,9
+Studio V2,v202,1,2
+Studio V2,v202,2,3
+Studio V2,v202,3,5
+Studio V2,v202,4,7
+Studio V2,v202,5,4
+Studio V2,v202,6,6
+Studio V2,v202,7,9
+Studio V2,v203,1,3
+Studio V2,v203,2,3
+Studio V2,v203,3,4
+Studio V2,v203,4,3
+Studio V2,v203,5,6
+Studio V2,v203,6,6
+Studio V2,v203,7,10
+Studio V2,v204,1,3
+Studio V2,v204,2,7
+Studio V2,v204,3,12
+Studio V2,v204,4,21
+Studio V2,v204,5,29
+Studio V2,v204,6,42
+Studio V2,v204,7,48
+Studio V2,v205,1,4
+Studio V2,v205,2,4
+Studio V2,v205,3,16
+Studio V2,v205,4,21
+Studio V2,v205,5,23
+Studio V2,v205,6,41
+Studio V2,v205,7,45
+Studio V2,v206,1,1
+Studio V2,v206,2,2
+Studio V2,v206,3,6
+Studio V2,v206,4,9
+Studio V2,v206,5,8
+Studio V2,v206,6,10
+Studio V2,v206,7,9
+Studio V2,v207,1,2
+Studio V2,v207,2,2
+Studio V2,v207,3,3
+Studio V2,v207,4,6
+Studio V2,v207,5,4
+Studio V2,v207,6,5
+Studio V2,v207,7,7
+Studio V2,v208,1,1
+Studio V2,v208,2,5
+Studio V2,v208,3,4
+Studio V2,v208,4,7
+Studio V2,v208,5,17
+Studio V2,v208,6,7
+Studio V2,v208,7,17
+Studio V2,v209,1,2
+Studio V2,v209,2,2
+Studio V2,v209,3,4
+Studio V2,v209,4,6
+Studio V2,v209,5,5
+Studio V2,v209,6,3
+Studio V2,v209,7,7
+Studio V2,v210,1,2
+Studio V2,v210,2,2
+Studio V2,v210,3,3
+Studio V2,v210,4,5
+Studio V2,v210,5,5
+Studio V2,v210,6,8
+Studio V2,v210,7,10
+Studio V2,v211,1,1
+Studio V2,v211,2,1
+Studio V2,v211,3,3
+Studio V2,v211,4,1
+Studio V2,v211,5,1
+Studio V2,v211,6,6
+Studio V2,v211,7,3
+Studio V2,v212,1,3
+Studio V2,v212,2,3
+Studio V2,v212,3,3
+Studio V2,v212,4,6
+Studio V2,v212,5,6
+Studio V2,v212,6,3
+Studio V2,v212,7,9
+Studio V2,v213,1,3
+Studio V2,v213,2,3
+Studio V2,v213,3,3
+Studio V2,v213,4,8
+Studio V2,v213,5,5
+Studio V2,v213,6,6
+Studio V2,v213,7,6
+Studio V2,v214,1,2
+Studio V2,v214,2,4
+Studio V2,v214,3,16
+Studio V2,v214,4,10
+Studio V2,v214,5,17
+Studio V2,v214,6,19
+Studio V2,v214,7,21
+Studio V2,v215,1,4
+Studio V2,v215,2,4
+Studio V2,v215,3,6
+Studio V2,v215,4,12
+Studio V2,v215,5,23
+Studio V2,v215,6,16
+Studio V2,v215,7,40
+Studio V2,v216,1,1
+Studio V2,v216,2,3
+Studio V2,v216,3,8
+Studio V2,v216,4,22
+Studio V2,v216,5,20
+Studio V2,v216,6,17
+Studio V2,v216,7,38
+Studio V2,v217,1,4
+Studio V2,v217,2,7
+Studio V2,v217,3,28
+Studio V2,v217,4,26
+Studio V2,v217,5,23
+Studio V2,v217,6,17
+Studio V2,v217,7,28
+Studio V2,v218,1,3
+Studio V2,v218,2,6
+Studio V2,v218,3,20
+Studio V2,v218,4,31
+Studio V2,v218,5,32
+Studio V2,v218,6,47
+Studio V2,v218,7,42
+Studio V2,v219,1,6
+Studio V2,v219,2,6
+Studio V2,v219,3,13
+Studio V2,v219,4,23
+Studio V2,v219,5,16
+Studio V2,v219,6,39
+Studio V2,v219,7,49
+Studio V2,v220,1,2
+Studio V2,v220,2,2
+Studio V2,v220,3,7
+Studio V2,v220,4,9
+Studio V2,v220,5,9
+Studio V2,v220,6,166
+Studio V2,v220,7,75
+NVIDIA,al7306,1,9
+NVIDIA,al7306,2,17
+NVIDIA,al7306,3,17
+NVIDIA,al7306,4,21
+NVIDIA,al7306,5,21
+NVIDIA,al7306,6,23
+NVIDIA,al7306,7,29
+NVIDIA,al7306,8,37
+NVIDIA,cc2048,1,16
+NVIDIA,cc2048,2,20
+NVIDIA,cc2048,3,20
+NVIDIA,cc2048,4,19
+NVIDIA,cc2048,5,21
+NVIDIA,cc2048,6,21
+NVIDIA,cc2048,7,20
+NVIDIA,cc2048,8,21
+NVIDIA,cg1842,1,15
+NVIDIA,cg1842,2,20
+NVIDIA,cg1842,3,20
+NVIDIA,cg1842,4,18
+NVIDIA,cg1842,5,33
+NVIDIA,cg1842,6,22
+NVIDIA,cg1842,7,22
+NVIDIA,cg1842,8,27
+NVIDIA,cl0426,1,8
+NVIDIA,cl0426,2,10
+NVIDIA,cl0426,3,6
+NVIDIA,cl0426,4,8
+NVIDIA,cl0426,5,10
+NVIDIA,cl0426,6,10
+NVIDIA,cl0426,7,10
+NVIDIA,cl0426,8,12
+NVIDIA,df4821,1,14
+NVIDIA,df4821,2,24
+NVIDIA,df4821,3,18
+NVIDIA,df4821,4,16
+NVIDIA,df4821,5,38
+NVIDIA,df4821,6,20
+NVIDIA,df4821,7,26
+NVIDIA,df4821,8,26
+NVIDIA,dl4827,1,12
+NVIDIA,dl4827,2,29
+NVIDIA,dl4827,3,23
+NVIDIA,dl4827,4,37
+NVIDIA,dl4827,5,33
+NVIDIA,dl4827,6,29
+NVIDIA,dl4827,7,34
+NVIDIA,dl4827,8,29
+NVIDIA,fl5273,1,9
+NVIDIA,fl5273,2,28
+NVIDIA,fl5273,3,20
+NVIDIA,fl5273,4,23
+NVIDIA,fl5273,5,48
+NVIDIA,fl5273,6,17
+NVIDIA,fl5273,7,23
+NVIDIA,fl5273,8,32
+NVIDIA,fw4821,1,8
+NVIDIA,fw4821,2,8
+NVIDIA,fw4821,3,9
+NVIDIA,fw4821,4,8
+NVIDIA,fw4821,5,9
+NVIDIA,fw4821,6,9
+NVIDIA,fw4821,7,13
+NVIDIA,fw4821,8,15
+NVIDIA,gc4721,1,14
+NVIDIA,gc4721,2,14
+NVIDIA,gc4721,3,10
+NVIDIA,gc4721,4,7
+NVIDIA,gc4721,5,16
+NVIDIA,gc4721,6,20
+NVIDIA,gc4721,7,21
+NVIDIA,gc4721,8,17
+NVIDIA,hr2048,1,10
+NVIDIA,hr2048,2,15
+NVIDIA,hr2048,3,16
+NVIDIA,hr2048,4,19
+NVIDIA,hr2048,5,15
+NVIDIA,hr2048,6,15
+NVIDIA,hr2048,7,16
+NVIDIA,hr2048,8,18
+NVIDIA,ll4821,1,8
+NVIDIA,ll4821,2,9
+NVIDIA,ll4821,3,19
+NVIDIA,ll4821,4,22
+NVIDIA,ll4821,5,19
+NVIDIA,ll4821,6,11
+NVIDIA,ll4821,7,15
+NVIDIA,ll4821,8,15
+NVIDIA,ma4173,1,10
+NVIDIA,ma4173,2,12
+NVIDIA,ma4173,3,14
+NVIDIA,ma4173,4,13
+NVIDIA,ma4173,5,15
+NVIDIA,ma4173,6,13
+NVIDIA,ma4173,7,15
+NVIDIA,ma4173,8,19
+NVIDIA,mb2741,1,10
+NVIDIA,mb2741,2,14
+NVIDIA,mb2741,3,10
+NVIDIA,mb2741,4,15
+NVIDIA,mb2741,5,16
+NVIDIA,mb2741,6,15
+NVIDIA,mb2741,7,15
+NVIDIA,mb2741,8,17
+NVIDIA,ml2048,1,8
+NVIDIA,ml2048,2,12
+NVIDIA,ml2048,3,13
+NVIDIA,ml2048,4,12
+NVIDIA,ml2048,5,16
+NVIDIA,ml2048,6,21
+NVIDIA,ml2048,7,23
+NVIDIA,ml2048,8,23
+NVIDIA,mt4926,1,10
+NVIDIA,mt4926,2,20
+NVIDIA,mt4926,3,10
+NVIDIA,mt4926,4,6
+NVIDIA,mt4926,5,10
+NVIDIA,mt4926,6,10
+NVIDIA,mt4926,7,12
+NVIDIA,mt4926,8,15
+NVIDIA,ne4172,1,15
+NVIDIA,ne4172,2,21
+NVIDIA,ne4172,3,21
+NVIDIA,ne4172,4,51
+NVIDIA,ne4172,5,55
+NVIDIA,ne4172,6,57
+NVIDIA,ne4172,7,61
+NVIDIA,ne4172,8,76
+NVIDIA,os1842,1,4
+NVIDIA,os1842,2,10
+NVIDIA,os1842,3,6
+NVIDIA,os1842,4,7
+NVIDIA,os1842,5,8
+NVIDIA,os1842,6,7
+NVIDIA,os1842,7,9
+NVIDIA,os1842,8,10
+NVIDIA,ps1842,1,2
+NVIDIA,ps1842,2,6
+NVIDIA,ps1842,3,2
+NVIDIA,ps1842,4,6
+NVIDIA,ps1842,5,13
+NVIDIA,ps1842,6,14
+NVIDIA,ps1842,7,13
+NVIDIA,ps1842,8,7
+NVIDIA,ps7413,1,8
+NVIDIA,ps7413,2,19
+NVIDIA,ps7413,3,32
+NVIDIA,ps7413,4,33
+NVIDIA,ps7413,5,51
+NVIDIA,ps7413,6,48
+NVIDIA,ps7413,7,76
+NVIDIA,ps7413,8,78
+NVIDIA,rl2048,1,10
+NVIDIA,rl2048,2,12
+NVIDIA,rl2048,3,22
+NVIDIA,rl2048,4,14
+NVIDIA,rl2048,5,22
+NVIDIA,rl2048,6,12
+NVIDIA,rl2048,7,14
+NVIDIA,rl2048,8,24
+NVIDIA,rs0427,1,8
+NVIDIA,rs0427,2,10
+NVIDIA,rs0427,3,9
+NVIDIA,rs0427,4,12
+NVIDIA,rs0427,5,15
+NVIDIA,rs0427,6,21
+NVIDIA,rs0427,7,21
+NVIDIA,rs0427,8,37
+NVIDIA,sf2048,1,7
+NVIDIA,sf2048,2,9
+NVIDIA,sf2048,3,11
+NVIDIA,sf2048,4,10
+NVIDIA,sf2048,5,14
+NVIDIA,sf2048,6,14
+NVIDIA,sf2048,7,16
+NVIDIA,sf2048,8,21
+NVIDIA,sl4821,1,3
+NVIDIA,sl4821,2,9
+NVIDIA,sl4821,3,5
+NVIDIA,sl4821,4,5
+NVIDIA,sl4821,5,8
+NVIDIA,sl4821,6,5
+NVIDIA,sl4821,7,8
+NVIDIA,sl4821,8,9
+NVIDIA,ss6041,1,16
+NVIDIA,ss6041,2,19
+NVIDIA,ss6041,3,13
+NVIDIA,ss6041,4,20
+NVIDIA,ss6041,5,19
+NVIDIA,ss6041,6,17
+NVIDIA,ss6041,7,20
+NVIDIA,ss6041,8,21
+NVIDIA,td4826,1,12
+NVIDIA,td4826,2,14
+NVIDIA,td4826,3,23
+NVIDIA,td4826,4,9
+NVIDIA,td4826,5,23
+NVIDIA,td4826,6,15
+NVIDIA,td4826,7,15
+NVIDIA,td4826,8,37

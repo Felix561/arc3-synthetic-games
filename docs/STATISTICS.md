@@ -4,6 +4,11 @@ Snapshot: **`arc3-source-informed-agent-v2.0.0`**, recorded seed 0.
 These are source-informed AI-agent demonstrations, not human trials,
 source-blind results or official benchmark scores.
 
+For level progression, control mix, mechanical/visual variety and aggregate
+official-human comparisons, see the
+[interactive analysis report](https://felix561.github.io/arc3-synthetic-games/analysis/)
+and its [offline files and methods](analysis/README.md).
+
 ## Coverage and observed outcomes
 
 | Measure | Studio | Studio V2 | NVIDIA DreamTeam | Total |

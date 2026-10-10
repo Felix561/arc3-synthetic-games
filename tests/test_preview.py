@@ -3,6 +3,7 @@
 import hashlib
 import importlib.util
 import json
+import sys
 import zipfile
 from pathlib import Path
 
@@ -11,7 +12,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("preview_builder", ROOT / "tools/build_preview.py")
 builder = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(builder)
+sys.path.insert(0, str(ROOT / "tools"))
+try:
+    spec.loader.exec_module(builder)
+finally:
+    sys.path.pop(0)
 
 
 def test_preview_contains_exact_native_bytes_and_only_public_assets(tmp_path, monkeypatch):
@@ -43,6 +48,12 @@ def test_preview_contains_exact_native_bytes_and_only_public_assets(tmp_path, mo
     html = (first / "index.html").read_text(encoding="utf-8")
     assert html.index("browser/client.js") < html.index("static/app.js")
     assert 'src="/static/' not in html
+    assert 'href="analysis/"' in html
+    expected_report = builder.report_files()
+    assert {p.relative_to(first / "analysis").as_posix()
+            for p in (first / "analysis").rglob("*") if p.is_file()} == set(expected_report)
+    assert all((first / "analysis" / name).read_bytes() == content
+               for name, content in expected_report.items())
 
 
 def test_preview_rejects_corrupt_dependency_and_existing_output(tmp_path):

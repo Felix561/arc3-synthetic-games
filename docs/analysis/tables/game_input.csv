@@ -1,0 +1,526 @@
+collection,game,input,actions,inputShare
+Studio V1,sg01,Up,84,0.23661971830985915
+Studio V1,sg01,Down,25,0.07042253521126761
+Studio V1,sg01,Left,10,0.028169014084507043
+Studio V1,sg01,Right,230,0.647887323943662
+Studio V1,sg01,Action button,6,0.016901408450704224
+Studio V1,sg01,Click,0,0.0
+Studio V1,sg01,Undo,0,0.0
+Studio V1,sg02,Up,3,0.03614457831325301
+Studio V1,sg02,Down,8,0.0963855421686747
+Studio V1,sg02,Left,7,0.08433734939759036
+Studio V1,sg02,Right,22,0.26506024096385544
+Studio V1,sg02,Action button,11,0.13253012048192772
+Studio V1,sg02,Click,32,0.3855421686746988
+Studio V1,sg02,Undo,0,0.0
+Studio V1,sg03,Up,0,0.0
+Studio V1,sg03,Down,0,0.0
+Studio V1,sg03,Left,0,0.0
+Studio V1,sg03,Right,0,0.0
+Studio V1,sg03,Action button,7,0.3684210526315789
+Studio V1,sg03,Click,12,0.631578947368421
+Studio V1,sg03,Undo,0,0.0
+Studio V1,sg04,Up,0,0.0
+Studio V1,sg04,Down,0,0.0
+Studio V1,sg04,Left,0,0.0
+Studio V1,sg04,Right,9,0.225
+Studio V1,sg04,Action button,13,0.325
+Studio V1,sg04,Click,18,0.45
+Studio V1,sg04,Undo,0,0.0
+Studio V1,sg05,Up,0,0.0
+Studio V1,sg05,Down,0,0.0
+Studio V1,sg05,Left,0,0.0
+Studio V1,sg05,Right,0,0.0
+Studio V1,sg05,Action button,0,0.0
+Studio V1,sg05,Click,23,1.0
+Studio V1,sg05,Undo,0,0.0
+Studio V1,sg06,Up,0,0.0
+Studio V1,sg06,Down,0,0.0
+Studio V1,sg06,Left,0,0.0
+Studio V1,sg06,Right,0,0.0
+Studio V1,sg06,Action button,0,0.0
+Studio V1,sg06,Click,39,1.0
+Studio V1,sg06,Undo,0,0.0
+Studio V1,sg07,Up,0,0.0
+Studio V1,sg07,Down,10,0.14705882352941177
+Studio V1,sg07,Left,0,0.0
+Studio V1,sg07,Right,3,0.04411764705882353
+Studio V1,sg07,Action button,21,0.3088235294117647
+Studio V1,sg07,Click,34,0.5
+Studio V1,sg07,Undo,0,0.0
+Studio V1,sg08,Up,8,0.12698412698412698
+Studio V1,sg08,Down,17,0.2698412698412698
+Studio V1,sg08,Left,13,0.20634920634920634
+Studio V1,sg08,Right,25,0.3968253968253968
+Studio V1,sg08,Action button,0,0.0
+Studio V1,sg08,Click,0,0.0
+Studio V1,sg08,Undo,0,0.0
+Studio V1,sg09,Up,24,0.12698412698412698
+Studio V1,sg09,Down,34,0.17989417989417988
+Studio V1,sg09,Left,32,0.1693121693121693
+Studio V1,sg09,Right,49,0.25925925925925924
+Studio V1,sg09,Action button,27,0.14285714285714285
+Studio V1,sg09,Click,23,0.12169312169312169
+Studio V1,sg09,Undo,0,0.0
+Studio V1,sg10,Up,4,0.06666666666666667
+Studio V1,sg10,Down,9,0.15
+Studio V1,sg10,Left,6,0.1
+Studio V1,sg10,Right,14,0.23333333333333334
+Studio V1,sg10,Action button,11,0.18333333333333332
+Studio V1,sg10,Click,16,0.26666666666666666
+Studio V1,sg10,Undo,0,0.0
+Studio V1,sg11,Up,0,0.0
+Studio V1,sg11,Down,0,0.0
+Studio V1,sg11,Left,0,0.0
+Studio V1,sg11,Right,0,0.0
+Studio V1,sg11,Action button,7,0.1044776119402985
+Studio V1,sg11,Click,60,0.8955223880597015
+Studio V1,sg11,Undo,0,0.0
+Studio V1,sg12,Up,19,0.2345679012345679
+Studio V1,sg12,Down,12,0.14814814814814814
+Studio V1,sg12,Left,11,0.13580246913580246
+Studio V1,sg12,Right,26,0.32098765432098764
+Studio V1,sg12,Action button,13,0.16049382716049382
+Studio V1,sg12,Click,0,0.0
+Studio V1,sg12,Undo,0,0.0
+Studio V1,sg13,Up,0,0.0
+Studio V1,sg13,Down,0,0.0
+Studio V1,sg13,Left,0,0.0
+Studio V1,sg13,Right,1,0.008333333333333333
+Studio V1,sg13,Action button,25,0.20833333333333334
+Studio V1,sg13,Click,94,0.7833333333333333
+Studio V1,sg13,Undo,0,0.0
+Studio V1,sg14,Up,43,0.2792207792207792
+Studio V1,sg14,Down,42,0.2727272727272727
+Studio V1,sg14,Left,36,0.23376623376623376
+Studio V1,sg14,Right,33,0.21428571428571427
+Studio V1,sg14,Action button,0,0.0
+Studio V1,sg14,Click,0,0.0
+Studio V1,sg14,Undo,0,0.0
+Studio V1,sg15,Up,0,0.0
+Studio V1,sg15,Down,0,0.0
+Studio V1,sg15,Left,0,0.0
+Studio V1,sg15,Right,0,0.0
+Studio V1,sg15,Action button,4,0.13793103448275862
+Studio V1,sg15,Click,25,0.8620689655172413
+Studio V1,sg15,Undo,0,0.0
+Studio V1,sg16,Up,0,0.0
+Studio V1,sg16,Down,0,0.0
+Studio V1,sg16,Left,0,0.0
+Studio V1,sg16,Right,0,0.0
+Studio V1,sg16,Action button,0,0.0
+Studio V1,sg16,Click,23,1.0
+Studio V1,sg16,Undo,0,0.0
+Studio V1,sg17,Up,13,0.13
+Studio V1,sg17,Down,14,0.14
+Studio V1,sg17,Left,5,0.05
+Studio V1,sg17,Right,7,0.07
+Studio V1,sg17,Action button,59,0.59
+Studio V1,sg17,Click,0,0.0
+Studio V1,sg17,Undo,2,0.02
+Studio V1,sg18,Up,0,0.0
+Studio V1,sg18,Down,0,0.0
+Studio V1,sg18,Left,0,0.0
+Studio V1,sg18,Right,0,0.0
+Studio V1,sg18,Action button,0,0.0
+Studio V1,sg18,Click,102,0.9622641509433962
+Studio V1,sg18,Undo,4,0.03773584905660377
+Studio V1,sg19,Up,0,0.0
+Studio V1,sg19,Down,0,0.0
+Studio V1,sg19,Left,0,0.0
+Studio V1,sg19,Right,0,0.0
+Studio V1,sg19,Action button,0,0.0
+Studio V1,sg19,Click,44,1.0
+Studio V1,sg19,Undo,0,0.0
+Studio V1,sg20,Up,0,0.0
+Studio V1,sg20,Down,0,0.0
+Studio V1,sg20,Left,0,0.0
+Studio V1,sg20,Right,0,0.0
+Studio V1,sg20,Action button,0,0.0
+Studio V1,sg20,Click,52,1.0
+Studio V1,sg20,Undo,0,0.0
+Studio V1,sg21,Up,0,0.0
+Studio V1,sg21,Down,0,0.0
+Studio V1,sg21,Left,0,0.0
+Studio V1,sg21,Right,0,0.0
+Studio V1,sg21,Action button,0,0.0
+Studio V1,sg21,Click,35,1.0
+Studio V1,sg21,Undo,0,0.0
+Studio V1,sg22,Up,4,0.07547169811320754
+Studio V1,sg22,Down,15,0.2830188679245283
+Studio V1,sg22,Left,3,0.05660377358490566
+Studio V1,sg22,Right,17,0.32075471698113206
+Studio V1,sg22,Action button,0,0.0
+Studio V1,sg22,Click,14,0.2641509433962264
+Studio V1,sg22,Undo,0,0.0
+Studio V1,sg23,Up,0,0.0
+Studio V1,sg23,Down,0,0.0
+Studio V1,sg23,Left,0,0.0
+Studio V1,sg23,Right,0,0.0
+Studio V1,sg23,Action button,6,0.1935483870967742
+Studio V1,sg23,Click,25,0.8064516129032258
+Studio V1,sg23,Undo,0,0.0
+Studio V1,sg24,Up,10,0.05025125628140704
+Studio V1,sg24,Down,6,0.03015075376884422
+Studio V1,sg24,Left,37,0.18592964824120603
+Studio V1,sg24,Right,112,0.5628140703517588
+Studio V1,sg24,Action button,34,0.1708542713567839
+Studio V1,sg24,Click,0,0.0
+Studio V1,sg24,Undo,0,0.0
+Studio V1,sg25,Up,10,0.18867924528301888
+Studio V1,sg25,Down,15,0.2830188679245283
+Studio V1,sg25,Left,8,0.1509433962264151
+Studio V1,sg25,Right,9,0.16981132075471697
+Studio V1,sg25,Action button,11,0.20754716981132076
+Studio V1,sg25,Click,0,0.0
+Studio V1,sg25,Undo,0,0.0
+Studio V1,sg26,Up,0,0.0
+Studio V1,sg26,Down,0,0.0
+Studio V1,sg26,Left,0,0.0
+Studio V1,sg26,Right,0,0.0
+Studio V1,sg26,Action button,0,0.0
+Studio V1,sg26,Click,29,1.0
+Studio V1,sg26,Undo,0,0.0
+Studio V1,sg27,Up,12,0.14285714285714285
+Studio V1,sg27,Down,12,0.14285714285714285
+Studio V1,sg27,Left,13,0.15476190476190477
+Studio V1,sg27,Right,20,0.23809523809523808
+Studio V1,sg27,Action button,27,0.32142857142857145
+Studio V1,sg27,Click,0,0.0
+Studio V1,sg27,Undo,0,0.0
+Studio V1,sg28,Up,0,0.0
+Studio V1,sg28,Down,0,0.0
+Studio V1,sg28,Left,0,0.0
+Studio V1,sg28,Right,0,0.0
+Studio V1,sg28,Action button,42,0.7636363636363637
+Studio V1,sg28,Click,12,0.21818181818181817
+Studio V1,sg28,Undo,1,0.01818181818181818
+Studio V1,sg29,Up,12,0.18181818181818182
+Studio V1,sg29,Down,14,0.21212121212121213
+Studio V1,sg29,Left,18,0.2727272727272727
+Studio V1,sg29,Right,14,0.21212121212121213
+Studio V1,sg29,Action button,8,0.12121212121212122
+Studio V1,sg29,Click,0,0.0
+Studio V1,sg29,Undo,0,0.0
+Studio V1,sg30,Up,0,0.0
+Studio V1,sg30,Down,0,0.0
+Studio V1,sg30,Left,0,0.0
+Studio V1,sg30,Right,0,0.0
+Studio V1,sg30,Action button,0,0.0
+Studio V1,sg30,Click,24,1.0
+Studio V1,sg30,Undo,0,0.0
+Studio V2,v201,Up,0,0.0
+Studio V2,v201,Down,0,0.0
+Studio V2,v201,Left,0,0.0
+Studio V2,v201,Right,0,0.0
+Studio V2,v201,Action button,9,0.2571428571428571
+Studio V2,v201,Click,25,0.7142857142857143
+Studio V2,v201,Undo,1,0.02857142857142857
+Studio V2,v202,Up,0,0.0
+Studio V2,v202,Down,0,0.0
+Studio V2,v202,Left,6,0.16666666666666666
+Studio V2,v202,Right,13,0.3611111111111111
+Studio V2,v202,Action button,17,0.4722222222222222
+Studio V2,v202,Click,0,0.0
+Studio V2,v202,Undo,0,0.0
+Studio V2,v203,Up,0,0.0
+Studio V2,v203,Down,0,0.0
+Studio V2,v203,Left,0,0.0
+Studio V2,v203,Right,0,0.0
+Studio V2,v203,Action button,11,0.3142857142857143
+Studio V2,v203,Click,24,0.6857142857142857
+Studio V2,v203,Undo,0,0.0
+Studio V2,v204,Up,27,0.16666666666666666
+Studio V2,v204,Down,26,0.16049382716049382
+Studio V2,v204,Left,40,0.24691358024691357
+Studio V2,v204,Right,56,0.345679012345679
+Studio V2,v204,Action button,13,0.08024691358024691
+Studio V2,v204,Click,0,0.0
+Studio V2,v204,Undo,0,0.0
+Studio V2,v205,Up,8,0.05194805194805195
+Studio V2,v205,Down,47,0.3051948051948052
+Studio V2,v205,Left,43,0.2792207792207792
+Studio V2,v205,Right,56,0.36363636363636365
+Studio V2,v205,Action button,0,0.0
+Studio V2,v205,Click,0,0.0
+Studio V2,v205,Undo,0,0.0
+Studio V2,v206,Up,8,0.17777777777777778
+Studio V2,v206,Down,10,0.2222222222222222
+Studio V2,v206,Left,5,0.1111111111111111
+Studio V2,v206,Right,16,0.35555555555555557
+Studio V2,v206,Action button,6,0.13333333333333333
+Studio V2,v206,Click,0,0.0
+Studio V2,v206,Undo,0,0.0
+Studio V2,v207,Up,0,0.0
+Studio V2,v207,Down,0,0.0
+Studio V2,v207,Left,7,0.2413793103448276
+Studio V2,v207,Right,9,0.3103448275862069
+Studio V2,v207,Action button,0,0.0
+Studio V2,v207,Click,13,0.4482758620689655
+Studio V2,v207,Undo,0,0.0
+Studio V2,v208,Up,0,0.0
+Studio V2,v208,Down,0,0.0
+Studio V2,v208,Left,20,0.3448275862068966
+Studio V2,v208,Right,28,0.4827586206896552
+Studio V2,v208,Action button,0,0.0
+Studio V2,v208,Click,10,0.1724137931034483
+Studio V2,v208,Undo,0,0.0
+Studio V2,v209,Up,7,0.2413793103448276
+Studio V2,v209,Down,12,0.41379310344827586
+Studio V2,v209,Left,6,0.20689655172413793
+Studio V2,v209,Right,0,0.0
+Studio V2,v209,Action button,0,0.0
+Studio V2,v209,Click,4,0.13793103448275862
+Studio V2,v209,Undo,0,0.0
+Studio V2,v210,Up,0,0.0
+Studio V2,v210,Down,0,0.0
+Studio V2,v210,Left,0,0.0
+Studio V2,v210,Right,0,0.0
+Studio V2,v210,Action button,0,0.0
+Studio V2,v210,Click,35,1.0
+Studio V2,v210,Undo,0,0.0
+Studio V2,v211,Up,1,0.0625
+Studio V2,v211,Down,0,0.0
+Studio V2,v211,Left,0,0.0
+Studio V2,v211,Right,4,0.25
+Studio V2,v211,Action button,0,0.0
+Studio V2,v211,Click,11,0.6875
+Studio V2,v211,Undo,0,0.0
+Studio V2,v212,Up,0,0.0
+Studio V2,v212,Down,0,0.0
+Studio V2,v212,Left,0,0.0
+Studio V2,v212,Right,0,0.0
+Studio V2,v212,Action button,20,0.6060606060606061
+Studio V2,v212,Click,13,0.3939393939393939
+Studio V2,v212,Undo,0,0.0
+Studio V2,v213,Up,2,0.058823529411764705
+Studio V2,v213,Down,3,0.08823529411764706
+Studio V2,v213,Left,5,0.14705882352941177
+Studio V2,v213,Right,14,0.4117647058823529
+Studio V2,v213,Action button,0,0.0
+Studio V2,v213,Click,10,0.29411764705882354
+Studio V2,v213,Undo,0,0.0
+Studio V2,v214,Up,16,0.1797752808988764
+Studio V2,v214,Down,27,0.30337078651685395
+Studio V2,v214,Left,2,0.02247191011235955
+Studio V2,v214,Right,27,0.30337078651685395
+Studio V2,v214,Action button,17,0.19101123595505617
+Studio V2,v214,Click,0,0.0
+Studio V2,v214,Undo,0,0.0
+Studio V2,v215,Up,8,0.0761904761904762
+Studio V2,v215,Down,21,0.2
+Studio V2,v215,Left,13,0.12380952380952381
+Studio V2,v215,Right,24,0.22857142857142856
+Studio V2,v215,Action button,0,0.0
+Studio V2,v215,Click,39,0.37142857142857144
+Studio V2,v215,Undo,0,0.0
+Studio V2,v216,Up,22,0.2018348623853211
+Studio V2,v216,Down,25,0.22935779816513763
+Studio V2,v216,Left,19,0.1743119266055046
+Studio V2,v216,Right,28,0.25688073394495414
+Studio V2,v216,Action button,15,0.13761467889908258
+Studio V2,v216,Click,0,0.0
+Studio V2,v216,Undo,0,0.0
+Studio V2,v217,Up,0,0.0
+Studio V2,v217,Down,0,0.0
+Studio V2,v217,Left,0,0.0
+Studio V2,v217,Right,0,0.0
+Studio V2,v217,Action button,0,0.0
+Studio V2,v217,Click,133,1.0
+Studio V2,v217,Undo,0,0.0
+Studio V2,v218,Up,11,0.06077348066298342
+Studio V2,v218,Down,48,0.26519337016574585
+Studio V2,v218,Left,47,0.2596685082872928
+Studio V2,v218,Right,74,0.4088397790055249
+Studio V2,v218,Action button,0,0.0
+Studio V2,v218,Click,0,0.0
+Studio V2,v218,Undo,1,0.0055248618784530384
+Studio V2,v219,Up,0,0.0
+Studio V2,v219,Down,0,0.0
+Studio V2,v219,Left,0,0.0
+Studio V2,v219,Right,0,0.0
+Studio V2,v219,Action button,129,0.8486842105263158
+Studio V2,v219,Click,23,0.1513157894736842
+Studio V2,v219,Undo,0,0.0
+Studio V2,v220,Up,33,0.12222222222222222
+Studio V2,v220,Down,47,0.17407407407407408
+Studio V2,v220,Left,44,0.16296296296296298
+Studio V2,v220,Right,41,0.15185185185185185
+Studio V2,v220,Action button,29,0.10740740740740741
+Studio V2,v220,Click,0,0.0
+Studio V2,v220,Undo,76,0.2814814814814815
+NVIDIA,al7306,Up,0,0.0
+NVIDIA,al7306,Down,0,0.0
+NVIDIA,al7306,Left,0,0.0
+NVIDIA,al7306,Right,0,0.0
+NVIDIA,al7306,Action button,0,0.0
+NVIDIA,al7306,Click,174,1.0
+NVIDIA,al7306,Undo,0,0.0
+NVIDIA,cc2048,Up,32,0.20253164556962025
+NVIDIA,cc2048,Down,49,0.310126582278481
+NVIDIA,cc2048,Left,31,0.1962025316455696
+NVIDIA,cc2048,Right,46,0.2911392405063291
+NVIDIA,cc2048,Action button,0,0.0
+NVIDIA,cc2048,Click,0,0.0
+NVIDIA,cc2048,Undo,0,0.0
+NVIDIA,cg1842,Up,75,0.423728813559322
+NVIDIA,cg1842,Down,2,0.011299435028248588
+NVIDIA,cg1842,Left,27,0.15254237288135594
+NVIDIA,cg1842,Right,73,0.4124293785310734
+NVIDIA,cg1842,Action button,0,0.0
+NVIDIA,cg1842,Click,0,0.0
+NVIDIA,cg1842,Undo,0,0.0
+NVIDIA,cl0426,Up,0,0.0
+NVIDIA,cl0426,Down,0,0.0
+NVIDIA,cl0426,Left,0,0.0
+NVIDIA,cl0426,Right,0,0.0
+NVIDIA,cl0426,Action button,0,0.0
+NVIDIA,cl0426,Click,74,1.0
+NVIDIA,cl0426,Undo,0,0.0
+NVIDIA,df4821,Up,0,0.0
+NVIDIA,df4821,Down,0,0.0
+NVIDIA,df4821,Left,0,0.0
+NVIDIA,df4821,Right,0,0.0
+NVIDIA,df4821,Action button,0,0.0
+NVIDIA,df4821,Click,182,1.0
+NVIDIA,df4821,Undo,0,0.0
+NVIDIA,dl4827,Up,0,0.0
+NVIDIA,dl4827,Down,31,0.13716814159292035
+NVIDIA,dl4827,Left,74,0.3274336283185841
+NVIDIA,dl4827,Right,92,0.40707964601769914
+NVIDIA,dl4827,Action button,0,0.0
+NVIDIA,dl4827,Click,29,0.12831858407079647
+NVIDIA,dl4827,Undo,0,0.0
+NVIDIA,fl5273,Up,43,0.215
+NVIDIA,fl5273,Down,53,0.265
+NVIDIA,fl5273,Left,46,0.23
+NVIDIA,fl5273,Right,58,0.29
+NVIDIA,fl5273,Action button,0,0.0
+NVIDIA,fl5273,Click,0,0.0
+NVIDIA,fl5273,Undo,0,0.0
+NVIDIA,fw4821,Up,0,0.0
+NVIDIA,fw4821,Down,0,0.0
+NVIDIA,fw4821,Left,0,0.0
+NVIDIA,fw4821,Right,0,0.0
+NVIDIA,fw4821,Action button,0,0.0
+NVIDIA,fw4821,Click,79,1.0
+NVIDIA,fw4821,Undo,0,0.0
+NVIDIA,gc4721,Up,0,0.0
+NVIDIA,gc4721,Down,0,0.0
+NVIDIA,gc4721,Left,0,0.0
+NVIDIA,gc4721,Right,0,0.0
+NVIDIA,gc4721,Action button,0,0.0
+NVIDIA,gc4721,Click,119,1.0
+NVIDIA,gc4721,Undo,0,0.0
+NVIDIA,hr2048,Up,0,0.0
+NVIDIA,hr2048,Down,0,0.0
+NVIDIA,hr2048,Left,0,0.0
+NVIDIA,hr2048,Right,0,0.0
+NVIDIA,hr2048,Action button,0,0.0
+NVIDIA,hr2048,Click,124,1.0
+NVIDIA,hr2048,Undo,0,0.0
+NVIDIA,ll4821,Up,10,0.0847457627118644
+NVIDIA,ll4821,Down,56,0.4745762711864407
+NVIDIA,ll4821,Left,0,0.0
+NVIDIA,ll4821,Right,52,0.4406779661016949
+NVIDIA,ll4821,Action button,0,0.0
+NVIDIA,ll4821,Click,0,0.0
+NVIDIA,ll4821,Undo,0,0.0
+NVIDIA,ma4173,Up,0,0.0
+NVIDIA,ma4173,Down,48,0.43243243243243246
+NVIDIA,ma4173,Left,33,0.2972972972972973
+NVIDIA,ma4173,Right,30,0.2702702702702703
+NVIDIA,ma4173,Action button,0,0.0
+NVIDIA,ma4173,Click,0,0.0
+NVIDIA,ma4173,Undo,0,0.0
+NVIDIA,mb2741,Up,20,0.17857142857142858
+NVIDIA,mb2741,Down,29,0.25892857142857145
+NVIDIA,mb2741,Left,21,0.1875
+NVIDIA,mb2741,Right,42,0.375
+NVIDIA,mb2741,Action button,0,0.0
+NVIDIA,mb2741,Click,0,0.0
+NVIDIA,mb2741,Undo,0,0.0
+NVIDIA,ml2048,Up,0,0.0
+NVIDIA,ml2048,Down,50,0.390625
+NVIDIA,ml2048,Left,17,0.1328125
+NVIDIA,ml2048,Right,23,0.1796875
+NVIDIA,ml2048,Action button,1,0.0078125
+NVIDIA,ml2048,Click,37,0.2890625
+NVIDIA,ml2048,Undo,0,0.0
+NVIDIA,mt4926,Up,0,0.0
+NVIDIA,mt4926,Down,0,0.0
+NVIDIA,mt4926,Left,0,0.0
+NVIDIA,mt4926,Right,0,0.0
+NVIDIA,mt4926,Action button,0,0.0
+NVIDIA,mt4926,Click,93,1.0
+NVIDIA,mt4926,Undo,0,0.0
+NVIDIA,ne4172,Up,100,0.2680965147453083
+NVIDIA,ne4172,Down,50,0.13404825737265416
+NVIDIA,ne4172,Left,88,0.2359249329758713
+NVIDIA,ne4172,Right,135,0.36193029490616624
+NVIDIA,ne4172,Action button,0,0.0
+NVIDIA,ne4172,Click,0,0.0
+NVIDIA,ne4172,Undo,0,0.0
+NVIDIA,os1842,Up,0,0.0
+NVIDIA,os1842,Down,0,0.0
+NVIDIA,os1842,Left,0,0.0
+NVIDIA,os1842,Right,0,0.0
+NVIDIA,os1842,Action button,0,0.0
+NVIDIA,os1842,Click,61,1.0
+NVIDIA,os1842,Undo,0,0.0
+NVIDIA,ps1842,Up,0,0.0
+NVIDIA,ps1842,Down,0,0.0
+NVIDIA,ps1842,Left,0,0.0
+NVIDIA,ps1842,Right,0,0.0
+NVIDIA,ps1842,Action button,0,0.0
+NVIDIA,ps1842,Click,63,1.0
+NVIDIA,ps1842,Undo,0,0.0
+NVIDIA,ps7413,Up,0,0.0
+NVIDIA,ps7413,Down,0,0.0
+NVIDIA,ps7413,Left,0,0.0
+NVIDIA,ps7413,Right,0,0.0
+NVIDIA,ps7413,Action button,0,0.0
+NVIDIA,ps7413,Click,345,1.0
+NVIDIA,ps7413,Undo,0,0.0
+NVIDIA,rl2048,Up,0,0.0
+NVIDIA,rl2048,Down,0,0.0
+NVIDIA,rl2048,Left,0,0.0
+NVIDIA,rl2048,Right,0,0.0
+NVIDIA,rl2048,Action button,0,0.0
+NVIDIA,rl2048,Click,130,1.0
+NVIDIA,rl2048,Undo,0,0.0
+NVIDIA,rs0427,Up,18,0.13533834586466165
+NVIDIA,rs0427,Down,30,0.22556390977443608
+NVIDIA,rs0427,Left,15,0.11278195488721804
+NVIDIA,rs0427,Right,70,0.5263157894736842
+NVIDIA,rs0427,Action button,0,0.0
+NVIDIA,rs0427,Click,0,0.0
+NVIDIA,rs0427,Undo,0,0.0
+NVIDIA,sf2048,Up,0,0.0
+NVIDIA,sf2048,Down,0,0.0
+NVIDIA,sf2048,Left,0,0.0
+NVIDIA,sf2048,Right,0,0.0
+NVIDIA,sf2048,Action button,0,0.0
+NVIDIA,sf2048,Click,102,1.0
+NVIDIA,sf2048,Undo,0,0.0
+NVIDIA,sl4821,Up,0,0.0
+NVIDIA,sl4821,Down,0,0.0
+NVIDIA,sl4821,Left,0,0.0
+NVIDIA,sl4821,Right,0,0.0
+NVIDIA,sl4821,Action button,0,0.0
+NVIDIA,sl4821,Click,52,1.0
+NVIDIA,sl4821,Undo,0,0.0
+NVIDIA,ss6041,Up,0,0.0
+NVIDIA,ss6041,Down,0,0.0
+NVIDIA,ss6041,Left,0,0.0
+NVIDIA,ss6041,Right,0,0.0
+NVIDIA,ss6041,Action button,0,0.0
+NVIDIA,ss6041,Click,145,1.0
+NVIDIA,ss6041,Undo,0,0.0
+NVIDIA,td4826,Up,53,0.28191489361702127
+NVIDIA,td4826,Down,36,0.19148936170212766
+NVIDIA,td4826,Left,34,0.18085106382978725
+NVIDIA,td4826,Right,65,0.34574468085106386
+NVIDIA,td4826,Action button,0,0.0
+NVIDIA,td4826,Click,0,0.0
+NVIDIA,td4826,Undo,0,0.0

@@ -1,0 +1,33 @@
+collection,family,games,gameShare
+Studio V1,Agency and time,2,0.06666666666666667
+Studio V1,Coupled operators,6,0.2
+Studio V1,Identity and ordering,3,0.1
+Studio V1,Material transformation,5,0.16666666666666666
+Studio V1,Navigation and access,4,0.13333333333333333
+Studio V1,Quantity and containment,5,0.16666666666666666
+Studio V1,Rule composition,0,0.0
+Studio V1,Spatial manipulation,5,0.16666666666666666
+Studio V2,Agency and time,5,0.25
+Studio V2,Coupled operators,0,0.0
+Studio V2,Identity and ordering,1,0.05
+Studio V2,Material transformation,3,0.15
+Studio V2,Navigation and access,1,0.05
+Studio V2,Quantity and containment,2,0.1
+Studio V2,Rule composition,0,0.0
+Studio V2,Spatial manipulation,8,0.4
+NVIDIA,Agency and time,3,0.12
+NVIDIA,Coupled operators,5,0.2
+NVIDIA,Identity and ordering,5,0.2
+NVIDIA,Material transformation,3,0.12
+NVIDIA,Navigation and access,4,0.16
+NVIDIA,Quantity and containment,2,0.08
+NVIDIA,Rule composition,0,0.0
+NVIDIA,Spatial manipulation,3,0.12
+Official humans,Agency and time,3,0.12
+Official humans,Coupled operators,1,0.04
+Official humans,Identity and ordering,1,0.04
+Official humans,Material transformation,5,0.2
+Official humans,Navigation and access,3,0.12
+Official humans,Quantity and containment,2,0.08
+Official humans,Rule composition,4,0.16
+Official humans,Spatial manipulation,6,0.24

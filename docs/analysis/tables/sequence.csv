@@ -1,0 +1,76 @@
+collection,game,distinct_parameter_sequences,levels,all_lengths_equal
+Studio V1,sg01,7,7,False
+Studio V1,sg02,7,7,False
+Studio V1,sg03,7,7,False
+Studio V1,sg04,5,7,False
+Studio V1,sg05,7,7,False
+Studio V1,sg06,7,7,False
+Studio V1,sg07,7,7,False
+Studio V1,sg08,7,7,False
+Studio V1,sg09,7,7,False
+Studio V1,sg10,7,7,False
+Studio V1,sg11,7,7,False
+Studio V1,sg12,6,7,False
+Studio V1,sg13,7,7,False
+Studio V1,sg14,7,7,False
+Studio V1,sg15,7,7,False
+Studio V1,sg16,7,7,False
+Studio V1,sg17,7,7,False
+Studio V1,sg18,7,7,False
+Studio V1,sg19,7,7,False
+Studio V1,sg20,6,7,False
+Studio V1,sg21,7,7,False
+Studio V1,sg22,7,7,False
+Studio V1,sg23,7,7,False
+Studio V1,sg24,7,7,False
+Studio V1,sg25,7,7,False
+Studio V1,sg26,7,7,False
+Studio V1,sg27,7,7,False
+Studio V1,sg28,6,7,False
+Studio V1,sg29,7,7,False
+Studio V1,sg30,7,7,False
+Studio V2,v201,7,7,False
+Studio V2,v202,7,7,False
+Studio V2,v203,7,7,False
+Studio V2,v204,7,7,False
+Studio V2,v205,6,7,False
+Studio V2,v206,7,7,False
+Studio V2,v207,7,7,False
+Studio V2,v208,5,7,False
+Studio V2,v209,7,7,False
+Studio V2,v210,6,7,False
+Studio V2,v211,7,7,False
+Studio V2,v212,7,7,False
+Studio V2,v213,7,7,False
+Studio V2,v214,7,7,False
+Studio V2,v215,7,7,False
+Studio V2,v216,7,7,False
+Studio V2,v217,7,7,False
+Studio V2,v218,7,7,False
+Studio V2,v219,6,7,False
+Studio V2,v220,6,7,False
+NVIDIA,al7306,7,8,False
+NVIDIA,cc2048,7,8,False
+NVIDIA,cg1842,7,8,False
+NVIDIA,cl0426,8,8,False
+NVIDIA,df4821,7,8,False
+NVIDIA,dl4827,8,8,False
+NVIDIA,fl5273,7,8,False
+NVIDIA,fw4821,8,8,False
+NVIDIA,gc4721,8,8,False
+NVIDIA,hr2048,8,8,False
+NVIDIA,ll4821,7,8,False
+NVIDIA,ma4173,8,8,False
+NVIDIA,mb2741,8,8,False
+NVIDIA,ml2048,8,8,False
+NVIDIA,mt4926,8,8,False
+NVIDIA,ne4172,7,8,False
+NVIDIA,os1842,8,8,False
+NVIDIA,ps1842,8,8,False
+NVIDIA,ps7413,8,8,False
+NVIDIA,rl2048,8,8,False
+NVIDIA,rs0427,7,8,False
+NVIDIA,sf2048,8,8,False
+NVIDIA,sl4821,8,8,False
+NVIDIA,ss6041,8,8,False
+NVIDIA,td4826,7,8,False

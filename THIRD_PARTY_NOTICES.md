@@ -1,5 +1,18 @@
 # Third-party acknowledgments
 
+## Statistical analysis report
+
+The report under `docs/analysis/` uses original project-authored HTML, CSS,
+JavaScript and independently drawn statistical graphics, under the report's
+MIT notice. It bundles no third-party report runtime, JavaScript libraries,
+fonts, official environment code or official game images. Official-human
+comparisons contain derived aggregate statistics with source citations, not
+individual human replay paths. Original upstream game/data rights remain with
+their respective sources; the report's license does not relicense them.
+Figure generation uses Matplotlib as a development tool; no Matplotlib code or
+font binary is included in the report. ARC Prize and NVIDIA do not endorse
+the analysis. Dataset-specific upstream notices below remain applicable.
+
 ## Studio V2 design references
 
 The V201–V220 games are independently implemented Studio environments. Their

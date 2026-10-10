@@ -1,0 +1,25 @@
+collection,family,games,gameShare
+Studio V1,Contained lattice,6,0.2
+Studio V1,Containers or quantities,7,0.23333333333333334
+Studio V1,Continuous material,4,0.13333333333333333
+Studio V1,Open geometry,5,0.16666666666666666
+Studio V1,Paired panels or programs,1,0.03333333333333333
+Studio V1,Route or network,7,0.23333333333333334
+Studio V2,Contained lattice,2,0.1
+Studio V2,Containers or quantities,2,0.1
+Studio V2,Continuous material,5,0.25
+Studio V2,Open geometry,9,0.45
+Studio V2,Paired panels or programs,0,0.0
+Studio V2,Route or network,2,0.1
+NVIDIA,Contained lattice,12,0.48
+NVIDIA,Containers or quantities,2,0.08
+NVIDIA,Continuous material,3,0.12
+NVIDIA,Open geometry,3,0.12
+NVIDIA,Paired panels or programs,3,0.12
+NVIDIA,Route or network,2,0.08
+Official humans,Contained lattice,2,0.08
+Official humans,Containers or quantities,1,0.04
+Official humans,Continuous material,4,0.16
+Official humans,Open geometry,9,0.36
+Official humans,Paired panels or programs,5,0.2
+Official humans,Route or network,4,0.16

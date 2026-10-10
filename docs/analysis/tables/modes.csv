@@ -1,0 +1,19 @@
+collection,mode,games,gameShare
+Studio V1,Directions+Action button,7,0.23333333333333334
+Studio V1,Directions+Action button+Click,6,0.2
+Studio V1,Action button+Click,5,0.16666666666666666
+Studio V1,Click,9,0.3
+Studio V1,Directions,2,0.06666666666666667
+Studio V1,Directions+Click,1,0.03333333333333333
+Studio V2,Action button+Click,4,0.2
+Studio V2,Directions+Action button,6,0.3
+Studio V2,Directions,2,0.1
+Studio V2,Directions+Click,6,0.3
+Studio V2,Click,2,0.1
+NVIDIA,Click,14,0.56
+NVIDIA,Directions,9,0.36
+NVIDIA,Directions+Click,1,0.04
+NVIDIA,Directions+Action button+Click,1,0.04
+Studio V2,Directions+Action button+Click,0,0
+NVIDIA,Action button+Click,0,0
+NVIDIA,Directions+Action button,0,0

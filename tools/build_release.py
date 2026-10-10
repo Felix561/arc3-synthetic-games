@@ -7,6 +7,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from build_analysis_report import report_files
 from build_dataset_release import build as build_dataset_archive
 from build_preview import ROOT, write_zip
 from build_trajectory_release import build as build_trajectory_archive
@@ -18,7 +19,7 @@ def git(*args):
 
 PUBLIC_DOCS = {"README.md", "docs/DATASET_CARD.md", "docs/GAMES.md", "docs/VALIDATION.md", "docs/PUBLICATION.md",
                "THIRD_PARTY_NOTICES.md", "docs/CHANGELOG.md", "docs/TRAJECTORIES.md", "docs/STATISTICS.md",
-               "docs/DOWNLOADS.md"}
+               "docs/DOWNLOADS.md", "docs/analysis/README.md"}
 
 
 def check_public_docs(paths):
@@ -182,6 +183,11 @@ def build(output, preview, packages):
                "browser/worker.mjs", "browser/runtime.json"}
     allowed.update("browser/" + entry["path"] for entry in manifest["files"])
     allowed.update(name for name in names if name.startswith("media/"))
+    for name, content in report_files(ROOT / "docs/analysis").items():
+        relative = "analysis/" + name
+        if (preview / relative).read_bytes() != content:
+            raise ValueError("Preview analysis does not match reviewed source")
+        allowed.add(relative)
     actual = {p.relative_to(preview).as_posix() for p in preview.rglob("*") if p.is_file()}
     if actual != allowed or any(p.is_symlink() for p in preview.rglob("*")):
         raise ValueError("Unexpected static preview files")

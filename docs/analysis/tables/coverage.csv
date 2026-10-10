@@ -1,0 +1,5 @@
+collection,source,games,nativeLevels,recordedPlays,actions,segments,median,mean,lateMedian,lateShort,lateN
+Studio V1,studio,30,210,30,2344,210,6.0,11.161904761904761,15.0,23,60
+Studio V2,studio_v2,20,140,20,1740,140,6.0,12.428571428571429,10.0,21,40
+NVIDIA,nvidia,25,200,25,3667,205,15.0,18.055,20.0,6,50
+Official humans,official,25,183,340,178422,1614,54.0,91.10099132589839,94,0,319
